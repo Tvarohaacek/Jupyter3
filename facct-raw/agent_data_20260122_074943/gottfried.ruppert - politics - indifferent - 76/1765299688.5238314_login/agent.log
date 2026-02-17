@@ -1,0 +1,155 @@
+[2025-12-09 17:01:32,487][agent:main:main_async] [INFO] Storage path: /data
+[2025-12-09 17:01:32,632][agent:main:run_pipeline] [INFO] Starting pipeline execution for experiment: drifting_study_login
+[2025-12-09 17:01:32,634][agent:toolbox:clear_pipeline_log] [INFO] Pipeline execution log cleared
+[2025-12-09 17:01:32,639][agent:runner:execute_pipeline] [INFO] --- Starting Pipeline Execution for Experiment: drifting_study_login ---
+[2025-12-09 17:01:32,641][agent:context:_try_parse_puppet_identity] [DEBUG] Successfully parsed puppet identity from variables
+[2025-12-09 17:01:32,644][agent:runner:get_pipeline_action_step_results] [INFO] Executing initial actions on platform 'tiktok'
+[2025-12-09 17:01:32,646][agent:runner:execute_initial_actions] [INFO] No initial actions found (ONCE schedule, no dependencies).
+[2025-12-09 17:01:32,649][agent:runner:get_pipeline_action_step_results] [INFO] Completed initial actions: None
+[2025-12-09 17:01:32,651][agent:runner:resolve_dependencies_until_complete] [INFO] Entering dependency resolution loop for 1 pending actions.
+[2025-12-09 17:01:32,653][agent:runner:resolve_dependencies_until_complete] [DEBUG] Starting dependency resolution round. Pending: ['login_phase']
+[2025-12-09 17:01:32,656][agent:runner:execute_pending_actions_round] [INFO] Dependencies met for action login_phase, executing.
+[2025-12-09 17:01:32,659][agent:runner:execute_action] [INFO] Executing action: login_phase - Login to TikTok social platform.
+[2025-12-09 17:01:32,661][agent:runner:execute_step] [DEBUG] Processing step open_browser on platform tiktok
+[2025-12-09 17:01:32,663][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step open_browser: {}
+[2025-12-09 17:01:32,666][agent:runner:execute_tool] [INFO] Executing async tool open_browser
+[2025-12-09 17:01:32,668][agent:session:open_browser] [INFO] Initializing browser session
+[2025-12-09 17:01:32,671][agent:session:_ensure_protocol_handler_allowance] [INFO] Injecting/checking TikTok protocol into browser storage preferences.
+[2025-12-09 17:01:32,674][agent:session:_ensure_protocol_handler_allowance] [INFO] Chrome preferences file path: /data/browser_storage/Default/Preferences
+[2025-12-09 17:01:32,677][agent:session:_ensure_protocol_handler_allowance] [DEBUG] Chrome preferences file /data/browser_storage/Default/Preferences missing; skipping allowance injection
+[2025-12-09 17:01:32,681][agent:session:open_browser] [INFO] Browser options: ['--disable-dev-shm-usage', '--disable-accelerated-2d-canvas', '--disable-gpu', '--disable-backgrounding-occluded-windows', '--disable-features=TranslateUI,BlinkGenPropertyTrees', '--disable-ipc-flooding-protection', '--allow-running-insecure-content', '--enable-logging', '--v=1', '--enable-features=protocolMonitor', '--disable-notifications', '--disable-popup-blocking', '--disable-extensions', '--disable-component-extensions-with-background-pages', '--disable-default-apps', '--disable-hang-monitor', '--disable-prompt-on-repost', '--disable-client-side-phishing-detection', '--disable-sync', '--metrics-recording-only', '--no-first-run', '--password-store=basic', '--no-sandbox', '--lang=en-US', '--timezone=Europe/Paris', '--remote-debugging-port=54321', '--window-position=0,0', '--window-size=1920,1080']
+[2025-12-09 17:01:34,016][agent:session:open_browser] [INFO] Browser download directory set to /data/1765299688.5238314/downloads
+[2025-12-09 17:01:34,026][agent:session:open_browser] [INFO] Browser session initialized successfully
+[2025-12-09 17:01:34,028][agent:runner:execute_step_with_tool] [INFO] Step open_browser execution completed with success=True
+[2025-12-09 17:01:34,031][agent:runner:execute_step_with_tool] [DEBUG] Step open_browser result data: {'browser_initialized': True}
+[2025-12-09 17:01:34,034][agent:runner:execute_step] [DEBUG] Processing step start_dismiss_actions on platform tiktok
+[2025-12-09 17:01:34,036][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step start_dismiss_actions: {'mode': 'before_login'}
+[2025-12-09 17:01:34,038][agent:runner:execute_tool] [INFO] Executing async tool start_dismiss_actions
+[2025-12-09 17:01:34,041][agent:popup_handler:start_dismiss_actions] [INFO] Start dismiss task.
+[2025-12-09 17:01:34,044][agent:runner:execute_step_with_tool] [INFO] Step start_dismiss_actions execution completed with success=True
+[2025-12-09 17:01:34,047][agent:runner:execute_step_with_tool] [DEBUG] Step start_dismiss_actions result data: {'dismiss_task': <Task pending name='dismiss_loop_task' coro=<dismiss_loop() running at /app/.venv/lib/python3.12/site-packages/driver/actions/utils.py:11>>}
+[2025-12-09 17:01:34,049][agent:runner:execute_step] [DEBUG] Processing step navigate_to_tiktok on platform tiktok
+[2025-12-09 17:01:34,052][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step navigate_to_tiktok: {'url': 'https://www.tiktok.com/'}
+[2025-12-09 17:01:34,054][agent:runner:execute_tool] [INFO] Executing async tool navigate_to
+[2025-12-09 17:01:34,057][agent:session:navigate_to] [DEBUG] Navigating to URL: https://www.tiktok.com/
+[2025-12-09 17:01:34,069][agent:screenshot:screenshot_loop] [DEBUG] Screenshot loop started with sleep interval: '1' s.)
+[2025-12-09 17:01:34,077][agent:screenshot:screenshot_loop] [DEBUG] Screenshot loop started with sleep interval: '1' s.)
+[2025-12-09 17:01:40,397][agent:runner:execute_step_with_tool] [INFO] Step navigate_to_tiktok execution completed with success=True
+[2025-12-09 17:01:40,407][agent:runner:execute_step_with_tool] [DEBUG] Step navigate_to_tiktok result data: {'url': 'https://www.tiktok.com/'}
+[2025-12-09 17:01:40,411][agent:runner:execute_step] [DEBUG] Processing step account_login on platform tiktok
+[2025-12-09 17:01:40,414][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.username' to: user2026+gottfried.ruppert@zohomail.eu
+[2025-12-09 17:01:40,429][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.secret' to: 9I4WyVY&
+[2025-12-09 17:01:40,445][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step account_login: {'email': 'user2026+gottfried.ruppert@zohomail.eu', 'secret': '9I4WyVY&'}
+[2025-12-09 17:01:40,450][agent:runner:execute_tool] [INFO] Executing async tool log_in_with_email
+[2025-12-09 17:02:05,361][agent:screenshot:take_screenshot] [ERROR] Screenshot failed.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/asyncio/tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/.venv/lib/python3.12/site-packages/driver/connection.py", line 233, in send
+    response = await asyncio.wait_for(future, RESPONSE_TIMEOUT)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/src/platforms/browser/screenshot.py", line 17, in take_screenshot
+    await tab.screenshot(folder=config.screens_path)
+  File "/app/.venv/lib/python3.12/site-packages/driver/tab.py", line 403, in screenshot
+    data = await self.connection.send_cdp_transaction(page.capture_screenshot(format_=file_format, capture_beyond_viewport=full_page))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/driver/connection.py", line 167, in send_cdp_transaction
+    response = await self.send(**message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/driver/connection.py", line 249, in send
+    raise TimeoutError(msg) from e
+TimeoutError: Command timed out: Page.captureScreenshot
+[2025-12-09 17:02:38,123][agent:email_verification:fetch_verification_code] [DEBUG] Using imap server imap.zoho.eu, with username user2026@zohomail.eu
+[2025-12-09 17:03:01,950][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+gottfried.ruppert@zohomail.eu
+[2025-12-09 17:03:24,351][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+gottfried.ruppert@zohomail.eu
+[2025-12-09 17:03:46,854][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+gottfried.ruppert@zohomail.eu
+[2025-12-09 17:04:10,459][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+gottfried.ruppert@zohomail.eu
+[2025-12-09 17:04:34,643][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+gottfried.ruppert@zohomail.eu
+[2025-12-09 17:04:42,061][agent:email_verification:fetch_verification_code] [INFO] Verification code retrieved: 044854
+[2025-12-09 17:05:07,984][agent:runner:execute_step_with_tool] [INFO] Step account_login execution completed with success=True
+[2025-12-09 17:05:07,988][agent:runner:execute_step_with_tool] [DEBUG] Step account_login result data: {'user': 'user2026+gottfried.ruppert@zohomail.eu'}
+[2025-12-09 17:05:07,994][agent:runner:execute_step] [DEBUG] Processing step create_new_collection on platform tiktok
+[2025-12-09 17:05:07,997][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step create_new_collection: {'name': 'interests'}
+[2025-12-09 17:05:08,001][agent:runner:execute_tool] [INFO] Executing async tool create_collection
+[2025-12-09 17:05:23,288][agent:runner:execute_step_with_tool] [INFO] Step create_new_collection execution completed with success=True
+[2025-12-09 17:05:23,292][agent:runner:execute_step_with_tool] [DEBUG] Step create_new_collection result data: {'created': True}
+[2025-12-09 17:05:23,295][agent:runner:execute_step] [DEBUG] Processing step wait_for_few_seconds on platform tiktok
+[2025-12-09 17:05:23,298][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step wait_for_few_seconds: {'seconds': 5}
+[2025-12-09 17:05:23,301][agent:runner:execute_tool] [INFO] Executing async tool wait
+[2025-12-09 17:05:28,306][agent:session:wait] [INFO] Requested to wait 5 seconds. Duration was 5.000551739999992 seconds.
+[2025-12-09 17:05:28,308][agent:runner:execute_step_with_tool] [INFO] Step wait_for_few_seconds execution completed with success=True
+[2025-12-09 17:05:28,311][agent:runner:execute_step_with_tool] [DEBUG] Step wait_for_few_seconds result data: {'duration_ms': 5.000551739999992, 'requested_seconds': 5}
+[2025-12-09 17:05:28,320][agent:runner:execute_step] [DEBUG] Processing step stop_dismiss_actions on platform tiktok
+[2025-12-09 17:05:28,323][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step stop_dismiss_actions: {}
+[2025-12-09 17:05:28,326][agent:runner:execute_tool] [INFO] Executing async tool stop_dismiss_actions
+[2025-12-09 17:05:28,329][agent:popup_handler:stop_dismiss_actions] [INFO] Cancelling dismiss task.
+[2025-12-09 17:05:28,332][agent:runner:execute_step_with_tool] [INFO] Step stop_dismiss_actions execution completed with success=True
+[2025-12-09 17:05:28,335][agent:runner:execute_step_with_tool] [DEBUG] Step stop_dismiss_actions result data: {}
+[2025-12-09 17:05:28,338][agent:runner:execute_step] [DEBUG] Processing step close_browser on platform tiktok
+[2025-12-09 17:05:28,341][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step close_browser: {}
+[2025-12-09 17:05:28,346][agent:runner:execute_tool] [INFO] Executing async tool close_browser
+[2025-12-09 17:05:28,353][agent:screenshot:stop_screenshots] [DEBUG] Task periodic_screenshot cancelled.
+[2025-12-09 17:05:28,356][agent:screenshot:stop_screenshots] [DEBUG] Task periodic_screenshot cancelled.
+[2025-12-09 17:05:28,360][agent:session:close_browser] [DEBUG] Closing browser session
+[2025-12-09 17:05:29,642][agent:session:close_browser] [INFO] Browser session closed successfully
+[2025-12-09 17:05:29,645][agent:runner:execute_step_with_tool] [INFO] Step close_browser execution completed with success=True
+[2025-12-09 17:05:29,648][agent:runner:execute_step_with_tool] [DEBUG] Step close_browser result data: {'browser_closed': True}
+[2025-12-09 17:05:29,650][agent:runner:execute_action] [INFO] Finished action: login_phase
+[2025-12-09 17:05:29,653][agent:runner:resolve_dependencies_until_complete] [DEBUG] Completed actions after round: {'login_phase'}
+[2025-12-09 17:05:29,655][agent:runner:resolve_dependencies_until_complete] [INFO] All actions completed.
+[2025-12-09 17:05:29,657][agent:runner:execute_pipeline] [INFO] --- Pipeline Execution Finished for Experiment: drifting_study_login ---
+[2025-12-09 17:05:29,659][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-09 17:05:29,661][agent:output:display_execution_results] [INFO] PIPELINE EXECUTION RESULTS
+[2025-12-09 17:05:29,663][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-09 17:05:29,665][agent:output:display_execution_results] [INFO] 
+[2025-12-09 17:05:29,667][agent:output:display_execution_results] [INFO] ----------------------------------------
+[2025-12-09 17:05:29,669][agent:output:display_execution_results] [INFO] ACTION: LOGIN_PHASE
+[2025-12-09 17:05:29,671][agent:output:display_execution_results] [INFO] ----------------------------------------
+[2025-12-09 17:05:29,673][agent:output:display_execution_results] [INFO] Step Execution Details:
+[2025-12-09 17:05:29,675][agent:output:display_execution_results] [INFO]   [OK] open_browser
+[2025-12-09 17:05:29,677][agent:output:display_execution_results] [INFO]   [OK] start_dismiss_actions
+[2025-12-09 17:05:29,679][agent:output:display_execution_results] [INFO]   [OK] navigate_to_tiktok
+[2025-12-09 17:05:29,681][agent:output:display_execution_results] [INFO]   [OK] account_login
+[2025-12-09 17:05:29,683][agent:output:display_execution_results] [INFO]   [OK] create_new_collection
+[2025-12-09 17:05:29,685][agent:output:display_execution_results] [INFO]   [OK] wait_for_few_seconds
+[2025-12-09 17:05:29,687][agent:output:display_execution_results] [INFO]   [OK] stop_dismiss_actions
+[2025-12-09 17:05:29,689][agent:output:display_execution_results] [INFO]   [OK] close_browser
+[2025-12-09 17:05:29,691][agent:output:display_execution_results] [INFO] Action 'login_phase' Summary:
+[2025-12-09 17:05:29,693][agent:output:display_execution_results] [INFO]   Steps Count: 8
+[2025-12-09 17:05:29,695][agent:output:display_execution_results] [INFO]   Successful: 8
+[2025-12-09 17:05:29,697][agent:output:display_execution_results] [INFO]   Failed: 0
+[2025-12-09 17:05:29,699][agent:output:display_execution_results] [INFO]   Skipped: 0
+[2025-12-09 17:05:29,701][agent:output:display_execution_results] [INFO]   Success Rate: 100.0%
+[2025-12-09 17:05:29,703][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-09 17:05:29,705][agent:output:display_execution_results] [INFO] PIPELINE EXECUTION SUMMARY
+[2025-12-09 17:05:29,707][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-09 17:05:29,709][agent:output:display_execution_results] [INFO] Pipeline ID: drifting_study_login
+[2025-12-09 17:05:29,710][agent:output:display_execution_results] [INFO] Actions Overview:
+[2025-12-09 17:05:29,712][agent:output:display_execution_results] [INFO]   Total Actions: 1
+[2025-12-09 17:05:29,714][agent:output:display_execution_results] [INFO]   Successful Actions: 1
+[2025-12-09 17:05:29,716][agent:output:display_execution_results] [INFO]   Failed Actions: 0
+[2025-12-09 17:05:29,718][agent:output:display_execution_results] [INFO] Steps Overview:
+[2025-12-09 17:05:29,720][agent:output:display_execution_results] [INFO]   Total Steps: 8
+[2025-12-09 17:05:29,722][agent:output:display_execution_results] [INFO]   Successful Steps: 8
+[2025-12-09 17:05:29,724][agent:output:display_execution_results] [INFO]   Failed Steps: 0
+[2025-12-09 17:05:29,726][agent:output:display_execution_results] [INFO]   Skipped Steps: 0
+[2025-12-09 17:05:29,728][agent:output:display_execution_results] [INFO]   Overall Success Rate: 100.0%
+[2025-12-09 17:05:29,730][agent:output:display_pipeline_complete] [INFO] Pipeline execution COMPLETED SUCCESSFULLY
+[2025-12-09 17:05:29,732][agent:output:display_pipeline_complete] [INFO] ============================================================
+[2025-12-09 17:05:29,734][agent:uploader:validate_upload_config] [INFO] Upload of collected data to repository is disabled in configuration.

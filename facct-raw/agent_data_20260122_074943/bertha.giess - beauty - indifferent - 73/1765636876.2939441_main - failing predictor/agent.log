@@ -1,0 +1,122 @@
+[2025-12-13 14:41:19,600][agent:main:main_async] [INFO] Storage path: /data
+[2025-12-13 14:41:19,735][agent:main:run_pipeline] [INFO] Starting pipeline execution for experiment: drifting_study_main
+[2025-12-13 14:41:19,737][agent:toolbox:clear_pipeline_log] [INFO] Pipeline execution log cleared
+[2025-12-13 14:41:19,739][agent:runner:execute_pipeline] [INFO] --- Starting Pipeline Execution for Experiment: drifting_study_main ---
+[2025-12-13 14:41:19,741][agent:context:_try_parse_puppet_identity] [DEBUG] Successfully parsed puppet identity from variables
+[2025-12-13 14:41:19,743][agent:runner:get_pipeline_action_step_results] [INFO] Executing initial actions on platform 'tiktok'
+[2025-12-13 14:41:19,745][agent:runner:execute_initial_actions] [INFO] No initial actions found (ONCE schedule, no dependencies).
+[2025-12-13 14:41:19,747][agent:runner:get_pipeline_action_step_results] [INFO] Completed initial actions: None
+[2025-12-13 14:41:19,749][agent:runner:resolve_dependencies_until_complete] [INFO] Entering dependency resolution loop for 1 pending actions.
+[2025-12-13 14:41:19,752][agent:runner:resolve_dependencies_until_complete] [DEBUG] Starting dependency resolution round. Pending: ['main_phase_foryou']
+[2025-12-13 14:41:19,754][agent:runner:execute_pending_actions_round] [INFO] Dependencies met for action main_phase_foryou, executing.
+[2025-12-13 14:41:19,756][agent:runner:execute_action] [INFO] Executing action: main_phase_foryou - Start browser and navigate to TikTok
+[2025-12-13 14:41:19,758][agent:runner:execute_step] [DEBUG] Processing step open_browser on platform tiktok
+[2025-12-13 14:41:19,760][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step open_browser: {}
+[2025-12-13 14:41:19,763][agent:runner:execute_tool] [INFO] Executing async tool open_browser
+[2025-12-13 14:41:19,765][agent:session:open_browser] [INFO] Initializing browser session
+[2025-12-13 14:41:19,768][agent:session:_ensure_protocol_handler_allowance] [INFO] Injecting/checking TikTok protocol into browser storage preferences.
+[2025-12-13 14:41:19,771][agent:session:_ensure_protocol_handler_allowance] [INFO] Chrome preferences file path: /data/browser_storage/Default/Preferences
+[2025-12-13 14:41:19,775][agent:session:_ensure_protocol_handler_allowance] [DEBUG] TikTok protocol handler already allowed; no update needed
+[2025-12-13 14:41:19,777][agent:session:open_browser] [INFO] Browser options: ['--disable-dev-shm-usage', '--disable-accelerated-2d-canvas', '--disable-gpu', '--disable-backgrounding-occluded-windows', '--disable-features=TranslateUI,BlinkGenPropertyTrees', '--disable-ipc-flooding-protection', '--allow-running-insecure-content', '--enable-logging', '--v=1', '--enable-features=protocolMonitor', '--disable-notifications', '--disable-popup-blocking', '--disable-extensions', '--disable-component-extensions-with-background-pages', '--disable-default-apps', '--disable-hang-monitor', '--disable-prompt-on-repost', '--disable-client-side-phishing-detection', '--disable-sync', '--metrics-recording-only', '--no-first-run', '--password-store=basic', '--no-sandbox', '--lang=en-US', '--timezone=Europe/Paris', '--remote-debugging-port=54321', '--window-position=0,0', '--window-size=1920,1080']
+[2025-12-13 14:41:21,098][agent:session:open_browser] [INFO] Browser download directory set to /data/1765636876.2939441/downloads
+[2025-12-13 14:41:21,108][agent:session:open_browser] [INFO] Browser session initialized successfully
+[2025-12-13 14:41:21,110][agent:runner:execute_step_with_tool] [INFO] Step open_browser execution completed with success=True
+[2025-12-13 14:41:21,113][agent:runner:execute_step_with_tool] [DEBUG] Step open_browser result data: {'browser_initialized': True}
+[2025-12-13 14:41:21,116][agent:runner:execute_step] [DEBUG] Processing step collect_network_data on platform tiktok
+[2025-12-13 14:41:21,118][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.track' to: {'comment_list': 'https://www.tiktok.com/api/comment/list/', 'recommend_item_list': 'https://www.tiktok.com/api/recommend/item_list', 'search_general_full': 'https://www.tiktok.com/api/search/general/full/', 'search_general_preview': 'https://www.tiktok.com/api/search/general/preview/', 'user_detail': 'https://www.tiktok.com/api/user/detail/', 'webcast': 'https://webcast.tiktok.com/webcast/room/check_alive/'}
+[2025-12-13 14:41:21,121][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step collect_network_data: {'endpoints': {'comment_list': 'https://www.tiktok.com/api/comment/list/', 'recommend_item_list': 'https://www.tiktok.com/api/recommend/item_list', 'search_general_full': 'https://www.tiktok.com/api/search/general/full/', 'search_general_preview': 'https://www.tiktok.com/api/search/general/preview/', 'user_detail': 'https://www.tiktok.com/api/user/detail/', 'webcast': 'https://webcast.tiktok.com/webcast/room/check_alive/'}}
+[2025-12-13 14:41:21,123][agent:runner:execute_tool] [INFO] Executing async tool track_network
+[2025-12-13 14:41:21,160][agent:runner:execute_step_with_tool] [INFO] Step collect_network_data execution completed with success=True
+[2025-12-13 14:41:21,162][agent:runner:execute_step_with_tool] [DEBUG] Step collect_network_data result data: {'count': 6, 'context_key': 'endpoint_responses'}
+[2025-12-13 14:41:21,165][agent:runner:execute_step] [DEBUG] Processing step navigate_to_tiktok on platform tiktok
+[2025-12-13 14:41:21,167][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step navigate_to_tiktok: {'url': 'https://www.tiktok.com/'}
+[2025-12-13 14:41:21,169][agent:runner:execute_tool] [INFO] Executing async tool navigate_to
+[2025-12-13 14:41:21,171][agent:session:navigate_to] [DEBUG] Navigating to URL: https://www.tiktok.com/
+[2025-12-13 14:41:21,183][agent:screenshot:screenshot_loop] [DEBUG] Screenshot loop started with sleep interval: '1' s.)
+[2025-12-13 14:41:21,191][agent:screenshot:screenshot_loop] [DEBUG] Screenshot loop started with sleep interval: '1' s.)
+[2025-12-13 14:41:27,353][agent:runner:execute_step_with_tool] [INFO] Step navigate_to_tiktok execution completed with success=True
+[2025-12-13 14:41:27,356][agent:runner:execute_step_with_tool] [DEBUG] Step navigate_to_tiktok result data: {'url': 'https://www.tiktok.com/'}
+[2025-12-13 14:41:27,361][agent:runner:execute_step] [DEBUG] Processing step account_login on platform tiktok
+[2025-12-13 14:41:27,364][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.username' to: user2026+bertha.giess@zohomail.eu
+[2025-12-13 14:41:27,367][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.secret' to: v2!JlKkg
+[2025-12-13 14:41:27,370][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step account_login: {'email': 'user2026+bertha.giess@zohomail.eu', 'secret': 'v2!JlKkg'}
+[2025-12-13 14:41:27,373][agent:runner:execute_tool] [INFO] Executing async tool log_in_with_email
+[2025-12-13 14:41:28,136][agent:monitoring:store] [INFO] Stored response for endpoint 'recommend_item_list'
+[2025-12-13 14:41:28,748][agent:runner:execute_step_with_tool] [INFO] Step account_login execution completed with success=True
+[2025-12-13 14:41:28,752][agent:runner:execute_step_with_tool] [DEBUG] Step account_login result data: {'user': 'user2026+bertha.giess@zohomail.eu'}
+[2025-12-13 14:41:28,760][agent:runner:execute_step] [DEBUG] Processing step start_dismiss_actions on platform tiktok
+[2025-12-13 14:41:28,765][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step start_dismiss_actions: {'mode': 'after_login'}
+[2025-12-13 14:41:28,769][agent:runner:execute_tool] [INFO] Executing async tool start_dismiss_actions
+[2025-12-13 14:41:28,772][agent:popup_handler:start_dismiss_actions] [INFO] Start dismiss task.
+[2025-12-13 14:41:28,775][agent:runner:execute_step_with_tool] [INFO] Step start_dismiss_actions execution completed with success=True
+[2025-12-13 14:41:28,799][agent:runner:execute_step_with_tool] [DEBUG] Step start_dismiss_actions result data: {'dismiss_task': <Task pending name='dismiss_loop_task' coro=<dismiss_loop() running at /app/.venv/lib/python3.12/site-packages/driver/actions/utils.py:11>>}
+[2025-12-13 14:41:28,801][agent:runner:execute_step] [DEBUG] Processing step navigate_to_tiktok on platform tiktok
+[2025-12-13 14:41:28,804][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step navigate_to_tiktok: {'url': 'https://www.tiktok.com/foryou'}
+[2025-12-13 14:41:28,811][agent:runner:execute_tool] [INFO] Executing async tool navigate_to
+[2025-12-13 14:41:28,816][agent:session:navigate_to] [DEBUG] Navigating to URL: https://www.tiktok.com/foryou
+[2025-12-13 14:41:31,600][agent:monitoring:store] [INFO] Stored response for endpoint 'recommend_item_list'
+[2025-12-13 14:41:32,464][agent:monitoring:store] [INFO] Stored response for endpoint 'recommend_item_list'
+[2025-12-13 14:41:34,438][agent:runner:execute_step_with_tool] [INFO] Step navigate_to_tiktok execution completed with success=True
+[2025-12-13 14:41:34,442][agent:runner:execute_step_with_tool] [DEBUG] Step navigate_to_tiktok result data: {'url': 'https://www.tiktok.com/foryou'}
+[2025-12-13 14:41:34,458][agent:runner:execute_step] [DEBUG] Processing step pause_video on platform tiktok
+[2025-12-13 14:41:34,463][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step pause_video: {}
+[2025-12-13 14:41:34,467][agent:runner:execute_tool] [INFO] Executing async tool pause_fyp_video
+[2025-12-13 14:41:35,008][agent:monitoring:store] [INFO] Stored response for endpoint 'webcast'
+[2025-12-13 14:41:35,673][agent:runner:execute_step_with_tool] [INFO] Step pause_video execution completed with success=True
+[2025-12-13 14:41:35,677][agent:runner:execute_step_with_tool] [DEBUG] Step pause_video result data: {'paused': True}
+[2025-12-13 14:41:35,680][agent:runner:execute_step] [DEBUG] Processing step unpause_video on platform tiktok
+[2025-12-13 14:41:35,684][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step unpause_video: {}
+[2025-12-13 14:41:35,687][agent:runner:execute_tool] [INFO] Executing async tool unpause_fyp_video
+[2025-12-13 14:41:41,822][agent:monitoring:store] [INFO] Stored response for endpoint 'webcast'
+[2025-12-13 14:41:44,156][agent:monitoring:store] [INFO] Stored response for endpoint 'webcast'
+[2025-12-13 14:41:50,704][agent:toolbox:wrapper] [WARNING] Tool unpause_fyp_video returned non-dictionary result: None. This will not be added to the pipeline state.
+[2025-12-13 14:41:50,709][agent:runner:create_tool_result] [WARNING] Tool unpause_fyp_video returned non-dictionary result: <class 'NoneType'> - None
+[2025-12-13 14:41:50,712][agent:runner:execute_step_with_tool] [INFO] Step unpause_video execution completed with success=False
+[2025-12-13 14:41:50,714][agent:runner:execute_action] [ERROR] Action main_phase_foryou terminated early due to critical failure in step unpause_video: Tool unpause_fyp_video returned non-dictionary result: <class 'NoneType'> - None
+[2025-12-13 14:41:50,717][agent:runner:execute_action] [INFO] Finished action: main_phase_foryou
+[2025-12-13 14:41:50,719][agent:runner:resolve_dependencies_until_complete] [DEBUG] Completed actions after round: {'main_phase_foryou'}
+[2025-12-13 14:41:50,721][agent:runner:resolve_dependencies_until_complete] [INFO] All actions completed.
+[2025-12-13 14:41:50,967][agent:storage:save_endpoint_data] [INFO] Save response for endpoint 'recommend_item_list' to /data/1765636876.2939441/recommend_item_list.parquet
+[2025-12-13 14:41:51,004][agent:storage:save_endpoint_data] [INFO] Save response for endpoint 'webcast' to /data/1765636876.2939441/webcast.parquet
+[2025-12-13 14:41:51,007][agent:runner:execute_pipeline] [INFO] --- Pipeline Execution Finished for Experiment: drifting_study_main ---
+[2025-12-13 14:41:51,011][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-13 14:41:51,014][agent:output:display_execution_results] [INFO] PIPELINE EXECUTION RESULTS
+[2025-12-13 14:41:51,016][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-13 14:41:51,019][agent:output:display_execution_results] [INFO] 
+[2025-12-13 14:41:51,021][agent:output:display_execution_results] [INFO] ----------------------------------------
+[2025-12-13 14:41:51,023][agent:output:display_execution_results] [INFO] ACTION: MAIN_PHASE_FORYOU
+[2025-12-13 14:41:51,109][agent:output:display_execution_results] [INFO] ----------------------------------------
+[2025-12-13 14:41:51,112][agent:output:display_execution_results] [INFO] Step Execution Details:
+[2025-12-13 14:41:51,117][agent:output:display_execution_results] [INFO]   [OK] open_browser
+[2025-12-13 14:41:51,120][agent:output:display_execution_results] [INFO]   [OK] collect_network_data
+[2025-12-13 14:41:51,122][agent:output:display_execution_results] [INFO]   [OK] navigate_to_tiktok
+[2025-12-13 14:41:51,124][agent:output:display_execution_results] [INFO]   [OK] account_login
+[2025-12-13 14:41:51,126][agent:output:display_execution_results] [INFO]   [OK] start_dismiss_actions
+[2025-12-13 14:41:51,129][agent:output:display_execution_results] [INFO]   [OK] pause_video
+[2025-12-13 14:41:51,131][agent:output:display_execution_results] [INFO]   [FAIL] unpause_video (FAILED)
+[2025-12-13 14:41:51,133][agent:output:display_execution_results] [INFO] Action 'main_phase_foryou' Summary:
+[2025-12-13 14:41:51,135][agent:output:display_execution_results] [INFO]   Steps Count: 7
+[2025-12-13 14:41:51,138][agent:output:display_execution_results] [INFO]   Successful: 6
+[2025-12-13 14:41:51,141][agent:output:display_execution_results] [INFO]   Failed: 1
+[2025-12-13 14:41:51,143][agent:output:display_execution_results] [INFO]   Skipped: 0
+[2025-12-13 14:41:51,145][agent:output:display_execution_results] [INFO]   Success Rate: 85.7%
+[2025-12-13 14:41:51,147][agent:output:display_execution_results] [INFO] Error Details:
+[2025-12-13 14:41:51,149][agent:output:display_execution_results] [INFO]     • unpause_video: Tool unpause_fyp_video returned non-dictionary result: <class 'NoneType'> - None
+[2025-12-13 14:41:51,152][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-13 14:41:51,154][agent:output:display_execution_results] [INFO] PIPELINE EXECUTION SUMMARY
+[2025-12-13 14:41:51,156][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-13 14:41:51,159][agent:output:display_execution_results] [INFO] Pipeline ID: drifting_study_main
+[2025-12-13 14:41:51,161][agent:output:display_execution_results] [INFO] Actions Overview:
+[2025-12-13 14:41:51,163][agent:output:display_execution_results] [INFO]   Total Actions: 1
+[2025-12-13 14:41:51,166][agent:output:display_execution_results] [INFO]   Successful Actions: 0
+[2025-12-13 14:41:51,168][agent:output:display_execution_results] [INFO]   Failed Actions: 1
+[2025-12-13 14:41:51,170][agent:output:display_execution_results] [INFO] Steps Overview:
+[2025-12-13 14:41:51,173][agent:output:display_execution_results] [INFO]   Total Steps: 7
+[2025-12-13 14:41:51,175][agent:output:display_execution_results] [INFO]   Successful Steps: 6
+[2025-12-13 14:41:51,177][agent:output:display_execution_results] [INFO]   Failed Steps: 1
+[2025-12-13 14:41:51,180][agent:output:display_execution_results] [INFO]   Skipped Steps: 0
+[2025-12-13 14:41:51,182][agent:output:display_execution_results] [INFO]   Overall Success Rate: 85.7%
+[2025-12-13 14:41:51,184][agent:output:display_pipeline_complete] [INFO] Pipeline execution COMPLETED WITH ERRORS
+[2025-12-13 14:41:51,186][agent:output:display_pipeline_complete] [INFO] ============================================================
+[2025-12-13 14:41:51,188][agent:uploader:validate_upload_config] [INFO] Upload of collected data to repository is disabled in configuration.
+[2025-12-13 14:41:51,190][agent:main:run_pipeline] [WARNING] Pipeline completed with errors

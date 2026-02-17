@@ -1,0 +1,9 @@
+[2025-12-12 13:01:38,965][agent:captcha:act] [DEBUG] Starting CAPTCHA detection and dismissal process
+[2025-12-12 13:01:38,966][agent:captcha:act] [DEBUG] Checking for rotation CAPTCHA elements...
+[2025-12-12 13:01:39,709][agent:captcha:act] [DEBUG] No rotation CAPTCHA found on page - page is clean
+[2025-12-12 13:01:47,264][agent:captcha:act] [DEBUG] Starting CAPTCHA detection and dismissal process
+[2025-12-12 13:01:47,267][agent:captcha:act] [DEBUG] Checking for rotation CAPTCHA elements...
+[2025-12-12 13:01:47,354][agent:captcha:act] [DEBUG] No rotation CAPTCHA found on page - page is clean
+[2025-12-12 13:01:55,138][agent:captcha:act] [DEBUG] Starting CAPTCHA detection and dismissal process
+[2025-12-12 13:01:55,139][agent:captcha:act] [DEBUG] Checking for rotation CAPTCHA elements...
+[2025-12-12 13:01:55,721][agent:captcha:act] [DEBUG] No rotation CAPTCHA found on page - page is clean

@@ -1,0 +1,694 @@
+[2025-12-12 13:01:30,643][driver:find_browser:find_chrome_executable] [INFO] Searching for Chrome executable on Linux system
+[2025-12-12 13:01:30,646][driver:find_browser:find_chrome_executable] [DEBUG] Checking common Linux Chrome installation paths
+[2025-12-12 13:01:30,648][driver:find_browser:find_chrome_executable] [DEBUG] Checking path: /usr/bin/google-chrome
+[2025-12-12 13:01:30,650][driver:find_browser:find_chrome_executable] [INFO] Chrome executable found at: /usr/bin/google-chrome
+[2025-12-12 13:01:30,653][driver:utils:free_port] [DEBUG] Finding free port for browser connection
+[2025-12-12 13:01:30,656][driver:utils:free_port] [DEBUG] Found free port: 43165
+[2025-12-12 13:01:30,658][driver:browser:__init__] [INFO] Browser debugging port: 43165
+[2025-12-12 13:01:30,660][driver:browser:_initial_user_profile_dir] [INFO] Browser profile folder has been loaded /data/browser_storage
+[2025-12-12 13:01:30,663][driver:browser:__init__] [DEBUG] Browser launch arguments: ['--disable-dev-shm-usage', '--disable-accelerated-2d-canvas', '--disable-gpu', '--disable-backgrounding-occluded-windows', '--disable-features=TranslateUI,BlinkGenPropertyTrees', '--disable-ipc-flooding-protection', '--allow-running-insecure-content', '--enable-logging', '--v=1', '--enable-features=protocolMonitor', '--disable-notifications', '--disable-popup-blocking', '--disable-extensions', '--disable-component-extensions-with-background-pages', '--disable-default-apps', '--disable-hang-monitor', '--disable-prompt-on-repost', '--disable-client-side-phishing-detection', '--disable-sync', '--metrics-recording-only', '--no-first-run', '--password-store=basic', '--no-sandbox', '--lang=en-US', '--timezone=Europe/Paris', '--remote-debugging-port=54321', '--window-position=0,0', '--window-size=1920,1080', '--remote-debugging-host=127.0.0.1', '--remote-debugging-port=43165', '--user-data-dir=/data/browser_storage']
+[2025-12-12 13:01:30,666][driver:process:_resolve_executable] [DEBUG] Resolving executable path: /usr/bin/google-chrome
+[2025-12-12 13:01:30,668][driver:process:_resolve_executable] [DEBUG] Executable found at: /usr/bin/google-chrome
+[2025-12-12 13:01:30,670][driver:process:__init__] [DEBUG] Resolved executable path: /usr/bin/google-chrome
+[2025-12-12 13:01:30,674][driver:process:__init__] [DEBUG] ProcessManager initialized with executable: /usr/bin/google-chrome
+[2025-12-12 13:01:30,676][driver:browser:__init__] [DEBUG] Browser initialized with focus_mode=True
+[2025-12-12 13:01:30,678][driver:process:exucute_process] [INFO] Launching process: /usr/bin/google-chrome
+[2025-12-12 13:01:30,681][driver:process:exucute_process] [DEBUG] Command arguments: ['--disable-dev-shm-usage', '--disable-accelerated-2d-canvas', '--disable-gpu', '--disable-backgrounding-occluded-windows', '--disable-features=TranslateUI,BlinkGenPropertyTrees', '--disable-ipc-flooding-protection', '--allow-running-insecure-content', '--enable-logging', '--v=1', '--enable-features=protocolMonitor', '--disable-notifications', '--disable-popup-blocking', '--disable-extensions', '--disable-component-extensions-with-background-pages', '--disable-default-apps', '--disable-hang-monitor', '--disable-prompt-on-repost', '--disable-client-side-phishing-detection', '--disable-sync', '--metrics-recording-only', '--no-first-run', '--password-store=basic', '--no-sandbox', '--lang=en-US', '--timezone=Europe/Paris', '--remote-debugging-port=54321', '--window-position=0,0', '--window-size=1920,1080', '--remote-debugging-host=127.0.0.1', '--remote-debugging-port=43165', '--user-data-dir=/data/browser_storage']
+[2025-12-12 13:01:30,685][driver:process:exucute_process] [DEBUG] Process created with PID: 66
+[2025-12-12 13:01:30,687][driver:process:exucute_process] [DEBUG] Process monitoring task started
+[2025-12-12 13:01:30,689][driver:process:exucute_process] [INFO] Process started successfully (PID: 66)
+[2025-12-12 13:01:30,692][driver:browser:start] [INFO] Starting browser process
+[2025-12-12 13:01:30,695][driver:process:exucute_process] [WARNING] Process is already running, skipping launch
+[2025-12-12 13:01:30,698][driver:browser:start] [INFO] Retrieving WebSocket URL
+[2025-12-12 13:01:30,701][driver:browser:_get_websocket_url] [DEBUG] Attempting to get WebSocket URL from http://127.0.0.1:43165/json/version
+[2025-12-12 13:01:30,704][driver:process:_monitor_process] [DEBUG] Starting process monitoring for PID: 66
+[2025-12-12 13:01:30,705][driver:process:_monitor_process] [DEBUG] Created process monitoring tasks for exit, stdout, and stderr
+[2025-12-12 13:01:30,707][driver:process:_watch_process_exit] [DEBUG] Starting exit watcher for process 66
+[2025-12-12 13:01:30,708][driver:process:_handle_stream] [DEBUG] Starting stdout handler for process 66
+[2025-12-12 13:01:30,709][driver:process:_handle_stream] [DEBUG] Starting stderr handler for process 66
+[2025-12-12 13:01:30,711][driver:browser:_get_websocket_url] [DEBUG] Attempt 1: Failed to get debugger URL: http://127.0.0.1:43165/json/version - Cannot connect to host 127.0.0.1:43165 ssl:default [Connect call failed ('127.0.0.1', 43165)]
+[2025-12-12 13:01:31,044][driver:process:_default_output_handler] [ERROR] [STDERR] 
+[2025-12-12 13:01:31,046][driver:process:_default_output_handler] [ERROR] [STDERR] DevTools listening on ws://127.0.0.1:43165/devtools/browser/a6efb873-5f60-4950-ac51-8e578efd76dd
+[2025-12-12 13:01:31,262][driver:process:_default_output_handler] [ERROR] [STDERR] Created TensorFlow Lite XNNPACK delegate for CPU.
+[2025-12-12 13:01:31,716][driver:browser:_get_websocket_url] [DEBUG] Retrieved WebSocket URL: ws://127.0.0.1:43165/devtools/browser/a6efb873-5f60-4950-ac51-8e578efd76dd
+[2025-12-12 13:01:31,719][driver:browser:start] [INFO] Establishing browser connection
+[2025-12-12 13:01:31,722][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:43165/devtools/browser/a6efb873-5f60-4950-ac51-8e578efd76dd
+[2025-12-12 13:01:31,770][driver:connection:connect] [INFO] Successfully connected to ws://127.0.0.1:43165/devtools/browser/a6efb873-5f60-4950-ac51-8e578efd76dd
+[2025-12-12 13:01:31,773][driver:connection:connect] [DEBUG] WebSocket connection established with max_size=268435456, ping_interval=30s
+[2025-12-12 13:01:31,776][driver:connection:connect] [DEBUG] Message listener task started
+[2025-12-12 13:01:31,779][driver:domain_log_buffer:start] [DEBUG] Domain log buffer flush timer started
+[2025-12-12 13:01:31,781][driver:browser:start] [INFO] Initializing tab manager
+[2025-12-12 13:01:31,784][driver:browser:start] [DEBUG] Enabling target discovery
+[2025-12-12 13:01:31,787][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Target.setDiscoverTargets
+[2025-12-12 13:01:31,830][driver:connection:send] [DEBUG] {'id': 1, 'method': 'Target.setDiscoverTargets', 'params': {'discover': True}}
+[2025-12-12 13:01:31,832][driver:connection:send] [DEBUG] Sending: Target.setDiscoverTargets (id=1)
+[2025-12-12 13:01:31,835][driver:connection:_listen_for_messages] [INFO] Starting WebSocket message listener
+[2025-12-12 13:01:31,838][driver:connection:_process_message] [DEBUG] Processing message with id: 1
+[2025-12-12 13:01:31,839][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Target.setDiscoverTargets completed in 0.01 seconds
+[2025-12-12 13:01:31,841][driver:browser:start] [INFO] Discovering existing tabs
+[2025-12-12 13:01:31,844][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Target.getTargets
+[2025-12-12 13:01:31,847][driver:connection:send] [DEBUG] {'id': 2, 'method': 'Target.getTargets'}
+[2025-12-12 13:01:31,850][driver:connection:send] [DEBUG] Sending: Target.getTargets (id=2)
+[2025-12-12 13:01:31,853][driver:connection:_process_message] [DEBUG] Processing message with id: 2
+[2025-12-12 13:01:31,855][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Target.getTargets completed in 0.01 seconds
+[2025-12-12 13:01:31,857][driver:tab_manager:discover_tabs] [DEBUG] New tab was discovered !
+[2025-12-12 13:01:31,859][driver:tab:__init__] [INFO] Creating new tab with target ID: 270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:31,862][driver:tab:__init__] [DEBUG] Tab WebSocket URL: ws://127.0.0.1:43165/devtools/page/270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:31,865][driver:tab:__init__] [DEBUG] Tab initialized with domains to enable: ['Page', 'Runtime', 'Network', 'DOM', 'Media']
+[2025-12-12 13:01:31,867][driver:tab:connect] [DEBUG] Connecting tab 270A2D8541D97C654ADAA4FF61E44D51 to ws://127.0.0.1:43165/devtools/page/270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:31,870][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:43165/devtools/page/270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:31,874][driver:connection:connect] [INFO] Successfully connected to ws://127.0.0.1:43165/devtools/page/270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:31,877][driver:connection:connect] [DEBUG] WebSocket connection established with max_size=268435456, ping_interval=30s
+[2025-12-12 13:01:31,880][driver:connection:connect] [DEBUG] Message listener task started
+[2025-12-12 13:01:31,883][driver:domain_log_buffer:start] [DEBUG] Domain log buffer flush timer started
+[2025-12-12 13:01:31,885][driver:tab:connect] [INFO] Tab 270A2D8541D97C654ADAA4FF61E44D51 connected successfully
+[2025-12-12 13:01:31,888][driver:browser:start] [INFO] Found None existing tabs
+[2025-12-12 13:01:31,891][driver:browser:start] [DEBUG] Initializing browser events
+[2025-12-12 13:01:31,894][driver:browser:_init_events] [INFO] Registering browser target event handlers
+[2025-12-12 13:01:31,896][driver:connection:on] [DEBUG] Event type Target.targetDestroyed was added into event handlers.
+[2025-12-12 13:01:31,899][driver:connection:on] [DEBUG] Handler on_target_destroyed was added into event handlers Target.targetDestroyed.
+[2025-12-12 13:01:31,901][driver:browser:_init_events] [DEBUG] Registering focus mode event handlers
+[2025-12-12 13:01:31,903][driver:connection:on] [DEBUG] Event type Target.targetCreated was added into event handlers.
+[2025-12-12 13:01:31,906][driver:connection:on] [DEBUG] Handler on_target_focus was added into event handlers Target.targetCreated.
+[2025-12-12 13:01:31,908][driver:connection:on] [DEBUG] Event type Target.targetInfoChanged was added into event handlers.
+[2025-12-12 13:01:31,910][driver:connection:on] [DEBUG] Handler on_target_focus was added into event handlers Target.targetInfoChanged.
+[2025-12-12 13:01:31,913][driver:browser:start] [INFO] Browser started successfully
+[2025-12-12 13:01:31,915][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Browser.setDownloadBehavior
+[2025-12-12 13:01:31,919][driver:connection:send] [DEBUG] {'id': 3, 'method': 'Browser.setDownloadBehavior', 'params': {'behavior': 'allowAndName', 'downloadPath': '/data/1765544487.1557252/downloads', 'eventsEnabled': True}}
+[2025-12-12 13:01:31,921][driver:connection:send] [DEBUG] Sending: Browser.setDownloadBehavior (id=3)
+[2025-12-12 13:01:31,924][driver:connection:_listen_for_messages] [INFO] Starting WebSocket message listener
+[2025-12-12 13:01:31,926][driver:connection:_process_message] [DEBUG] Processing message with id: 3
+[2025-12-12 13:01:31,927][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Browser.setDownloadBehavior completed in 0.01 seconds
+[2025-12-12 13:01:31,932][driver:connection:on] [DEBUG] Event type Media.playerEventsAdded was added into event handlers.
+[2025-12-12 13:01:31,935][driver:connection:on] [DEBUG] Handler _event_added_responce was added into event handlers Media.playerEventsAdded.
+[2025-12-12 13:01:31,937][driver:connection:on] [DEBUG] Create task for enable domain Media.
+[2025-12-12 13:01:31,956][driver:connection:on] [DEBUG] Event type Network.requestWillBeSent was added into event handlers.
+[2025-12-12 13:01:31,958][driver:connection:on] [DEBUG] Handler _on_request was added into event handlers Network.requestWillBeSent.
+[2025-12-12 13:01:31,961][driver:connection:on] [DEBUG] Create task for enable domain Network.
+[2025-12-12 13:01:31,963][driver:connection:on] [DEBUG] Event type Network.loadingFinished was added into event handlers.
+[2025-12-12 13:01:31,965][driver:connection:on] [DEBUG] Handler _on_loading_finished was added into event handlers Network.loadingFinished.
+[2025-12-12 13:01:31,967][driver:connection:on] [DEBUG] Create task for enable domain Network.
+[2025-12-12 13:01:31,969][driver:endpoint_watcher:_setup_event_handlers] [DEBUG] Network event handlers registered
+[2025-12-12 13:01:31,971][driver:endpoint_watcher:__init__] [INFO] MultiEndpointWatcher initialized
+[2025-12-12 13:01:31,974][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'comment_list' with pattern: https://www.tiktok.com/api/comment/list/
+[2025-12-12 13:01:31,976][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'recommend_item_list' with pattern: https://www.tiktok.com/api/recommend/item_list
+[2025-12-12 13:01:31,979][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'search_general_full' with pattern: https://www.tiktok.com/api/search/general/full/
+[2025-12-12 13:01:31,981][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'search_general_preview' with pattern: https://www.tiktok.com/api/search/general/preview/
+[2025-12-12 13:01:31,984][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'user_detail' with pattern: https://www.tiktok.com/api/user/detail/
+[2025-12-12 13:01:31,986][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'webcast' with pattern: https://webcast.tiktok.com/webcast/room/check_alive/
+[2025-12-12 13:01:32,003][driver:tab:attach] [DEBUG] Attaching to tab 270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:32,006][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Target.attachToTarget
+[2025-12-12 13:01:32,008][driver:connection:send] [DEBUG] {'id': 1, 'method': 'Target.attachToTarget', 'params': {'targetId': TargetID('270A2D8541D97C654ADAA4FF61E44D51'), 'flatten': True}}
+[2025-12-12 13:01:32,010][driver:connection:send] [DEBUG] Sending: Target.attachToTarget (id=1)
+[2025-12-12 13:01:32,030][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Media
+[2025-12-12 13:01:32,032][driver:connection:send] [DEBUG] {'id': 4, 'method': 'Media.enable'}
+[2025-12-12 13:01:32,034][driver:connection:send] [DEBUG] Sending: Media.enable (id=4)
+[2025-12-12 13:01:32,036][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Network
+[2025-12-12 13:01:32,040][driver:connection:send] [DEBUG] {'id': 5, 'method': 'Network.enable'}
+[2025-12-12 13:01:32,042][driver:connection:send] [DEBUG] Sending: Network.enable (id=5)
+[2025-12-12 13:01:32,044][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Network
+[2025-12-12 13:01:32,045][driver:connection:send] [DEBUG] {'id': 6, 'method': 'Network.enable'}
+[2025-12-12 13:01:32,047][driver:connection:send] [DEBUG] Sending: Network.enable (id=6)
+[2025-12-12 13:01:32,049][driver:connection:_process_message] [DEBUG] Processing message with id: 1
+[2025-12-12 13:01:32,052][driver:connection:_process_message] [DEBUG] Processing message with id: 4
+[2025-12-12 13:01:32,053][driver:connection:_process_message] [DEBUG] Processing message with id: 5
+[2025-12-12 13:01:32,055][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Target.attachToTarget completed in 0.05 seconds
+[2025-12-12 13:01:32,058][driver:tab:attach] [INFO] Successfully attached to tab 270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:32,061][driver:tab:attach] [DEBUG] Enabling domains for tab 270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:32,064][driver:tab:_enable_domains] [DEBUG] Enabling domain Page for tab 270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:32,067][driver:tab:attach] [DEBUG] Tab 270A2D8541D97C654ADAA4FF61E44D51 already attached, skipping
+[2025-12-12 13:01:32,069][driver:connection:send] [DEBUG] {'id': 7, 'method': 'Page.enable'}
+[2025-12-12 13:01:32,073][driver:connection:send] [DEBUG] Sending: Page.enable (id=7)
+[2025-12-12 13:01:32,076][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Media
+[2025-12-12 13:01:32,078][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Network
+[2025-12-12 13:01:32,079][driver:connection:_process_message] [DEBUG] Processing message with id: 6
+[2025-12-12 13:01:32,080][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Network
+[2025-12-12 13:01:32,082][driver:connection:_process_message] [DEBUG] Processing message with id: 7
+[2025-12-12 13:01:32,084][driver:tab:_enable_domains] [DEBUG] Enabling domain Runtime for tab 270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:32,087][driver:tab:attach] [DEBUG] Tab 270A2D8541D97C654ADAA4FF61E44D51 already attached, skipping
+[2025-12-12 13:01:32,090][driver:connection:send] [DEBUG] {'id': 8, 'method': 'Runtime.enable'}
+[2025-12-12 13:01:32,093][driver:connection:send] [DEBUG] Sending: Runtime.enable (id=8)
+[2025-12-12 13:01:32,247][driver:connection:_process_message] [DEBUG] Processing message with id: 2
+[2025-12-12 13:01:32,406][driver:connection:_process_message] [DEBUG] Processing message with id: 3
+[2025-12-12 13:01:32,412][driver:connection:_process_message] [DEBUG] Processing message with id: 8
+[2025-12-12 13:01:32,414][driver:tab:_enable_domains] [DEBUG] Enabling domain Network for tab 270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:32,416][driver:tab:attach] [DEBUG] Tab 270A2D8541D97C654ADAA4FF61E44D51 already attached, skipping
+[2025-12-12 13:01:32,419][driver:connection:send] [DEBUG] {'id': 9, 'method': 'Network.enable'}
+[2025-12-12 13:01:32,421][driver:connection:send] [DEBUG] Sending: Network.enable (id=9)
+[2025-12-12 13:01:32,425][driver:connection:_process_message] [DEBUG] Processing message with id: 9
+[2025-12-12 13:01:32,426][driver:tab:_enable_domains] [DEBUG] Enabling domain DOM for tab 270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:32,428][driver:tab:attach] [DEBUG] Tab 270A2D8541D97C654ADAA4FF61E44D51 already attached, skipping
+[2025-12-12 13:01:32,431][driver:connection:send] [DEBUG] {'id': 10, 'method': 'DOM.enable'}
+[2025-12-12 13:01:32,433][driver:connection:send] [DEBUG] Sending: DOM.enable (id=10)
+[2025-12-12 13:01:32,437][driver:connection:_process_message] [DEBUG] Processing message with id: 10
+[2025-12-12 13:01:32,438][driver:tab:_enable_domains] [DEBUG] Enabling domain Media for tab 270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:32,440][driver:tab:attach] [DEBUG] Tab 270A2D8541D97C654ADAA4FF61E44D51 already attached, skipping
+[2025-12-12 13:01:32,442][driver:connection:send] [DEBUG] {'id': 11, 'method': 'Media.enable'}
+[2025-12-12 13:01:32,445][driver:connection:send] [DEBUG] Sending: Media.enable (id=11)
+[2025-12-12 13:01:32,448][driver:connection:_process_message] [DEBUG] Processing message with id: 11
+[2025-12-12 13:01:32,449][driver:tab:_enable_domains] [DEBUG] Enabled 5/5 domains for tab 270A2D8541D97C654ADAA4FF61E44D51
+[2025-12-12 13:01:32,451][driver:tab:navigate] [INFO] Navigating tab 270A2D8541D97C654ADAA4FF61E44D51 to: https://www.tiktok.com/
+[2025-12-12 13:01:32,453][driver:tab:navigate] [DEBUG] Navigation wait event: networkIdle
+[2025-12-12 13:01:32,455][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Page.navigate
+[2025-12-12 13:01:32,458][driver:connection:send] [DEBUG] {'id': 12, 'method': 'Page.navigate', 'params': {'url': 'https://www.tiktok.com/'}}
+[2025-12-12 13:01:32,460][driver:connection:send] [DEBUG] Sending: Page.navigate (id=12)
+[2025-12-12 13:01:33,201][driver:connection:_process_message] [DEBUG] Processing message with id: 12
+[2025-12-12 13:01:33,203][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:Page.navigate took 0.75 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-12 13:01:33,206][driver:tab:navigate] [DEBUG] Waiting for 'networkIdle' event
+[2025-12-12 13:01:33,210][driver:connection:on] [DEBUG] Event type Page.lifecycleEvent was added into event handlers.
+[2025-12-12 13:01:33,213][driver:connection:on] [DEBUG] Handler _on_lifecycle_event was added into event handlers Page.lifecycleEvent.
+[2025-12-12 13:01:33,216][driver:connection:on] [DEBUG] Create task for enable domain Page.
+[2025-12-12 13:01:33,220][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Page
+[2025-12-12 13:01:33,224][driver:connection:send] [DEBUG] {'id': 13, 'method': 'Page.enable'}
+[2025-12-12 13:01:33,226][driver:connection:send] [DEBUG] Sending: Page.enable (id=13)
+[2025-12-12 13:01:33,296][driver:connection:_process_message] [DEBUG] Processing message with id: 13
+[2025-12-12 13:01:33,301][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Page
+[2025-12-12 13:01:33,557][driver:connection:_process_message] [DEBUG] Processing message with id: 14
+[2025-12-12 13:01:34,393][driver:connection:_process_message] [DEBUG] Processing message with id: 15
+[2025-12-12 13:01:34,443][driver:endpoint_watcher:_on_request] [INFO] Watching request 182.328 for endpoint 'recommend_item_list': https://www.tiktok.com/api/recommend/item_list/?WebIdLastTime=1765300586&aid=1988&app_language=en&app_name=tiktok_web&browser_language=en-US&browser_name=Mozilla&browser_online=true&browser_platform=Linux%20x86_64&browser_version=5.0%20%28X11%3B%20Linux%20x86_64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F143.0.0.0%20Safari%2F537.36&channel=tiktok_web&clientABVersions=70508271%2C72437276%2C73547759%2C73720540%2C74444735%2C74446916%2C74757744%2C74780476%2C74782565%2C74813746%2C74852655%2C74869499%2C74894691%2C74902367%2C74907602%2C74926161%2C74957746%2C74970061%2C74973672%2C74976256%2C74983393%2C74983940%2C74987203%2C74991529%2C74998868%2C75001422%2C75005877%2C75014049%2C75014657%2C75026334%2C75034908%2C75036735%2C75038625%2C75041555%2C75045554%2C75045731%2C75045920%2C75048550%2C75069884%2C75074404%2C75081929%2C75081996%2C75094426%2C75103455%2C75108292%2C75112497%2C75114547%2C75122539%2C75125467%2C75154302%2C75158103%2C70138197%2C70156809%2C70405643%2C70772958%2C71057832%2C71200802%2C71381811%2C71516509%2C71803300%2C71962127%2C72360691%2C72408100%2C72854054%2C72892778%2C73171280%2C73208420%2C73989921%2C74276218%2C74844724&cookie_enabled=true&count=6&coverFormat=2&cpu_core_number=4&dark_mode=false&data_collection_enabled=true&day_of_week=5&device_id=7581908279648257558&device_platform=web_pc&device_score=7&device_type=web_h264&enable_cache=false&focus_state=true&from_page=fyp&history_len=2&isNonPersonalized=false&is_fullscreen=false&is_new_user=false&is_page_visible=true&itemID=&language=en&launch_mode=direct&network=1.45&odinId=7581876153998476310&os=linux&priority_region=DE&pullType=1&referer=&region=DE&screen_height=1080&screen_width=1920&showAboutThisAd=true&showAds=true&time_of_day=13&tz_name=UTC&video_encoding=&vv_count=358&vv_count_fyp=333&watchLiveLastTime=&webcast_language=en&window_height=940&window_width=1919&msToken=rba09CrSex9MMJBrH2htxLaOfoa7ehgedIjEHF4Saus74iTlnRBPq5ZBzPk3n6KIMB6pwK12XXFWHaBESsvqPFfzcMhw2tjeTMsAME7JjbZyIiXJFOVucAR9vwincY3BvhAM3xQqR1EUFPSVuXJssCgF&X-Bogus=DFSzsIVOktTAN9rGCYNIfAvDKKMq&X-Gnarly=MwPD-m3CrrJ/0cCaTOOQxWsn5Gs-RXoSnU-ieH0o25TJgQeavMJs/fwv2mIJd6C5j4tegJSGgw2euTDDr10HZXWeWAoGPBebZ3RZfUqM/sFkT1SgPv91qT7-HiGxMb2Z/GeOGlDHj1fjDIDAZEuXnVxYpjgPQsbBJt7kb5Kd6s-kuk7ZymzohL64FjLX1-QvBAIeCSBaozMyYY8owCGMo8WPeUaWYk66dlbXAQhFQNIKtZKoYF4bk4TeyLTQF/ifhjq0U86AF4lzDLk4aUc0Y1dGAG5Kock9KW4IgZ2OkDDOyIOMduZ1NmMihkNLGMwG2VR=
+[2025-12-12 13:01:34,920][driver:connection:_process_message] [DEBUG] Processing message with id: 16
+[2025-12-12 13:01:35,872][driver:connection:_process_message] [DEBUG] Processing message with id: 17
+[2025-12-12 13:01:36,556][driver:connection:_process_message] [DEBUG] Processing message with id: 18
+[2025-12-12 13:01:36,581][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Network.getResponseBody
+[2025-12-12 13:01:36,585][driver:connection:send] [DEBUG] {'id': 19, 'method': 'Network.getResponseBody', 'params': {'requestId': RequestId('182.328')}}
+[2025-12-12 13:01:36,587][driver:connection:send] [DEBUG] Sending: Network.getResponseBody (id=19)
+[2025-12-12 13:01:36,838][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['Target']
+[2025-12-12 13:01:36,841][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 6 messages to /data/1765544487.1557252/network/browser_connection/Target.json
+[2025-12-12 13:01:36,885][driver:connection:_process_message] [DEBUG] Processing message with id: 19
+[2025-12-12 13:01:36,896][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:Network.getResponseBody took 0.31 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:36,926][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['Target', 'DOM']
+[2025-12-12 13:01:36,929][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 1 messages to /data/1765544487.1557252/network/270A2D8541D97C654ADAA4FF61E44D51/Target.json
+[2025-12-12 13:01:36,931][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 2 messages to /data/1765544487.1557252/network/270A2D8541D97C654ADAA4FF61E44D51/DOM.json
+[2025-12-12 13:01:37,860][driver:connection:_process_message] [DEBUG] Processing message with id: 20
+[2025-12-12 13:01:38,221][driver:lifecycle_watcher:_on_timeout] [WARNING] Navigation timeout after 5s waiting for 'networkIdle'
+[2025-12-12 13:01:38,224][driver:tab:navigate] [WARNING] Navigation timeout waiting for 'networkIdle' event at https://www.tiktok.com/
+[2025-12-12 13:01:38,230][driver:tab:navigate] [DEBUG] Navigation will continue despite timeout
+[2025-12-12 13:01:38,260][driver:flow:execute] [INFO] Start Flow: 'Check if user is logged in' (1 steps).
+[2025-12-12 13:01:38,267][driver:flow:execute] [INFO] Flow: 'Check if user is logged in' (1 of 1 steps) - Check if user is logged in
+[2025-12-12 13:01:38,273][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: VerifyNodeAttribute
+[2025-12-12 13:01:38,276][driver:base:act] [DEBUG] Verify if 'attribute check on '//a[@data-e2e='nav-profile']''.
+[2025-12-12 13:01:38,278][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-12 13:01:38,281][driver:connection:send] [DEBUG] {'id': 22, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-12 13:01:38,285][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=22)
+[2025-12-12 13:01:38,319][driver:connection:_process_message] [DEBUG] Processing message with id: 21
+[2025-12-12 13:01:38,442][driver:connection:_process_message] [DEBUG] Processing message with id: 22
+[2025-12-12 13:01:38,448][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.17 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-12 13:01:38,474][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-12 13:01:38,477][driver:connection:send] [DEBUG] {'id': 23, 'method': 'DOM.performSearch', 'params': {'query': "//a[@data-e2e='nav-profile']"}}
+[2025-12-12 13:01:38,480][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=23)
+[2025-12-12 13:01:38,493][driver:connection:_process_message] [DEBUG] Processing message with id: 23
+[2025-12-12 13:01:38,495][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.02 seconds
+[2025-12-12 13:01:38,500][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-12 13:01:38,504][driver:connection:send] [DEBUG] {'id': 24, 'method': 'DOM.getSearchResults', 'params': {'searchId': '182.0', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-12 13:01:38,508][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=24)
+[2025-12-12 13:01:38,603][driver:connection:_process_message] [DEBUG] Processing message with id: 24
+[2025-12-12 13:01:38,605][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getSearchResults took 0.10 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-12 13:01:38,610][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-12 13:01:38,615][driver:connection:send] [DEBUG] {'id': 25, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '182.0'}}
+[2025-12-12 13:01:38,619][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=25)
+[2025-12-12 13:01:38,648][driver:connection:_process_message] [DEBUG] Processing message with id: 25
+[2025-12-12 13:01:38,651][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.discardSearchResults completed in 0.04 seconds
+[2025-12-12 13:01:38,655][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //a[@data-e2e='nav-profile'] query.
+[2025-12-12 13:01:38,659][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-12 13:01:38,665][driver:connection:send] [DEBUG] {'id': 26, 'method': 'DOM.describeNode', 'params': {'nodeId': 447, 'pierce': True}}
+[2025-12-12 13:01:38,669][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=26)
+[2025-12-12 13:01:38,785][driver:connection:_process_message] [DEBUG] Processing message with id: 26
+[2025-12-12 13:01:38,787][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.describeNode took 0.12 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-12 13:01:38,791][driver:by_query_or_selector:locate_element] [DEBUG] Element found by text query: //a[@data-e2e='nav-profile']
+[2025-12-12 13:01:38,794][driver:element:get_node_attrs] [DEBUG] Converting attributes for node NodeId(447)
+[2025-12-12 13:01:38,797][driver:element:get_node_attrs] [DEBUG] Node has 4 attributes
+[2025-12-12 13:01:38,800][driver:element:get_node_attrs] [DEBUG] Converted attributes: {'data-e2e': 'nav-profile', 'tabindex': '-1', 'class_': 'link-a11y-focus', 'href': '/@user5072442832394'}
+[2025-12-12 13:01:38,803][driver:attribute:_verify] [DEBUG] Attribute check passed for //a[@data-e2e='nav-profile']
+[2025-12-12 13:01:38,805][driver:base:act] [DEBUG] Verification passed: 'attribute check on '//a[@data-e2e='nav-profile']''.
+[2025-12-12 13:01:38,808][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 succeeded: VerifyNodeAttribute
+[2025-12-12 13:01:38,911][driver:flow:_execute_step_with_retry] [INFO] Step 'Check if user is logged in' completed successfully
+[2025-12-12 13:01:38,914][driver:flow:execute] [INFO] Flow 'Check if user is logged in': Completed successfully
+[2025-12-12 13:01:38,942][driver:tab:attach] [DEBUG] Tab 270A2D8541D97C654ADAA4FF61E44D51 already attached, skipping
+[2025-12-12 13:01:38,944][driver:tab:navigate] [INFO] Navigating tab 270A2D8541D97C654ADAA4FF61E44D51 to: https://www.tiktok.com/foryou
+[2025-12-12 13:01:38,946][driver:tab:navigate] [DEBUG] Navigation wait event: networkIdle
+[2025-12-12 13:01:38,949][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Page.navigate
+[2025-12-12 13:01:38,951][driver:connection:send] [DEBUG] {'id': 28, 'method': 'Page.navigate', 'params': {'url': 'https://www.tiktok.com/foryou'}}
+[2025-12-12 13:01:38,953][driver:connection:send] [DEBUG] Sending: Page.navigate (id=28)
+[2025-12-12 13:01:39,188][driver:connection:_process_message] [DEBUG] Processing message with id: 27
+[2025-12-12 13:01:39,221][driver:connection:_process_message] [DEBUG] Processing message with id: 29
+[2025-12-12 13:01:39,628][driver:connection:_process_message] [DEBUG] Processing message with id: 31
+[2025-12-12 13:01:39,637][driver:connection:_process_message] [DEBUG] Processing message with id: 28
+[2025-12-12 13:01:39,639][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:Page.navigate took 0.69 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:39,641][driver:tab:navigate] [DEBUG] Waiting for 'networkIdle' event
+[2025-12-12 13:01:39,644][driver:connection:on] [DEBUG] Handler _on_lifecycle_event was added into event handlers Page.lifecycleEvent.
+[2025-12-12 13:01:39,706][driver:connection:_process_message] [DEBUG] Processing message with id: 30
+[2025-12-12 13:01:39,801][driver:connection:_process_message] [DEBUG] Processing message with id: 32
+[2025-12-12 13:01:39,977][driver:connection:_process_message] [DEBUG] Processing message with id: 33
+[2025-12-12 13:01:40,036][driver:connection:_process_message] [DEBUG] Processing message with id: 34
+[2025-12-12 13:01:40,060][driver:connection:_process_message] [DEBUG] Processing message with id: 35
+[2025-12-12 13:01:40,160][driver:endpoint_watcher:_on_request] [INFO] Watching request 182.836 for endpoint 'recommend_item_list': https://www.tiktok.com/api/recommend/item_list/?WebIdLastTime=1765300586&aid=1988&app_language=en&app_name=tiktok_web&browser_language=en-US&browser_name=Mozilla&browser_online=true&browser_platform=Linux%20x86_64&browser_version=5.0%20%28X11%3B%20Linux%20x86_64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F143.0.0.0%20Safari%2F537.36&channel=tiktok_web&clientABVersions=70508271%2C72437276%2C73547759%2C73720540%2C74444735%2C74446916%2C74757744%2C74780476%2C74782565%2C74813746%2C74852655%2C74869499%2C74894691%2C74902367%2C74907602%2C74926161%2C74957746%2C74970061%2C74973672%2C74976256%2C74983393%2C74983940%2C74987203%2C74991529%2C74998868%2C75001422%2C75005877%2C75014049%2C75014657%2C75026334%2C75034908%2C75036735%2C75038625%2C75041555%2C75045554%2C75045731%2C75045920%2C75048550%2C75069884%2C75074404%2C75081929%2C75081996%2C75094426%2C75103455%2C75108292%2C75112497%2C75114547%2C75122539%2C75125467%2C75154302%2C75158103%2C70138197%2C70156809%2C70405643%2C70772958%2C71057832%2C71200802%2C71381811%2C71516509%2C71803300%2C71962127%2C72360691%2C72408100%2C72854054%2C72892778%2C73171280%2C73208420%2C73989921%2C74276218%2C74844724&cookie_enabled=true&count=6&coverFormat=2&cpu_core_number=4&dark_mode=false&data_collection_enabled=true&day_of_week=5&device_id=7581908279648257558&device_platform=web_pc&enable_cache=false&focus_state=true&history_len=3&isNonPersonalized=false&is_fullscreen=false&is_new_user=false&is_page_visible=true&itemID=foryou&language=en&odinId=7581876153998476310&os=linux&priority_region=DE&pullType=1&referer=&region=DE&screen_height=1080&screen_width=1920&showAboutThisAd=true&showAds=true&time_of_day=13&tz_name=UTC&video_encoding=&vv_count=358&vv_count_fyp=333&watchLiveLastTime=&webcast_language=en&msToken=qDp3minbmqvmxQyZ96-itmyMf3ptA0j6IAREsxuKrQB4yeKm-ocMN-BpeBfhfJlB-Ze-bPBChDsscv7a0Hcgz8g04Lcc5LNJTRnd_mNdn_NCbTrcbMpD689GbRr5r4aD4NEZbtFsfRKecpRUi1ge8vVd&X-Bogus=DFSzsIVOPEzAN9rGCYNIICvDKK/h&X-Gnarly=MxJwc87pHaQ0V6NU5jmwJ52HK7cWnNEQy8JKvJxyrM9ClRwl/SryXAUPKiJFKnSCGV/iSS8MrklZdhkkooeqdwB3l5x/UualGRkac8k7YJdo5uTTgHY8sbDLMmmMcLoZvccy-TEDA8qxnrX1rOPoxJ/jX90D6LqKTj/ewfR6oRHaEuY48WCM2Ddl1s8EOfdydNVjgATnVEFUUCl4X1aKMigdy9oOduHG2bvDfyaf6-vLX7WQMZHc7jk6I9Paq4kQxlzUZDoQt3VZIXOvPFrztAWBbPl1DAJPMtaQZygH8EY1/yV1LalxU0WHYocjtGQSYTv=
+[2025-12-12 13:01:40,168][driver:connection:_process_message] [DEBUG] Processing message with id: 36
+[2025-12-12 13:01:40,186][driver:connection:_process_message] [DEBUG] Processing message with id: 37
+[2025-12-12 13:01:40,221][driver:endpoint_watcher:_on_request] [INFO] Watching request 182.840 for endpoint 'recommend_item_list': https://www.tiktok.com/api/recommend/item_list/?WebIdLastTime=1765300586&aid=1988&app_language=en&app_name=tiktok_web&browser_language=en-US&browser_name=Mozilla&browser_online=true&browser_platform=Linux%20x86_64&browser_version=5.0%20%28X11%3B%20Linux%20x86_64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F143.0.0.0%20Safari%2F537.36&channel=tiktok_web&clientABVersions=70508271%2C72437276%2C73547759%2C73720540%2C74444735%2C74446916%2C74757744%2C74780476%2C74782565%2C74813746%2C74852655%2C74869499%2C74894691%2C74902367%2C74907602%2C74926161%2C74957746%2C74970061%2C74973672%2C74976256%2C74983393%2C74983940%2C74987203%2C74991529%2C74998868%2C75001422%2C75005877%2C75014049%2C75014657%2C75026334%2C75034908%2C75036735%2C75038625%2C75041555%2C75045554%2C75045731%2C75045920%2C75048550%2C75069884%2C75074404%2C75081929%2C75081996%2C75094426%2C75103455%2C75108292%2C75112497%2C75114547%2C75122539%2C75125467%2C75154302%2C75158103%2C70138197%2C70156809%2C70405643%2C70772958%2C71057832%2C71200802%2C71381811%2C71516509%2C71803300%2C71962127%2C72360691%2C72408100%2C72854054%2C72892778%2C73171280%2C73208420%2C73989921%2C74276218%2C74844724&cookie_enabled=true&count=6&coverFormat=2&cpu_core_number=4&dark_mode=false&data_collection_enabled=true&day_of_week=5&device_id=7581908279648257558&device_platform=web_pc&device_score=7&device_type=web_h264&enable_cache=false&focus_state=true&from_page=fyp&history_len=3&isNonPersonalized=false&is_fullscreen=false&is_new_user=false&is_page_visible=true&itemID=&language=en&launch_mode=direct&network=1.45&odinId=7581876153998476310&os=linux&priority_region=DE&pullType=1&referer=&region=DE&screen_height=1080&screen_width=1920&showAboutThisAd=true&showAds=true&time_of_day=13&tz_name=UTC&video_encoding=&vv_count=358&vv_count_fyp=333&watchLiveLastTime=&webcast_language=en&window_height=940&window_width=1919&msToken=qDp3minbmqvmxQyZ96-itmyMf3ptA0j6IAREsxuKrQB4yeKm-ocMN-BpeBfhfJlB-Ze-bPBChDsscv7a0Hcgz8g04Lcc5LNJTRnd_mNdn_NCbTrcbMpD689GbRr5r4aD4NEZbtFsfRKecpRUi1ge8vVd&X-Bogus=DFSzsIVONssAN9rGCYNIICvDKK8C&X-Gnarly=MJhKV9iSewNGQ6ujiu/47qGxpZKueGSD0mm3MukwBSLdtdQuIYgHj7z9E0Ndgdc6lfiaOU6I25TrA54IdheG7H8gMFOdgtByOUS1dnMemLd/ER98EtErgmIdl1TSjpXRYU5/3y7c/SQyVimj62lkeY01emfdqBnI6VoiuDQF6JyKf228CwasTtZDKfKpRFJ4KO1IxIjuxmZo2XC3hxsUCKZ9kuy/BEoGZa2Uso8e82VkiljVwzk4DFh99pGgU3yAbJ78kO4W6zqJMla3bo1YMJxy0LcahjsnimZDJCZSiKrrGuDKXu940ncKLw/q-FHMAqu=
+[2025-12-12 13:01:40,228][driver:connection:_process_message] [DEBUG] Processing message with id: 38
+[2025-12-12 13:01:40,257][driver:connection:_process_message] [DEBUG] Processing message with id: 40
+[2025-12-12 13:01:40,479][driver:connection:_process_message] [DEBUG] Processing message with id: 39
+[2025-12-12 13:01:40,850][driver:connection:_process_message] [DEBUG] Processing message with id: 41
+[2025-12-12 13:01:41,297][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Network.getResponseBody
+[2025-12-12 13:01:41,299][driver:connection:send] [DEBUG] {'id': 42, 'method': 'Network.getResponseBody', 'params': {'requestId': RequestId('182.836')}}
+[2025-12-12 13:01:41,300][driver:connection:send] [DEBUG] Sending: Network.getResponseBody (id=42)
+[2025-12-12 13:01:41,332][driver:connection:_process_message] [DEBUG] Processing message with id: 42
+[2025-12-12 13:01:41,334][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Network.getResponseBody completed in 0.04 seconds
+[2025-12-12 13:01:41,718][driver:connection:_process_message] [DEBUG] Processing message with id: 43
+[2025-12-12 13:01:41,844][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['Target']
+[2025-12-12 13:01:41,846][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 1 messages to /data/1765544487.1557252/network/browser_connection/Target.json
+[2025-12-12 13:01:41,934][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['DOM']
+[2025-12-12 13:01:41,957][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 481 messages to /data/1765544487.1557252/network/270A2D8541D97C654ADAA4FF61E44D51/DOM.json
+[2025-12-12 13:01:42,092][driver:connection:_process_message] [DEBUG] Processing message with id: 44
+[2025-12-12 13:01:42,104][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Network.getResponseBody
+[2025-12-12 13:01:42,106][driver:connection:send] [DEBUG] {'id': 45, 'method': 'Network.getResponseBody', 'params': {'requestId': RequestId('182.840')}}
+[2025-12-12 13:01:42,107][driver:connection:send] [DEBUG] Sending: Network.getResponseBody (id=45)
+[2025-12-12 13:01:42,185][driver:connection:_process_message] [DEBUG] Processing message with id: 45
+[2025-12-12 13:01:42,188][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Network.getResponseBody completed in 0.08 seconds
+[2025-12-12 13:01:43,254][driver:connection:_process_message] [DEBUG] Processing message with id: 46
+[2025-12-12 13:01:43,693][driver:connection:_process_message] [DEBUG] Processing message with id: 47
+[2025-12-12 13:01:44,647][driver:lifecycle_watcher:_on_timeout] [WARNING] Navigation timeout after 5s waiting for 'networkIdle'
+[2025-12-12 13:01:44,648][driver:tab:navigate] [WARNING] Navigation timeout waiting for 'networkIdle' event at https://www.tiktok.com/foryou
+[2025-12-12 13:01:44,651][driver:tab:navigate] [DEBUG] Navigation will continue despite timeout
+[2025-12-12 13:01:44,667][driver:flow:execute] [INFO] Start Flow: 'Pause video' (1 steps).
+[2025-12-12 13:01:44,671][driver:flow:execute] [INFO] Flow: 'Pause video' (1 of 1 steps) - Click on video
+[2025-12-12 13:01:44,674][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-12 13:01:44,677][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-12 13:01:44,680][driver:connection:send] [DEBUG] {'id': 49, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-12 13:01:44,682][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=49)
+[2025-12-12 13:01:44,748][driver:connection:_process_message] [DEBUG] Processing message with id: 49
+[2025-12-12 13:01:44,752][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.07 seconds
+[2025-12-12 13:01:44,787][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-12 13:01:44,790][driver:connection:send] [DEBUG] {'id': 51, 'method': 'DOM.performSearch', 'params': {'query': '//article[.//video][position() = 1]'}}
+[2025-12-12 13:01:44,793][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=51)
+[2025-12-12 13:01:45,005][driver:connection:_process_message] [DEBUG] Processing message with id: 48
+[2025-12-12 13:01:45,024][driver:connection:_process_message] [DEBUG] Processing message with id: 51
+[2025-12-12 13:01:45,026][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.performSearch took 0.24 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:45,030][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-12 13:01:45,033][driver:connection:send] [DEBUG] {'id': 52, 'method': 'DOM.getSearchResults', 'params': {'searchId': '182.4', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-12 13:01:45,036][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=52)
+[2025-12-12 13:01:45,042][driver:connection:_process_message] [DEBUG] Processing message with id: 52
+[2025-12-12 13:01:45,054][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getSearchResults completed in 0.02 seconds
+[2025-12-12 13:01:45,067][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-12 13:01:45,084][driver:connection:send] [DEBUG] {'id': 53, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '182.4'}}
+[2025-12-12 13:01:45,089][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=53)
+[2025-12-12 13:01:45,287][driver:connection:_process_message] [DEBUG] Processing message with id: 50
+[2025-12-12 13:01:45,300][driver:connection:_process_message] [DEBUG] Processing message with id: 53
+[2025-12-12 13:01:45,302][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.discardSearchResults took 0.22 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 16.
+[2025-12-12 13:01:45,306][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //article[.//video][position() = 1] query.
+[2025-12-12 13:01:45,309][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-12 13:01:45,312][driver:connection:send] [DEBUG] {'id': 54, 'method': 'DOM.describeNode', 'params': {'nodeId': 2323, 'pierce': True}}
+[2025-12-12 13:01:45,314][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=54)
+[2025-12-12 13:01:45,319][driver:connection:_process_message] [DEBUG] Processing message with id: 54
+[2025-12-12 13:01:45,320][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.describeNode completed in 0.01 seconds
+[2025-12-12 13:01:45,323][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getBoxModel
+[2025-12-12 13:01:45,326][driver:connection:send] [DEBUG] {'id': 55, 'method': 'DOM.getBoxModel', 'params': {'nodeId': 2323}}
+[2025-12-12 13:01:45,329][driver:connection:send] [DEBUG] Sending: DOM.getBoxModel (id=55)
+[2025-12-12 13:01:45,333][driver:connection:_process_message] [DEBUG] Processing message with id: 55
+[2025-12-12 13:01:45,335][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getBoxModel completed in 0.01 seconds
+[2025-12-12 13:01:45,338][driver:element:_calculate_center] [DEBUG] Calculating center coordinates from box model content
+[2025-12-12 13:01:45,341][driver:element:_calculate_center] [DEBUG] Box dimensions: left=304, top=16, right=1679, bottom=924
+[2025-12-12 13:01:45,343][driver:element:_calculate_center] [DEBUG] Calculated center: (991.5, 470.0)
+[2025-12-12 13:01:45,346][driver:tab:click_element] [INFO] Clicking element at (991.5, 470.0)
+[2025-12-12 13:01:45,349][driver:tab:click_element] [DEBUG] Dispatching mousePressed event
+[2025-12-12 13:01:45,352][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-12 13:01:45,354][driver:connection:send] [DEBUG] {'id': 56, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mousePressed', 'x': 991.5, 'y': 470.0, 'button': 'left', 'clickCount': 1}}
+[2025-12-12 13:01:45,357][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=56)
+[2025-12-12 13:01:45,370][driver:connection:_process_message] [DEBUG] Processing message with id: 56
+[2025-12-12 13:01:45,373][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Input.dispatchMouseEvent completed in 0.02 seconds
+[2025-12-12 13:01:45,378][driver:tab:click_element] [DEBUG] Waiting 0.1s between press and release
+[2025-12-12 13:01:45,493][driver:tab:click_element] [DEBUG] Dispatching mouseReleased event
+[2025-12-12 13:01:45,497][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-12 13:01:45,500][driver:connection:send] [DEBUG] {'id': 57, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mouseReleased', 'x': 991.5, 'y': 470.0, 'button': 'left', 'clickCount': 1}}
+[2025-12-12 13:01:45,504][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=57)
+[2025-12-12 13:01:45,515][driver:connection:_process_message] [DEBUG] Processing message with id: 57
+[2025-12-12 13:01:45,517][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Input.dispatchMouseEvent completed in 0.02 seconds
+[2025-12-12 13:01:45,521][driver:tab:click_element] [INFO] Successfully clicked element at (991.5, 470.0)
+[2025-12-12 13:01:45,524][driver:click:_interact_with_element] [DEBUG] Successfully clicked element: click on '//article[.//video][position() = 1]'
+[2025-12-12 13:01:45,526][driver:base:act] [INFO] Interaction succeeded: click on '//article[.//video][position() = 1]' NodeId(2323)
+[2025-12-12 13:01:45,529][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 succeeded: Click
+[2025-12-12 13:01:45,632][driver:flow:_execute_step_with_retry] [INFO] Step 'Click on video' completed successfully
+[2025-12-12 13:01:45,636][driver:flow:execute] [INFO] Flow 'Pause video': Completed successfully
+[2025-12-12 13:01:45,659][driver:flow:execute] [INFO] Start Flow: 'Unpause video' (1 steps).
+[2025-12-12 13:01:45,663][driver:flow:execute] [INFO] Flow: 'Unpause video' (1 of 1 steps) - Click on video
+[2025-12-12 13:01:45,667][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-12 13:01:45,670][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-12 13:01:45,674][driver:connection:send] [DEBUG] {'id': 58, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-12 13:01:45,678][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=58)
+[2025-12-12 13:01:45,781][driver:connection:_process_message] [DEBUG] Processing message with id: 58
+[2025-12-12 13:01:45,782][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.11 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:45,804][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-12 13:01:45,807][driver:connection:send] [DEBUG] {'id': 59, 'method': 'DOM.performSearch', 'params': {'query': '//article[.//video][position() = 1]'}}
+[2025-12-12 13:01:45,810][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=59)
+[2025-12-12 13:01:45,817][driver:connection:_process_message] [DEBUG] Processing message with id: 59
+[2025-12-12 13:01:45,819][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-12 13:01:45,823][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-12 13:01:45,825][driver:connection:send] [DEBUG] {'id': 60, 'method': 'DOM.getSearchResults', 'params': {'searchId': '182.5', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-12 13:01:45,828][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=60)
+[2025-12-12 13:01:45,857][driver:connection:_process_message] [DEBUG] Processing message with id: 60
+[2025-12-12 13:01:45,859][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getSearchResults completed in 0.03 seconds
+[2025-12-12 13:01:45,863][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-12 13:01:45,866][driver:connection:send] [DEBUG] {'id': 61, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '182.5'}}
+[2025-12-12 13:01:45,869][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=61)
+[2025-12-12 13:01:45,872][driver:connection:_process_message] [DEBUG] Processing message with id: 61
+[2025-12-12 13:01:45,874][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.discardSearchResults completed in 0.01 seconds
+[2025-12-12 13:01:45,876][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //article[.//video][position() = 1] query.
+[2025-12-12 13:01:45,879][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-12 13:01:45,882][driver:connection:send] [DEBUG] {'id': 62, 'method': 'DOM.describeNode', 'params': {'nodeId': 3456, 'pierce': True}}
+[2025-12-12 13:01:45,884][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=62)
+[2025-12-12 13:01:45,888][driver:connection:_process_message] [DEBUG] Processing message with id: 62
+[2025-12-12 13:01:45,889][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.describeNode completed in 0.01 seconds
+[2025-12-12 13:01:45,892][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getBoxModel
+[2025-12-12 13:01:45,895][driver:connection:send] [DEBUG] {'id': 63, 'method': 'DOM.getBoxModel', 'params': {'nodeId': 3456}}
+[2025-12-12 13:01:45,898][driver:connection:send] [DEBUG] Sending: DOM.getBoxModel (id=63)
+[2025-12-12 13:01:45,904][driver:connection:_process_message] [DEBUG] Processing message with id: 63
+[2025-12-12 13:01:45,906][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getBoxModel completed in 0.01 seconds
+[2025-12-12 13:01:45,909][driver:element:_calculate_center] [DEBUG] Calculating center coordinates from box model content
+[2025-12-12 13:01:45,911][driver:element:_calculate_center] [DEBUG] Box dimensions: left=304, top=16, right=1679, bottom=924
+[2025-12-12 13:01:45,914][driver:element:_calculate_center] [DEBUG] Calculated center: (991.5, 470.0)
+[2025-12-12 13:01:45,917][driver:tab:click_element] [INFO] Clicking element at (991.5, 470.0)
+[2025-12-12 13:01:45,920][driver:tab:click_element] [DEBUG] Dispatching mousePressed event
+[2025-12-12 13:01:45,923][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-12 13:01:45,926][driver:connection:send] [DEBUG] {'id': 64, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mousePressed', 'x': 991.5, 'y': 470.0, 'button': 'left', 'clickCount': 1}}
+[2025-12-12 13:01:45,929][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=64)
+[2025-12-12 13:01:45,936][driver:connection:_process_message] [DEBUG] Processing message with id: 64
+[2025-12-12 13:01:45,937][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Input.dispatchMouseEvent completed in 0.01 seconds
+[2025-12-12 13:01:45,940][driver:tab:click_element] [DEBUG] Waiting 0.1s between press and release
+[2025-12-12 13:01:46,043][driver:tab:click_element] [DEBUG] Dispatching mouseReleased event
+[2025-12-12 13:01:46,046][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-12 13:01:46,049][driver:connection:send] [DEBUG] {'id': 66, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mouseReleased', 'x': 991.5, 'y': 470.0, 'button': 'left', 'clickCount': 1}}
+[2025-12-12 13:01:46,052][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=66)
+[2025-12-12 13:01:46,059][driver:connection:_process_message] [DEBUG] Processing message with id: 66
+[2025-12-12 13:01:46,061][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Input.dispatchMouseEvent completed in 0.01 seconds
+[2025-12-12 13:01:46,065][driver:tab:click_element] [INFO] Successfully clicked element at (991.5, 470.0)
+[2025-12-12 13:01:46,068][driver:click:_interact_with_element] [DEBUG] Successfully clicked element: click on '//article[.//video][position() = 1]'
+[2025-12-12 13:01:46,070][driver:base:act] [INFO] Interaction succeeded: click on '//article[.//video][position() = 1]' NodeId(3456)
+[2025-12-12 13:01:46,073][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 succeeded: Click
+[2025-12-12 13:01:46,177][driver:flow:_execute_step_with_retry] [INFO] Step 'Click on video' completed successfully
+[2025-12-12 13:01:46,180][driver:flow:execute] [INFO] Flow 'Unpause video': Completed successfully
+[2025-12-12 13:01:46,202][driver:loops:for_time] [DEBUG] Self-managing counter (step: watch_loop): Previous Result: None, Current Time Accumulated: 0, Max Time: 3600, Continue: True
+[2025-12-12 13:01:46,220][driver:tab:find_element_by_query] [DEBUG] Finding first element with query: '//article[.//video][position() = 1]'
+[2025-12-12 13:01:46,223][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-12 13:01:46,226][driver:connection:send] [DEBUG] {'id': 67, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-12 13:01:46,229][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=67)
+[2025-12-12 13:01:46,320][driver:connection:_process_message] [DEBUG] Processing message with id: 65
+[2025-12-12 13:01:46,344][driver:connection:_process_message] [DEBUG] Processing message with id: 67
+[2025-12-12 13:01:46,346][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.12 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:46,372][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-12 13:01:46,376][driver:connection:send] [DEBUG] {'id': 69, 'method': 'DOM.performSearch', 'params': {'query': '//article[.//video][position() = 1]'}}
+[2025-12-12 13:01:46,380][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=69)
+[2025-12-12 13:01:46,420][driver:connection:_process_message] [DEBUG] Processing message with id: 69
+[2025-12-12 13:01:46,422][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.05 seconds
+[2025-12-12 13:01:46,426][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-12 13:01:46,428][driver:connection:send] [DEBUG] {'id': 70, 'method': 'DOM.getSearchResults', 'params': {'searchId': '182.6', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-12 13:01:46,432][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=70)
+[2025-12-12 13:01:46,436][driver:connection:_process_message] [DEBUG] Processing message with id: 70
+[2025-12-12 13:01:46,438][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getSearchResults completed in 0.01 seconds
+[2025-12-12 13:01:46,441][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-12 13:01:46,445][driver:connection:send] [DEBUG] {'id': 71, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '182.6'}}
+[2025-12-12 13:01:46,448][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=71)
+[2025-12-12 13:01:46,453][driver:connection:_process_message] [DEBUG] Processing message with id: 71
+[2025-12-12 13:01:46,455][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.discardSearchResults completed in 0.01 seconds
+[2025-12-12 13:01:46,459][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //article[.//video][position() = 1] query.
+[2025-12-12 13:01:46,462][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-12 13:01:46,466][driver:connection:send] [DEBUG] {'id': 72, 'method': 'DOM.describeNode', 'params': {'nodeId': 4578, 'pierce': True}}
+[2025-12-12 13:01:46,470][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=72)
+[2025-12-12 13:01:46,677][driver:connection:_process_message] [DEBUG] Processing message with id: 68
+[2025-12-12 13:01:46,686][driver:connection:_process_message] [DEBUG] Processing message with id: 72
+[2025-12-12 13:01:46,687][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.describeNode took 0.22 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:46,690][driver:element:html] [DEBUG] Getting HTML content for element (nodeId: NodeId(4578))
+[2025-12-12 13:01:46,693][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getOuterHTML
+[2025-12-12 13:01:46,696][driver:connection:send] [DEBUG] {'id': 73, 'method': 'DOM.getOuterHTML', 'params': {'nodeId': 4578}}
+[2025-12-12 13:01:46,699][driver:connection:send] [DEBUG] Sending: DOM.getOuterHTML (id=73)
+[2025-12-12 13:01:46,707][driver:connection:_process_message] [DEBUG] Processing message with id: 73
+[2025-12-12 13:01:46,709][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getOuterHTML completed in 0.01 seconds
+[2025-12-12 13:01:46,810][driver:tab:scroll_by_mouse_wheel] [DEBUG] Using provided coordinates for scroll: (259.6, 348.5)
+[2025-12-12 13:01:46,812][driver:tab:scroll_by_mouse_wheel] [INFO] Scrolling page by mouse wheel: 504.2 pixels, starting at (259.6, 348.5)
+[2025-12-12 13:01:46,815][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-12 13:01:46,819][driver:connection:send] [DEBUG] {'id': 74, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mouseWheel', 'x': 259.6, 'y': 348.5, 'deltaX': 0, 'deltaY': 504.2}}
+[2025-12-12 13:01:46,822][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=74)
+[2025-12-12 13:01:46,850][driver:connection:_process_message] [DEBUG] Processing message with id: 74
+[2025-12-12 13:01:46,852][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Input.dispatchMouseEvent completed in 0.03 seconds
+[2025-12-12 13:01:46,961][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['DOM']
+[2025-12-12 13:01:47,044][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 1166 messages to /data/1765544487.1557252/network/270A2D8541D97C654ADAA4FF61E44D51/DOM.json
+[2025-12-12 13:01:47,309][driver:connection:_process_message] [DEBUG] Processing message with id: 75
+[2025-12-12 13:01:47,351][driver:connection:_process_message] [DEBUG] Processing message with id: 76
+[2025-12-12 13:01:47,391][driver:connection:_process_message] [DEBUG] Processing message with id: 78
+[2025-12-12 13:01:47,425][driver:connection:_process_message] [DEBUG] Processing message with id: 79
+[2025-12-12 13:01:47,471][driver:connection:_process_message] [DEBUG] Processing message with id: 80
+[2025-12-12 13:01:47,683][driver:connection:_process_message] [DEBUG] Processing message with id: 77
+[2025-12-12 13:01:47,694][driver:connection:_process_message] [DEBUG] Processing message with id: 81
+[2025-12-12 13:01:47,741][driver:connection:_process_message] [DEBUG] Processing message with id: 82
+[2025-12-12 13:01:47,776][driver:connection:_process_message] [DEBUG] Processing message with id: 84
+[2025-12-12 13:01:47,823][driver:connection:_process_message] [DEBUG] Processing message with id: 85
+[2025-12-12 13:01:48,055][driver:connection:_process_message] [DEBUG] Processing message with id: 83
+[2025-12-12 13:01:48,130][driver:connection:_process_message] [DEBUG] Processing message with id: 86
+[2025-12-12 13:01:49,195][driver:loops:for_time] [DEBUG] Self-managing counter (step: watch_loop): Previous Result: {'continue': True, 'time_ended': 1765544506, 'time_accumulated': 0}, Current Time Accumulated: 3, Max Time: 3600, Continue: True
+[2025-12-12 13:01:49,227][driver:tab:find_element_by_query] [DEBUG] Finding first element with query: '//article[.//video][position() = 1]'
+[2025-12-12 13:01:49,232][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-12 13:01:49,237][driver:connection:send] [DEBUG] {'id': 88, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-12 13:01:49,241][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=88)
+[2025-12-12 13:01:49,248][driver:connection:_process_message] [DEBUG] Processing message with id: 87
+[2025-12-12 13:01:49,616][driver:connection:_process_message] [DEBUG] Processing message with id: 88
+[2025-12-12 13:01:49,617][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.38 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:49,647][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-12 13:01:49,652][driver:connection:send] [DEBUG] {'id': 90, 'method': 'DOM.performSearch', 'params': {'query': '//article[.//video][position() = 1]'}}
+[2025-12-12 13:01:49,656][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=90)
+[2025-12-12 13:01:49,783][driver:connection:_process_message] [DEBUG] Processing message with id: 90
+[2025-12-12 13:01:49,786][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.performSearch took 0.13 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:49,790][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-12 13:01:49,795][driver:connection:send] [DEBUG] {'id': 91, 'method': 'DOM.getSearchResults', 'params': {'searchId': '182.10', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-12 13:01:49,799][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=91)
+[2025-12-12 13:01:49,813][driver:connection:_process_message] [DEBUG] Processing message with id: 91
+[2025-12-12 13:01:49,815][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getSearchResults completed in 0.02 seconds
+[2025-12-12 13:01:49,820][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-12 13:01:49,825][driver:connection:send] [DEBUG] {'id': 92, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '182.10'}}
+[2025-12-12 13:01:49,827][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=92)
+[2025-12-12 13:01:49,833][driver:connection:_process_message] [DEBUG] Processing message with id: 92
+[2025-12-12 13:01:49,835][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.discardSearchResults completed in 0.01 seconds
+[2025-12-12 13:01:49,838][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //article[.//video][position() = 1] query.
+[2025-12-12 13:01:49,840][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-12 13:01:49,843][driver:connection:send] [DEBUG] {'id': 93, 'method': 'DOM.describeNode', 'params': {'nodeId': 12138, 'pierce': True}}
+[2025-12-12 13:01:49,846][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=93)
+[2025-12-12 13:01:49,851][driver:connection:_process_message] [DEBUG] Processing message with id: 93
+[2025-12-12 13:01:49,852][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.describeNode completed in 0.01 seconds
+[2025-12-12 13:01:49,856][driver:element:html] [DEBUG] Getting HTML content for element (nodeId: NodeId(12138))
+[2025-12-12 13:01:49,859][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getOuterHTML
+[2025-12-12 13:01:49,863][driver:connection:send] [DEBUG] {'id': 94, 'method': 'DOM.getOuterHTML', 'params': {'nodeId': 12138}}
+[2025-12-12 13:01:49,866][driver:connection:send] [DEBUG] Sending: DOM.getOuterHTML (id=94)
+[2025-12-12 13:01:49,872][driver:connection:_process_message] [DEBUG] Processing message with id: 94
+[2025-12-12 13:01:49,874][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getOuterHTML completed in 0.01 seconds
+[2025-12-12 13:01:49,929][driver:tab:scroll_by_mouse_wheel] [DEBUG] Using provided coordinates for scroll: (258.4, 354.3)
+[2025-12-12 13:01:49,932][driver:tab:scroll_by_mouse_wheel] [INFO] Scrolling page by mouse wheel: 502.4 pixels, starting at (258.4, 354.3)
+[2025-12-12 13:01:49,935][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-12 13:01:49,938][driver:connection:send] [DEBUG] {'id': 95, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mouseWheel', 'x': 258.4, 'y': 354.3, 'deltaX': 0, 'deltaY': 502.4}}
+[2025-12-12 13:01:49,942][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=95)
+[2025-12-12 13:01:50,084][driver:connection:_process_message] [DEBUG] Processing message with id: 89
+[2025-12-12 13:01:50,116][driver:connection:_process_message] [DEBUG] Processing message with id: 95
+[2025-12-12 13:01:50,118][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:Input.dispatchMouseEvent took 0.18 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:50,734][driver:connection:_process_message] [DEBUG] Processing message with id: 96
+[2025-12-12 13:01:51,416][driver:connection:_process_message] [DEBUG] Processing message with id: 97
+[2025-12-12 13:01:52,048][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['DOM']
+[2025-12-12 13:01:52,168][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 124 messages to /data/1765544487.1557252/network/270A2D8541D97C654ADAA4FF61E44D51/DOM.json
+[2025-12-12 13:01:52,296][driver:loops:for_time] [DEBUG] Self-managing counter (step: watch_loop): Previous Result: {'continue': True, 'time_ended': 1765544509, 'time_accumulated': 3}, Current Time Accumulated: 6, Max Time: 3600, Continue: True
+[2025-12-12 13:01:52,317][driver:tab:find_element_by_query] [DEBUG] Finding first element with query: '//article[.//video][position() = 1]'
+[2025-12-12 13:01:52,320][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-12 13:01:52,324][driver:connection:send] [DEBUG] {'id': 99, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-12 13:01:52,328][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=99)
+[2025-12-12 13:01:52,463][driver:connection:_process_message] [DEBUG] Processing message with id: 98
+[2025-12-12 13:01:52,495][driver:connection:_process_message] [DEBUG] Processing message with id: 99
+[2025-12-12 13:01:52,497][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.17 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:52,522][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-12 13:01:52,525][driver:connection:send] [DEBUG] {'id': 101, 'method': 'DOM.performSearch', 'params': {'query': '//article[.//video][position() = 1]'}}
+[2025-12-12 13:01:52,528][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=101)
+[2025-12-12 13:01:52,732][driver:connection:_process_message] [DEBUG] Processing message with id: 100
+[2025-12-12 13:01:52,739][driver:connection:_process_message] [DEBUG] Processing message with id: 101
+[2025-12-12 13:01:52,740][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.performSearch took 0.22 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:52,744][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-12 13:01:52,748][driver:connection:send] [DEBUG] {'id': 102, 'method': 'DOM.getSearchResults', 'params': {'searchId': '182.11', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-12 13:01:52,752][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=102)
+[2025-12-12 13:01:52,755][driver:connection:_process_message] [DEBUG] Processing message with id: 102
+[2025-12-12 13:01:52,757][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getSearchResults completed in 0.01 seconds
+[2025-12-12 13:01:52,759][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-12 13:01:52,762][driver:connection:send] [DEBUG] {'id': 103, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '182.11'}}
+[2025-12-12 13:01:52,765][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=103)
+[2025-12-12 13:01:52,769][driver:connection:_process_message] [DEBUG] Processing message with id: 103
+[2025-12-12 13:01:52,771][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.discardSearchResults completed in 0.01 seconds
+[2025-12-12 13:01:52,773][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //article[.//video][position() = 1] query.
+[2025-12-12 13:01:52,776][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-12 13:01:52,779][driver:connection:send] [DEBUG] {'id': 104, 'method': 'DOM.describeNode', 'params': {'nodeId': 13510, 'pierce': True}}
+[2025-12-12 13:01:52,782][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=104)
+[2025-12-12 13:01:52,787][driver:connection:_process_message] [DEBUG] Processing message with id: 104
+[2025-12-12 13:01:52,788][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.describeNode completed in 0.01 seconds
+[2025-12-12 13:01:52,792][driver:element:html] [DEBUG] Getting HTML content for element (nodeId: NodeId(13510))
+[2025-12-12 13:01:52,795][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getOuterHTML
+[2025-12-12 13:01:52,797][driver:connection:send] [DEBUG] {'id': 105, 'method': 'DOM.getOuterHTML', 'params': {'nodeId': 13510}}
+[2025-12-12 13:01:52,801][driver:connection:send] [DEBUG] Sending: DOM.getOuterHTML (id=105)
+[2025-12-12 13:01:52,808][driver:connection:_process_message] [DEBUG] Processing message with id: 105
+[2025-12-12 13:01:52,809][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getOuterHTML completed in 0.01 seconds
+[2025-12-12 13:01:52,858][driver:tab:scroll_by_mouse_wheel] [DEBUG] Using provided coordinates for scroll: (250.2, 347.8)
+[2025-12-12 13:01:52,861][driver:tab:scroll_by_mouse_wheel] [INFO] Scrolling page by mouse wheel: 504.6 pixels, starting at (250.2, 347.8)
+[2025-12-12 13:01:52,864][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-12 13:01:52,867][driver:connection:send] [DEBUG] {'id': 106, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mouseWheel', 'x': 250.2, 'y': 347.8, 'deltaX': 0, 'deltaY': 504.6}}
+[2025-12-12 13:01:52,870][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=106)
+[2025-12-12 13:01:52,899][driver:connection:_process_message] [DEBUG] Processing message with id: 106
+[2025-12-12 13:01:52,902][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Input.dispatchMouseEvent completed in 0.03 seconds
+[2025-12-12 13:01:53,867][driver:connection:_process_message] [DEBUG] Processing message with id: 107
+[2025-12-12 13:01:54,167][driver:connection:_process_message] [DEBUG] Processing message with id: 108
+[2025-12-12 13:01:55,022][driver:loops:for_time] [DEBUG] Self-managing counter (step: watch_loop): Previous Result: {'continue': True, 'time_ended': 1765544512, 'time_accumulated': 6}, Current Time Accumulated: 9, Max Time: 3600, Continue: True
+[2025-12-12 13:01:55,046][driver:tab:find_element_by_query] [DEBUG] Finding first element with query: '//article[.//video][position() = 1]'
+[2025-12-12 13:01:55,049][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-12 13:01:55,053][driver:connection:send] [DEBUG] {'id': 110, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-12 13:01:55,056][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=110)
+[2025-12-12 13:01:55,226][driver:connection:_process_message] [DEBUG] Processing message with id: 109
+[2025-12-12 13:01:55,258][driver:connection:_process_message] [DEBUG] Processing message with id: 110
+[2025-12-12 13:01:55,260][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.21 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:01:55,288][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-12 13:01:55,291][driver:connection:send] [DEBUG] {'id': 112, 'method': 'DOM.performSearch', 'params': {'query': '//article[.//video][position() = 1]'}}
+[2025-12-12 13:01:55,293][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=112)
+[2025-12-12 13:01:55,302][driver:connection:_process_message] [DEBUG] Processing message with id: 112
+[2025-12-12 13:01:55,304][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-12 13:01:55,306][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-12 13:01:55,309][driver:connection:send] [DEBUG] {'id': 113, 'method': 'DOM.getSearchResults', 'params': {'searchId': '182.12', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-12 13:01:55,312][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=113)
+[2025-12-12 13:01:55,316][driver:connection:_process_message] [DEBUG] Processing message with id: 113
+[2025-12-12 13:01:55,317][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getSearchResults completed in 0.01 seconds
+[2025-12-12 13:01:55,320][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-12 13:01:55,323][driver:connection:send] [DEBUG] {'id': 114, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '182.12'}}
+[2025-12-12 13:01:55,326][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=114)
+[2025-12-12 13:01:55,528][driver:connection:_process_message] [DEBUG] Processing message with id: 111
+[2025-12-12 13:01:55,537][driver:connection:_process_message] [DEBUG] Processing message with id: 114
+[2025-12-12 13:01:55,539][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.discardSearchResults took 0.22 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 16.
+[2025-12-12 13:01:55,542][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //article[.//video][position() = 1] query.
+[2025-12-12 13:01:55,545][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-12 13:01:55,548][driver:connection:send] [DEBUG] {'id': 115, 'method': 'DOM.describeNode', 'params': {'nodeId': 14908, 'pierce': True}}
+[2025-12-12 13:01:55,551][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=115)
+[2025-12-12 13:01:55,560][driver:connection:_process_message] [DEBUG] Processing message with id: 115
+[2025-12-12 13:01:55,562][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.describeNode completed in 0.01 seconds
+[2025-12-12 13:01:55,566][driver:element:html] [DEBUG] Getting HTML content for element (nodeId: NodeId(14908))
+[2025-12-12 13:01:55,569][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getOuterHTML
+[2025-12-12 13:01:55,573][driver:connection:send] [DEBUG] {'id': 117, 'method': 'DOM.getOuterHTML', 'params': {'nodeId': 14908}}
+[2025-12-12 13:01:55,576][driver:connection:send] [DEBUG] Sending: DOM.getOuterHTML (id=117)
+[2025-12-12 13:01:55,595][driver:connection:_process_message] [DEBUG] Processing message with id: 116
+[2025-12-12 13:01:55,700][driver:connection:_process_message] [DEBUG] Processing message with id: 117
+[2025-12-12 13:01:55,701][driver:connection:send] [ERROR] DOM.getOuterHTML failed: Could not find node with given id (code: -32000)
+[2025-12-12 13:01:55,705][driver:element:html] [DEBUG] Primary HTML fetch failed using node_id: DOM.getOuterHTML failed: Could not find node with given id (code: -32000)
+[2025-12-12 13:01:55,708][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getOuterHTML
+[2025-12-12 13:01:55,710][driver:connection:send] [DEBUG] {'id': 119, 'method': 'DOM.getOuterHTML', 'params': {'backendNodeId': BackendNodeId(3876)}}
+[2025-12-12 13:01:55,713][driver:connection:send] [DEBUG] Sending: DOM.getOuterHTML (id=119)
+[2025-12-12 13:01:55,717][driver:connection:_process_message] [DEBUG] Processing message with id: 118
+[2025-12-12 13:01:55,728][driver:connection:_process_message] [DEBUG] Processing message with id: 119
+[2025-12-12 13:01:55,730][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getOuterHTML completed in 0.02 seconds
+[2025-12-12 13:01:55,764][driver:connection:_process_message] [DEBUG] Processing message with id: 120
+[2025-12-12 13:01:55,827][driver:tab:scroll_by_mouse_wheel] [DEBUG] Using provided coordinates for scroll: (274.6, 357.0)
+[2025-12-12 13:01:55,830][driver:tab:scroll_by_mouse_wheel] [INFO] Scrolling page by mouse wheel: 495.9 pixels, starting at (274.6, 357.0)
+[2025-12-12 13:01:55,834][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-12 13:01:55,837][driver:connection:send] [DEBUG] {'id': 122, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mouseWheel', 'x': 274.6, 'y': 357.0, 'deltaX': 0, 'deltaY': 495.9}}
+[2025-12-12 13:01:55,839][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=122)
+[2025-12-12 13:01:55,843][driver:connection:_process_message] [DEBUG] Processing message with id: 121
+[2025-12-12 13:01:55,889][driver:connection:_process_message] [DEBUG] Processing message with id: 123
+[2025-12-12 13:01:55,891][driver:connection:_process_message] [DEBUG] Processing message with id: 122
+[2025-12-12 13:01:55,933][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Input.dispatchMouseEvent completed in 0.10 seconds
+[2025-12-12 13:01:56,082][driver:connection:_process_message] [DEBUG] Processing message with id: 124
+[2025-12-12 13:01:56,148][driver:connection:_process_message] [DEBUG] Processing message with id: 125
+[2025-12-12 13:01:56,215][driver:endpoint_watcher:_on_request] [INFO] Watching request 182.1238 for endpoint 'recommend_item_list': https://www.tiktok.com/api/recommend/item_list/?WebIdLastTime=1765300586&aid=1988&app_language=en&app_name=tiktok_web&browser_language=en-US&browser_name=Mozilla&browser_online=true&browser_platform=Linux%20x86_64&browser_version=5.0%20%28X11%3B%20Linux%20x86_64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F143.0.0.0%20Safari%2F537.36&channel=tiktok_web&clientABVersions=70508271%2C72437276%2C73547759%2C73720540%2C74444735%2C74446916%2C74757744%2C74780476%2C74782565%2C74813746%2C74852655%2C74869499%2C74894691%2C74902367%2C74907602%2C74926161%2C74957746%2C74970061%2C74973672%2C74976256%2C74983393%2C74983940%2C74987203%2C74991529%2C74998868%2C75001422%2C75005877%2C75014049%2C75014657%2C75026334%2C75034908%2C75036735%2C75038625%2C75041555%2C75045554%2C75045731%2C75045920%2C75048550%2C75069884%2C75074404%2C75081929%2C75081996%2C75094426%2C75103455%2C75108292%2C75112497%2C75114547%2C75122539%2C75125467%2C75154302%2C75158103%2C70138197%2C70156809%2C70405643%2C70772958%2C71057832%2C71200802%2C71381811%2C71516509%2C71803300%2C71962127%2C72360691%2C72408100%2C72854054%2C72892778%2C73171280%2C73208420%2C73989921%2C74276218%2C74844724&cookie_enabled=true&count=14&coverFormat=2&cpu_core_number=4&dark_mode=false&data_collection_enabled=true&day_of_week=5&device_id=7581908279648257558&device_platform=web_pc&device_score=7&device_type=web_h264&enable_cache=false&focus_state=true&from_page=fyp&history_len=3&isNonPersonalized=false&is_fullscreen=false&is_new_user=false&is_page_visible=true&itemID=&language=en&launch_mode=direct&network=1.45&odinId=7581876153998476310&os=linux&priority_region=DE&pullType=2&referer=&region=DE&screen_height=1080&screen_width=1920&showAboutThisAd=true&showAds=true&time_of_day=13&tz_name=UTC&video_encoding=&vv_count=362&vv_count_fyp=337&watchLiveLastTime=&webcast_language=en&window_height=940&window_width=1919&msToken=oATbEXEOWFHq5N8pqRxsUYT-M9aDnAJucyuH53YPRQ3YunZEmwgCrY-sDaP-b6fEiqKx5mgMTkJnCDGlYXLjSgSrMhbI6wGLU9wUQ2-w0ec67fXDyhWRzX-RzCoSk5TfaMDXBLzblO0yviKNBnCNQHGV&X-Bogus=DFSzsIVO7tTAN9rGCYNIQCvDKK8k&X-Gnarly=MOo6iAOmurrPLE6Rb--VP3Xr4rbf3zjHQfcV3-TtBCcm8WPhSC9zhuqE/HlKkbFc0-Xt6APZLz1OljGwwXQcd5Xrr12tzsbSsJt0xR-K9enuPmVTJsqutXMRI7zQ4jjcTs6MM4ntHw7dHaejNRr1iNMTVNkocRl9BaKQzDFPCjef-p36A4CMivbYxWIfoW/X14RJ614xl//ZcfoyB9OF0Lxg7-68Ysp0kc/apZy9AGj16VgtUBkKxLIH/YnW1RSADzFGIZmENsfw86lGi7RLN8e/DnsfL0DiosOzkcqNdoXX9GuWPflYqpo5x-/pOtpDVvu=
+[2025-12-12 13:01:56,246][driver:connection:_process_message] [DEBUG] Processing message with id: 126
+[2025-12-12 13:01:56,309][driver:connection:_process_message] [DEBUG] Processing message with id: 128
+[2025-12-12 13:01:56,384][driver:connection:_process_message] [DEBUG] Processing message with id: 129
+[2025-12-12 13:01:56,616][driver:connection:_process_message] [DEBUG] Processing message with id: 127
+[2025-12-12 13:01:56,924][driver:connection:_process_message] [DEBUG] Processing message with id: 130
+[2025-12-12 13:01:57,171][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['DOM']
+[2025-12-12 13:01:57,256][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 109 messages to /data/1765544487.1557252/network/270A2D8541D97C654ADAA4FF61E44D51/DOM.json
+[2025-12-12 13:01:58,065][driver:loops:for_time] [DEBUG] Self-managing counter (step: watch_loop): Previous Result: {'continue': True, 'time_ended': 1765544515, 'time_accumulated': 9}, Current Time Accumulated: 12, Max Time: 3600, Continue: True
+[2025-12-12 13:01:58,087][driver:tab:find_element_by_query] [DEBUG] Finding first element with query: '//article[.//video][position() = 1]'
+[2025-12-12 13:01:58,090][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-12 13:01:58,094][driver:connection:send] [DEBUG] {'id': 133, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-12 13:01:58,098][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=133)
+[2025-12-12 13:01:58,103][driver:connection:_process_message] [DEBUG] Processing message with id: 131
+[2025-12-12 13:01:58,292][driver:connection:_process_message] [DEBUG] Processing message with id: 132
+[2025-12-12 13:01:58,303][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Network.getResponseBody
+[2025-12-12 13:01:58,305][driver:connection:send] [DEBUG] {'id': 134, 'method': 'Network.getResponseBody', 'params': {'requestId': RequestId('182.1238')}}
+[2025-12-12 13:01:58,307][driver:connection:send] [DEBUG] Sending: Network.getResponseBody (id=134)
+[2025-12-12 13:01:58,323][driver:connection:_process_message] [DEBUG] Processing message with id: 133
+[2025-12-12 13:01:58,325][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.23 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 15.
+[2025-12-12 13:01:58,353][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-12 13:01:58,357][driver:connection:send] [DEBUG] {'id': 135, 'method': 'DOM.performSearch', 'params': {'query': '//article[.//video][position() = 1]'}}
+[2025-12-12 13:01:58,359][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=135)
+[2025-12-12 13:01:58,368][driver:connection:_process_message] [DEBUG] Processing message with id: 134
+[2025-12-12 13:01:58,370][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Network.getResponseBody completed in 0.06 seconds
+[2025-12-12 13:01:58,382][driver:connection:_process_message] [DEBUG] Processing message with id: 135
+[2025-12-12 13:01:58,384][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.03 seconds
+[2025-12-12 13:01:58,387][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-12 13:01:58,390][driver:connection:send] [DEBUG] {'id': 136, 'method': 'DOM.getSearchResults', 'params': {'searchId': '182.16', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-12 13:01:58,392][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=136)
+[2025-12-12 13:01:58,397][driver:connection:_process_message] [DEBUG] Processing message with id: 136
+[2025-12-12 13:01:58,399][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getSearchResults completed in 0.01 seconds
+[2025-12-12 13:01:58,402][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-12 13:01:58,405][driver:connection:send] [DEBUG] {'id': 137, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '182.16'}}
+[2025-12-12 13:01:58,408][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=137)
+[2025-12-12 13:01:58,412][driver:connection:_process_message] [DEBUG] Processing message with id: 137
+[2025-12-12 13:01:58,414][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.discardSearchResults completed in 0.01 seconds
+[2025-12-12 13:01:58,416][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //article[.//video][position() = 1] query.
+[2025-12-12 13:01:58,419][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-12 13:01:58,422][driver:connection:send] [DEBUG] {'id': 138, 'method': 'DOM.describeNode', 'params': {'nodeId': 23238, 'pierce': True}}
+[2025-12-12 13:01:58,425][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=138)
+[2025-12-12 13:01:58,429][driver:connection:_process_message] [DEBUG] Processing message with id: 138
+[2025-12-12 13:01:58,430][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.describeNode completed in 0.01 seconds
+[2025-12-12 13:01:58,434][driver:element:html] [DEBUG] Getting HTML content for element (nodeId: NodeId(23238))
+[2025-12-12 13:01:58,437][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getOuterHTML
+[2025-12-12 13:01:58,439][driver:connection:send] [DEBUG] {'id': 139, 'method': 'DOM.getOuterHTML', 'params': {'nodeId': 23238}}
+[2025-12-12 13:01:58,442][driver:connection:send] [DEBUG] Sending: DOM.getOuterHTML (id=139)
+[2025-12-12 13:01:58,449][driver:connection:_process_message] [DEBUG] Processing message with id: 139
+[2025-12-12 13:01:58,450][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getOuterHTML completed in 0.01 seconds
+[2025-12-12 13:01:58,501][driver:tab:scroll_by_mouse_wheel] [DEBUG] Using provided coordinates for scroll: (263.5, 349.2)
+[2025-12-12 13:01:58,504][driver:tab:scroll_by_mouse_wheel] [INFO] Scrolling page by mouse wheel: 493.0 pixels, starting at (263.5, 349.2)
+[2025-12-12 13:01:58,507][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-12 13:01:58,510][driver:connection:send] [DEBUG] {'id': 140, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mouseWheel', 'x': 263.5, 'y': 349.2, 'deltaX': 0, 'deltaY': 493.0}}
+[2025-12-12 13:01:58,512][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=140)
+[2025-12-12 13:01:58,549][driver:connection:_process_message] [DEBUG] Processing message with id: 140
+[2025-12-12 13:01:58,551][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Input.dispatchMouseEvent completed in 0.04 seconds
+[2025-12-12 13:01:59,440][driver:connection:_process_message] [DEBUG] Processing message with id: 141
+[2025-12-12 13:01:59,739][driver:connection:_process_message] [DEBUG] Processing message with id: 142
+[2025-12-12 13:02:00,673][driver:loops:for_time] [DEBUG] Self-managing counter (step: watch_loop): Previous Result: {'continue': True, 'time_ended': 1765544518, 'time_accumulated': 12}, Current Time Accumulated: 14, Max Time: 3600, Continue: True
+[2025-12-12 13:02:00,694][driver:tab:find_element_by_query] [DEBUG] Finding first element with query: '//article[.//video][position() = 1]'
+[2025-12-12 13:02:00,696][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-12 13:02:00,699][driver:connection:send] [DEBUG] {'id': 144, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-12 13:02:00,703][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=144)
+[2025-12-12 13:02:00,766][driver:connection:_process_message] [DEBUG] Processing message with id: 143
+[2025-12-12 13:02:00,799][driver:connection:_process_message] [DEBUG] Processing message with id: 144
+[2025-12-12 13:02:00,801][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.10 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:02:00,831][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-12 13:02:00,835][driver:connection:send] [DEBUG] {'id': 146, 'method': 'DOM.performSearch', 'params': {'query': '//article[.//video][position() = 1]'}}
+[2025-12-12 13:02:00,838][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=146)
+[2025-12-12 13:02:01,044][driver:connection:_process_message] [DEBUG] Processing message with id: 145
+[2025-12-12 13:02:01,055][driver:connection:_process_message] [DEBUG] Processing message with id: 146
+[2025-12-12 13:02:01,057][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.performSearch took 0.22 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-12 13:02:01,060][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-12 13:02:01,064][driver:connection:send] [DEBUG] {'id': 147, 'method': 'DOM.getSearchResults', 'params': {'searchId': '182.17', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-12 13:02:01,068][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=147)
+[2025-12-12 13:02:01,072][driver:connection:_process_message] [DEBUG] Processing message with id: 147
+[2025-12-12 13:02:01,074][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getSearchResults completed in 0.01 seconds
+[2025-12-12 13:02:01,078][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-12 13:02:01,081][driver:connection:send] [DEBUG] {'id': 148, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '182.17'}}
+[2025-12-12 13:02:01,084][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=148)
+[2025-12-12 13:02:01,088][driver:connection:_process_message] [DEBUG] Processing message with id: 148
+[2025-12-12 13:02:01,090][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.discardSearchResults completed in 0.01 seconds
+[2025-12-12 13:02:01,092][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //article[.//video][position() = 1] query.
+[2025-12-12 13:02:01,095][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-12 13:02:01,099][driver:connection:send] [DEBUG] {'id': 149, 'method': 'DOM.describeNode', 'params': {'nodeId': 24619, 'pierce': True}}
+[2025-12-12 13:02:01,103][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=149)
+[2025-12-12 13:02:01,107][driver:connection:_process_message] [DEBUG] Processing message with id: 149
+[2025-12-12 13:02:01,109][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.describeNode completed in 0.01 seconds
+[2025-12-12 13:02:01,112][driver:element:html] [DEBUG] Getting HTML content for element (nodeId: NodeId(24619))
+[2025-12-12 13:02:01,115][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getOuterHTML
+[2025-12-12 13:02:01,118][driver:connection:send] [DEBUG] {'id': 150, 'method': 'DOM.getOuterHTML', 'params': {'nodeId': 24619}}
+[2025-12-12 13:02:01,121][driver:connection:send] [DEBUG] Sending: DOM.getOuterHTML (id=150)
+[2025-12-12 13:02:01,126][driver:connection:_process_message] [DEBUG] Processing message with id: 150
+[2025-12-12 13:02:01,127][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getOuterHTML completed in 0.01 seconds
+[2025-12-12 13:02:01,181][driver:tab:scroll_by_mouse_wheel] [DEBUG] Using provided coordinates for scroll: (257.2, 359.2)
+[2025-12-12 13:02:01,186][driver:tab:scroll_by_mouse_wheel] [INFO] Scrolling page by mouse wheel: 505.4 pixels, starting at (257.2, 359.2)
+[2025-12-12 13:02:01,188][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-12 13:02:01,192][driver:connection:send] [DEBUG] {'id': 151, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mouseWheel', 'x': 257.2, 'y': 359.2, 'deltaX': 0, 'deltaY': 505.4}}
+[2025-12-12 13:02:01,194][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=151)
+[2025-12-12 13:02:01,233][driver:connection:_process_message] [DEBUG] Processing message with id: 151
+[2025-12-12 13:02:01,235][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Input.dispatchMouseEvent completed in 0.04 seconds

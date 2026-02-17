@@ -1,0 +1,54 @@
+countries:
+- name: France
+  language_code: fr
+  country_code: fr
+  capital_city: Paris
+  gps_location:
+    latitude: 48.856614
+    longitude: 2.352222
+  population: 67022000
+
+- name: Germany
+  language_code: de
+  country_code: de
+  capital_city: Berlin
+  gps_location:
+    latitude: 52.520008
+    longitude: 13.404954
+  population: 83783942
+
+- name: Italy
+  language_code: it
+  country_code: it
+  capital_city: Rome
+  gps_location:
+    latitude: 41.902782
+    longitude: 12.496369
+  population: 58991340
+
+- name: Ukraine
+  language_code: uk
+  country_code: ua
+  capital_city: Kyiv
+  gps_location:
+    latitude: 50.450001
+    longitude: 30.523333
+  population: 38375430
+
+- name: Romania
+  language_code: ro
+  country_code: ro
+  capital_city: Bucharest
+  gps_location:
+    latitude: 44.439663
+    longitude: 26.096306
+  population: 18965673
+
+- name: United States
+  language_code: en-US
+  country_code: us
+  capital_city: Washington DC
+  gps_location:
+    latitude: 38.889805
+    longitude: -77.009056
+  population: 346282617

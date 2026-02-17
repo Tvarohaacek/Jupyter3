@@ -1,0 +1,409 @@
+[2025-12-12 13:01:05,659][agent:main:main_async] [INFO] Storage path: /data
+[2025-12-12 13:01:05,814][agent:main:run_pipeline] [INFO] Starting pipeline execution for experiment: drifting_study_main
+[2025-12-12 13:01:05,820][agent:toolbox:clear_pipeline_log] [INFO] Pipeline execution log cleared
+[2025-12-12 13:01:05,825][agent:runner:execute_pipeline] [INFO] --- Starting Pipeline Execution for Experiment: drifting_study_main ---
+[2025-12-12 13:01:05,832][agent:context:_try_parse_puppet_identity] [DEBUG] Successfully parsed puppet identity from variables
+[2025-12-12 13:01:05,837][agent:runner:get_pipeline_action_step_results] [INFO] Executing initial actions on platform 'tiktok'
+[2025-12-12 13:01:05,841][agent:runner:execute_initial_actions] [INFO] No initial actions found (ONCE schedule, no dependencies).
+[2025-12-12 13:01:05,844][agent:runner:get_pipeline_action_step_results] [INFO] Completed initial actions: None
+[2025-12-12 13:01:05,847][agent:runner:resolve_dependencies_until_complete] [INFO] Entering dependency resolution loop for 1 pending actions.
+[2025-12-12 13:01:05,852][agent:runner:resolve_dependencies_until_complete] [DEBUG] Starting dependency resolution round. Pending: ['main_phase_foryou']
+[2025-12-12 13:01:05,854][agent:runner:execute_pending_actions_round] [INFO] Dependencies met for action main_phase_foryou, executing.
+[2025-12-12 13:01:05,860][agent:runner:execute_action] [INFO] Executing action: main_phase_foryou - Start browser and navigate to TikTok
+[2025-12-12 13:01:05,864][agent:runner:execute_step] [DEBUG] Processing step open_browser on platform tiktok
+[2025-12-12 13:01:05,871][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step open_browser: {}
+[2025-12-12 13:01:05,876][agent:runner:execute_tool] [INFO] Executing async tool open_browser
+[2025-12-12 13:01:05,881][agent:session:open_browser] [INFO] Initializing browser session
+[2025-12-12 13:01:05,885][agent:session:_ensure_protocol_handler_allowance] [INFO] Injecting/checking TikTok protocol into browser storage preferences.
+[2025-12-12 13:01:05,890][agent:session:_ensure_protocol_handler_allowance] [INFO] Chrome preferences file path: /data/browser_storage/Default/Preferences
+[2025-12-12 13:01:05,897][agent:session:_ensure_protocol_handler_allowance] [DEBUG] TikTok protocol handler already allowed; no update needed
+[2025-12-12 13:01:05,900][agent:session:open_browser] [INFO] Browser options: ['--disable-dev-shm-usage', '--disable-accelerated-2d-canvas', '--disable-gpu', '--disable-backgrounding-occluded-windows', '--disable-features=TranslateUI,BlinkGenPropertyTrees', '--disable-ipc-flooding-protection', '--allow-running-insecure-content', '--enable-logging', '--v=1', '--enable-features=protocolMonitor', '--disable-notifications', '--disable-popup-blocking', '--disable-extensions', '--disable-component-extensions-with-background-pages', '--disable-default-apps', '--disable-hang-monitor', '--disable-prompt-on-repost', '--disable-client-side-phishing-detection', '--disable-sync', '--metrics-recording-only', '--no-first-run', '--password-store=basic', '--no-sandbox', '--lang=en-US', '--timezone=Europe/Paris', '--remote-debugging-port=54321', '--window-position=0,0', '--window-size=1920,1080']
+[2025-12-12 13:01:07,311][agent:session:open_browser] [INFO] Browser download directory set to /data/1765544461.4708593/downloads
+[2025-12-12 13:01:07,321][agent:session:open_browser] [INFO] Browser session initialized successfully
+[2025-12-12 13:01:07,324][agent:runner:execute_step_with_tool] [INFO] Step open_browser execution completed with success=True
+[2025-12-12 13:01:07,326][agent:runner:execute_step_with_tool] [DEBUG] Step open_browser result data: {'browser_initialized': True}
+[2025-12-12 13:01:07,329][agent:runner:execute_step] [DEBUG] Processing step collect_network_data on platform tiktok
+[2025-12-12 13:01:07,331][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.track' to: {'comment_list': 'https://www.tiktok.com/api/comment/list/', 'recommend_item_list': 'https://www.tiktok.com/api/recommend/item_list', 'search_general_full': 'https://www.tiktok.com/api/search/general/full/', 'search_general_preview': 'https://www.tiktok.com/api/search/general/preview/', 'user_detail': 'https://www.tiktok.com/api/user/detail/', 'webcast': 'https://webcast.tiktok.com/webcast/room/check_alive/'}
+[2025-12-12 13:01:07,334][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step collect_network_data: {'endpoints': {'comment_list': 'https://www.tiktok.com/api/comment/list/', 'recommend_item_list': 'https://www.tiktok.com/api/recommend/item_list', 'search_general_full': 'https://www.tiktok.com/api/search/general/full/', 'search_general_preview': 'https://www.tiktok.com/api/search/general/preview/', 'user_detail': 'https://www.tiktok.com/api/user/detail/', 'webcast': 'https://webcast.tiktok.com/webcast/room/check_alive/'}}
+[2025-12-12 13:01:07,337][agent:runner:execute_tool] [INFO] Executing async tool track_network
+[2025-12-12 13:01:07,380][agent:runner:execute_step_with_tool] [INFO] Step collect_network_data execution completed with success=True
+[2025-12-12 13:01:07,382][agent:runner:execute_step_with_tool] [DEBUG] Step collect_network_data result data: {'count': 6, 'context_key': 'endpoint_responses'}
+[2025-12-12 13:01:07,385][agent:runner:execute_step] [DEBUG] Processing step navigate_to_tiktok on platform tiktok
+[2025-12-12 13:01:07,387][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step navigate_to_tiktok: {'url': 'https://www.tiktok.com/'}
+[2025-12-12 13:01:07,390][agent:runner:execute_tool] [INFO] Executing async tool navigate_to
+[2025-12-12 13:01:07,393][agent:session:navigate_to] [DEBUG] Navigating to URL: https://www.tiktok.com/
+[2025-12-12 13:01:07,408][agent:screenshot:screenshot_loop] [DEBUG] Screenshot loop started with sleep interval: '1' s.)
+[2025-12-12 13:01:07,421][agent:screenshot:screenshot_loop] [DEBUG] Screenshot loop started with sleep interval: '1' s.)
+[2025-12-12 13:01:12,352][agent:monitoring:store] [INFO] Stored response for endpoint 'recommend_item_list'
+[2025-12-12 13:01:13,597][agent:runner:execute_step_with_tool] [INFO] Step navigate_to_tiktok execution completed with success=True
+[2025-12-12 13:01:13,607][agent:runner:execute_step_with_tool] [DEBUG] Step navigate_to_tiktok result data: {'url': 'https://www.tiktok.com/'}
+[2025-12-12 13:01:13,613][agent:runner:execute_step] [DEBUG] Processing step account_login on platform tiktok
+[2025-12-12 13:01:13,619][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.username' to: user2026+willibert.lower@zohomail.eu
+[2025-12-12 13:01:13,626][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.secret' to: $aZkM6Ei
+[2025-12-12 13:01:13,637][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step account_login: {'email': 'user2026+willibert.lower@zohomail.eu', 'secret': '$aZkM6Ei'}
+[2025-12-12 13:01:13,643][agent:runner:execute_tool] [INFO] Executing async tool log_in_with_email
+[2025-12-12 13:01:15,611][agent:runner:execute_step_with_tool] [INFO] Step account_login execution completed with success=True
+[2025-12-12 13:01:15,618][agent:runner:execute_step_with_tool] [DEBUG] Step account_login result data: {'user': 'user2026+willibert.lower@zohomail.eu'}
+[2025-12-12 13:01:15,629][agent:runner:execute_step] [DEBUG] Processing step start_dismiss_actions on platform tiktok
+[2025-12-12 13:01:15,642][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step start_dismiss_actions: {'mode': 'after_login'}
+[2025-12-12 13:01:15,647][agent:runner:execute_tool] [INFO] Executing async tool start_dismiss_actions
+[2025-12-12 13:01:15,652][agent:popup_handler:start_dismiss_actions] [INFO] Start dismiss task.
+[2025-12-12 13:01:15,656][agent:runner:execute_step_with_tool] [INFO] Step start_dismiss_actions execution completed with success=True
+[2025-12-12 13:01:15,661][agent:runner:execute_step_with_tool] [DEBUG] Step start_dismiss_actions result data: {'dismiss_task': <Task pending name='dismiss_loop_task' coro=<dismiss_loop() running at /app/.venv/lib/python3.12/site-packages/driver/actions/utils.py:11>>}
+[2025-12-12 13:01:15,667][agent:runner:execute_step] [DEBUG] Processing step navigate_to_tiktok on platform tiktok
+[2025-12-12 13:01:15,671][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step navigate_to_tiktok: {'url': 'https://www.tiktok.com/foryou'}
+[2025-12-12 13:01:15,675][agent:runner:execute_tool] [INFO] Executing async tool navigate_to
+[2025-12-12 13:01:15,680][agent:session:navigate_to] [DEBUG] Navigating to URL: https://www.tiktok.com/foryou
+[2025-12-12 13:01:18,610][agent:monitoring:store] [INFO] Stored response for endpoint 'recommend_item_list'
+[2025-12-12 13:01:21,441][agent:runner:execute_step_with_tool] [INFO] Step navigate_to_tiktok execution completed with success=True
+[2025-12-12 13:01:21,444][agent:runner:execute_step_with_tool] [DEBUG] Step navigate_to_tiktok result data: {'url': 'https://www.tiktok.com/foryou'}
+[2025-12-12 13:01:21,448][agent:runner:execute_step] [DEBUG] Processing step pause_video on platform tiktok
+[2025-12-12 13:01:21,452][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step pause_video: {}
+[2025-12-12 13:01:21,455][agent:runner:execute_tool] [INFO] Executing async tool pause_fyp_video
+[2025-12-12 13:01:23,718][agent:runner:execute_step_with_tool] [INFO] Step pause_video execution completed with success=True
+[2025-12-12 13:01:23,727][agent:runner:execute_step_with_tool] [DEBUG] Step pause_video result data: {'paused': True}
+[2025-12-12 13:01:23,729][agent:runner:execute_step] [DEBUG] Processing step unpause_video on platform tiktok
+[2025-12-12 13:01:23,732][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step unpause_video: {}
+[2025-12-12 13:01:23,735][agent:runner:execute_tool] [INFO] Executing async tool unpause_fyp_video
+[2025-12-12 13:01:24,485][agent:runner:execute_step_with_tool] [INFO] Step unpause_video execution completed with success=True
+[2025-12-12 13:01:24,489][agent:runner:execute_step_with_tool] [DEBUG] Step unpause_video result data: {'unpaused': True}
+[2025-12-12 13:01:24,492][agent:runner:execute_step] [DEBUG] Processing step watch_loop on platform tiktok
+[2025-12-12 13:01:24,495][agent:runner:execute_looping_step] [INFO] Executing looping step watch_loop using control tool for_time
+[2025-12-12 13:01:24,497][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.time' to: 3600
+[2025-12-12 13:01:24,500][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step watch_loop: {'max_time': 3600, '_step_id': 'watch_loop'}
+[2025-12-12 13:01:24,503][agent:runner:execute_tool] [INFO] Executing sync tool for_time
+[2025-12-12 13:01:24,509][agent:runner:execute_step_with_tool] [INFO] Step watch_loop execution completed with success=True
+[2025-12-12 13:01:24,511][agent:runner:execute_step_with_tool] [DEBUG] Step watch_loop result data: {'continue': True, 'time_ended': 1765544484, 'time_accumulated': 0}
+[2025-12-12 13:01:24,513][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:24,516][agent:runner:execute_step] [DEBUG] Processing step predict_interaction on platform tiktok
+[2025-12-12 13:01:24,519][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step predict_interaction: {}
+[2025-12-12 13:01:24,521][agent:runner:execute_tool] [INFO] Executing async tool predict_fyp_interaction
+[2025-12-12 13:01:25,002][agent:endpoint_data:find_matching_video_in_recommend_list] [DEBUG] Found matching video: 7579291086208666894 by definitely.not_deja
+[2025-12-12 13:01:25,013][agent:client:fetch_single_interaction_prediction] [INFO] Fetch single interaction prediction {'timestamp': '1765544485', 'request_id': '4741e33b-63d6-400f-8f2b-f81586fbb045', 'user': UserModel(gender=<Gender.MALE: 'male'>, user_name='user2026+willibert.lower@zohomail.eu', country_code='DE', date_of_birth='2008-07-02', params=ParamsModel(topics=[TopicStanceModel(topic='fitness', stance=<StanceType.INDIFFERENT: 'indifferent'>)])), 'video': VideoModel(video_id='7579291086208666894', url='https://www.tiktok.com/@definitely.not_deja/video/7579291086208666894', description='😩', author='definitely.not_deja')}
+[2025-12-12 13:01:25,033][agent:runner:execute_step_with_tool] [ERROR] Error executing tool predict_fyp_interaction for step predict_interaction
+Traceback (most recent call last):
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1115, in _wrap_create_connection
+    sock = await aiohappyeyeballs.start_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohappyeyeballs/impl.py", line 122, in start_connection
+    raise first_exception
+  File "/app/.venv/lib/python3.12/site-packages/aiohappyeyeballs/impl.py", line 73, in start_connection
+    sock = await _connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohappyeyeballs/impl.py", line 208, in _connect_sock
+    await loop.sock_connect(sock, address)
+  File "/usr/local/lib/python3.12/asyncio/selector_events.py", line 651, in sock_connect
+    return await fut
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/selector_events.py", line 691, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('10.100.32.164', 8000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/src/pipeline/runner.py", line 643, in execute_step_with_tool
+    raw_result = await execute_tool(platform_lower, step.tool, resolved_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/runner.py", line 597, in execute_tool
+    return await execute_async_tool(tool_func, args) if is_async else execute_sync_tool(tool_func, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/runner.py", line 457, in execute_async_tool
+    return await tool_func(**args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/tiktok/foryou/prediction.py", line 29, in predict_fyp_interaction
+    response = await call_interaction_predictor(videos=[video])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/prediction/client.py", line 167, in call_interaction_predictor
+    return await fetch_single_interaction_prediction(request, url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/prediction/client.py", line 94, in fetch_single_interaction_prediction
+    async with (
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1406, in _create_direct_connection
+    raise last_exc
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1375, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1130, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host ai-auditology-predictor.airflow.svc.cluster.local:8000 ssl:default [Connect call failed ('10.100.32.164', 8000)]
+[2025-12-12 13:01:25,041][agent:runner:execute_looping_step] [WARNING] Inner step predict_interaction failed: Cannot connect to host ai-auditology-predictor.airflow.svc.cluster.local:8000 ssl:default [Connect call failed ('10.100.32.164', 8000)]
+[2025-12-12 13:01:25,045][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:25,048][agent:runner:execute_step] [DEBUG] Processing step skip_video_if_prediction_missing on platform tiktok
+[2025-12-12 13:01:25,051][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step skip_video_if_prediction_missing: {{ steps.predict_interaction.success == false }}
+[2025-12-12 13:01:25,054][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.success' to: false
+[2025-12-12 13:01:25,060][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating False, False with operator <built-in function eq>, with result True
+[2025-12-12 13:01:25,064][agent:runner:should_execute_step] [DEBUG] Condition result for step skip_video_if_prediction_missing: True
+[2025-12-12 13:01:25,067][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step skip_video_if_prediction_missing: {}
+[2025-12-12 13:01:25,075][agent:runner:execute_tool] [INFO] Executing async tool scroll_fyp_video
+[2025-12-12 13:01:27,433][agent:runner:execute_step_with_tool] [INFO] Step skip_video_if_prediction_missing execution completed with success=True
+[2025-12-12 13:01:27,437][agent:runner:execute_step_with_tool] [DEBUG] Step skip_video_if_prediction_missing result data: {'scrolled': True}
+[2025-12-12 13:01:27,440][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:27,443][agent:runner:execute_step] [DEBUG] Processing step skip_video on platform tiktok
+[2025-12-12 13:01:27,445][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step skip_video: {{ steps.predict_interaction.data.skip == 1 }}
+[2025-12-12 13:01:27,448][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.data.skip' to: None
+[2025-12-12 13:01:27,452][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating None, 1 with operator <built-in function eq>, with result False
+[2025-12-12 13:01:27,455][agent:runner:should_execute_step] [DEBUG] Condition result for step skip_video: False
+[2025-12-12 13:01:27,465][agent:runner:execute_step] [INFO] Skipping step skip_video due to condition evaluation yielding False: '{{ steps.predict_interaction.data.skip == 1 }}'
+[2025-12-12 13:01:27,468][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:27,474][agent:runner:execute_step] [DEBUG] Processing step like_video on platform tiktok
+[2025-12-12 13:01:27,477][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step like_video: {{ steps.predict_interaction.data.like == 1 }}
+[2025-12-12 13:01:27,479][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.data.like' to: None
+[2025-12-12 13:01:27,486][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating None, 1 with operator <built-in function eq>, with result False
+[2025-12-12 13:01:27,490][agent:runner:should_execute_step] [DEBUG] Condition result for step like_video: False
+[2025-12-12 13:01:27,493][agent:runner:execute_step] [INFO] Skipping step like_video due to condition evaluation yielding False: '{{ steps.predict_interaction.data.like == 1 }}'
+[2025-12-12 13:01:27,495][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:27,498][agent:runner:execute_step] [DEBUG] Processing step bookmark_video on platform tiktok
+[2025-12-12 13:01:27,501][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step bookmark_video: {{ steps.predict_interaction.data.like == 1 }}
+[2025-12-12 13:01:27,504][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.data.like' to: None
+[2025-12-12 13:01:27,508][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating None, 1 with operator <built-in function eq>, with result False
+[2025-12-12 13:01:27,512][agent:runner:should_execute_step] [DEBUG] Condition result for step bookmark_video: False
+[2025-12-12 13:01:27,515][agent:runner:execute_step] [INFO] Skipping step bookmark_video due to condition evaluation yielding False: '{{ steps.predict_interaction.data.like == 1 }}'
+[2025-12-12 13:01:27,518][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:27,521][agent:runner:execute_step] [DEBUG] Processing step watch_video on platform tiktok
+[2025-12-12 13:01:27,524][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step watch_video: {{ steps.predict_interaction.data.watch == 1 }}
+[2025-12-12 13:01:27,527][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.data.watch' to: None
+[2025-12-12 13:01:27,531][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating None, 1 with operator <built-in function eq>, with result False
+[2025-12-12 13:01:27,535][agent:runner:should_execute_step] [DEBUG] Condition result for step watch_video: False
+[2025-12-12 13:01:27,538][agent:runner:execute_step] [INFO] Skipping step watch_video due to condition evaluation yielding False: '{{ steps.predict_interaction.data.watch == 1 }}'
+[2025-12-12 13:01:27,541][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:27,543][agent:runner:execute_step] [DEBUG] Processing step scroll_video on platform tiktok
+[2025-12-12 13:01:27,546][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step scroll_video: {{ steps.predict_interaction.data.watch == 1 }}
+[2025-12-12 13:01:27,549][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.data.watch' to: None
+[2025-12-12 13:01:27,552][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating None, 1 with operator <built-in function eq>, with result False
+[2025-12-12 13:01:27,555][agent:runner:should_execute_step] [DEBUG] Condition result for step scroll_video: False
+[2025-12-12 13:01:27,558][agent:runner:execute_step] [INFO] Skipping step scroll_video due to condition evaluation yielding False: '{{ steps.predict_interaction.data.watch == 1 }}'
+[2025-12-12 13:01:27,560][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.time' to: 3600
+[2025-12-12 13:01:27,564][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step watch_loop: {'max_time': 3600, '_step_id': 'watch_loop'}
+[2025-12-12 13:01:27,566][agent:runner:execute_tool] [INFO] Executing sync tool for_time
+[2025-12-12 13:01:27,573][agent:runner:execute_step_with_tool] [INFO] Step watch_loop execution completed with success=True
+[2025-12-12 13:01:27,577][agent:runner:execute_step_with_tool] [DEBUG] Step watch_loop result data: {'continue': True, 'time_ended': 1765544487, 'time_accumulated': 3}
+[2025-12-12 13:01:27,579][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:27,582][agent:runner:execute_step] [DEBUG] Processing step predict_interaction on platform tiktok
+[2025-12-12 13:01:27,585][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step predict_interaction: {}
+[2025-12-12 13:01:27,587][agent:runner:execute_tool] [INFO] Executing async tool predict_fyp_interaction
+[2025-12-12 13:01:28,475][agent:endpoint_data:find_matching_video_in_recommend_list] [DEBUG] Found matching video: 7549420196767796502 by sistervader
+[2025-12-12 13:01:28,478][agent:client:fetch_single_interaction_prediction] [INFO] Fetch single interaction prediction {'timestamp': '1765544488', 'request_id': '3cbb4730-ae87-4302-87d2-e5c237413123', 'user': UserModel(gender=<Gender.MALE: 'male'>, user_name='user2026+willibert.lower@zohomail.eu', country_code='DE', date_of_birth='2008-07-02', params=ParamsModel(topics=[TopicStanceModel(topic='fitness', stance=<StanceType.INDIFFERENT: 'indifferent'>)])), 'video': VideoModel(video_id='7549420196767796502', url='https://www.tiktok.com/@sistervader/video/7549420196767796502', description='Go big or go home #consistency #fyp #musclemommy #gym #gymmotivation🏋️\u200d♀️ ', author='sistervader')}
+[2025-12-12 13:01:28,486][agent:runner:execute_step_with_tool] [ERROR] Error executing tool predict_fyp_interaction for step predict_interaction
+Traceback (most recent call last):
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1115, in _wrap_create_connection
+    sock = await aiohappyeyeballs.start_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohappyeyeballs/impl.py", line 122, in start_connection
+    raise first_exception
+  File "/app/.venv/lib/python3.12/site-packages/aiohappyeyeballs/impl.py", line 73, in start_connection
+    sock = await _connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohappyeyeballs/impl.py", line 208, in _connect_sock
+    await loop.sock_connect(sock, address)
+  File "/usr/local/lib/python3.12/asyncio/selector_events.py", line 651, in sock_connect
+    return await fut
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/selector_events.py", line 691, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('10.100.32.164', 8000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/src/pipeline/runner.py", line 643, in execute_step_with_tool
+    raw_result = await execute_tool(platform_lower, step.tool, resolved_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/runner.py", line 597, in execute_tool
+    return await execute_async_tool(tool_func, args) if is_async else execute_sync_tool(tool_func, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/runner.py", line 457, in execute_async_tool
+    return await tool_func(**args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/tiktok/foryou/prediction.py", line 29, in predict_fyp_interaction
+    response = await call_interaction_predictor(videos=[video])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/prediction/client.py", line 167, in call_interaction_predictor
+    return await fetch_single_interaction_prediction(request, url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/prediction/client.py", line 94, in fetch_single_interaction_prediction
+    async with (
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1406, in _create_direct_connection
+    raise last_exc
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1375, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1130, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host ai-auditology-predictor.airflow.svc.cluster.local:8000 ssl:default [Connect call failed ('10.100.32.164', 8000)]
+[2025-12-12 13:01:28,492][agent:runner:execute_looping_step] [WARNING] Inner step predict_interaction failed: Cannot connect to host ai-auditology-predictor.airflow.svc.cluster.local:8000 ssl:default [Connect call failed ('10.100.32.164', 8000)]
+[2025-12-12 13:01:28,496][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:28,499][agent:runner:execute_step] [DEBUG] Processing step skip_video_if_prediction_missing on platform tiktok
+[2025-12-12 13:01:28,501][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step skip_video_if_prediction_missing: {{ steps.predict_interaction.success == false }}
+[2025-12-12 13:01:28,504][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.success' to: false
+[2025-12-12 13:01:28,508][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating False, False with operator <built-in function eq>, with result True
+[2025-12-12 13:01:28,511][agent:runner:should_execute_step] [DEBUG] Condition result for step skip_video_if_prediction_missing: True
+[2025-12-12 13:01:28,514][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step skip_video_if_prediction_missing: {}
+[2025-12-12 13:01:28,517][agent:runner:execute_tool] [INFO] Executing async tool scroll_fyp_video
+[2025-12-12 13:01:30,563][agent:runner:execute_step_with_tool] [INFO] Step skip_video_if_prediction_missing execution completed with success=True
+[2025-12-12 13:01:30,566][agent:runner:execute_step_with_tool] [DEBUG] Step skip_video_if_prediction_missing result data: {'scrolled': True}
+[2025-12-12 13:01:30,570][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:30,573][agent:runner:execute_step] [DEBUG] Processing step skip_video on platform tiktok
+[2025-12-12 13:01:30,576][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step skip_video: {{ steps.predict_interaction.data.skip == 1 }}
+[2025-12-12 13:01:30,579][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.data.skip' to: None
+[2025-12-12 13:01:30,582][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating None, 1 with operator <built-in function eq>, with result False
+[2025-12-12 13:01:30,586][agent:runner:should_execute_step] [DEBUG] Condition result for step skip_video: False
+[2025-12-12 13:01:30,589][agent:runner:execute_step] [INFO] Skipping step skip_video due to condition evaluation yielding False: '{{ steps.predict_interaction.data.skip == 1 }}'
+[2025-12-12 13:01:30,593][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:30,595][agent:runner:execute_step] [DEBUG] Processing step like_video on platform tiktok
+[2025-12-12 13:01:30,598][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step like_video: {{ steps.predict_interaction.data.like == 1 }}
+[2025-12-12 13:01:30,602][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.data.like' to: None
+[2025-12-12 13:01:30,605][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating None, 1 with operator <built-in function eq>, with result False
+[2025-12-12 13:01:30,608][agent:runner:should_execute_step] [DEBUG] Condition result for step like_video: False
+[2025-12-12 13:01:30,612][agent:runner:execute_step] [INFO] Skipping step like_video due to condition evaluation yielding False: '{{ steps.predict_interaction.data.like == 1 }}'
+[2025-12-12 13:01:30,615][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:30,618][agent:runner:execute_step] [DEBUG] Processing step bookmark_video on platform tiktok
+[2025-12-12 13:01:30,621][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step bookmark_video: {{ steps.predict_interaction.data.like == 1 }}
+[2025-12-12 13:01:30,624][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.data.like' to: None
+[2025-12-12 13:01:30,628][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating None, 1 with operator <built-in function eq>, with result False
+[2025-12-12 13:01:30,631][agent:runner:should_execute_step] [DEBUG] Condition result for step bookmark_video: False
+[2025-12-12 13:01:30,634][agent:runner:execute_step] [INFO] Skipping step bookmark_video due to condition evaluation yielding False: '{{ steps.predict_interaction.data.like == 1 }}'
+[2025-12-12 13:01:30,638][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:30,641][agent:runner:execute_step] [DEBUG] Processing step watch_video on platform tiktok
+[2025-12-12 13:01:30,644][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step watch_video: {{ steps.predict_interaction.data.watch == 1 }}
+[2025-12-12 13:01:30,648][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.data.watch' to: None
+[2025-12-12 13:01:30,651][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating None, 1 with operator <built-in function eq>, with result False
+[2025-12-12 13:01:30,655][agent:runner:should_execute_step] [DEBUG] Condition result for step watch_video: False
+[2025-12-12 13:01:30,658][agent:runner:execute_step] [INFO] Skipping step watch_video due to condition evaluation yielding False: '{{ steps.predict_interaction.data.watch == 1 }}'
+[2025-12-12 13:01:30,662][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:30,665][agent:runner:execute_step] [DEBUG] Processing step scroll_video on platform tiktok
+[2025-12-12 13:01:30,668][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step scroll_video: {{ steps.predict_interaction.data.watch == 1 }}
+[2025-12-12 13:01:30,672][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.data.watch' to: None
+[2025-12-12 13:01:30,675][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating None, 1 with operator <built-in function eq>, with result False
+[2025-12-12 13:01:30,679][agent:runner:should_execute_step] [DEBUG] Condition result for step scroll_video: False
+[2025-12-12 13:01:30,682][agent:runner:execute_step] [INFO] Skipping step scroll_video due to condition evaluation yielding False: '{{ steps.predict_interaction.data.watch == 1 }}'
+[2025-12-12 13:01:30,685][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.time' to: 3600
+[2025-12-12 13:01:30,689][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step watch_loop: {'max_time': 3600, '_step_id': 'watch_loop'}
+[2025-12-12 13:01:30,693][agent:runner:execute_tool] [INFO] Executing sync tool for_time
+[2025-12-12 13:01:30,699][agent:runner:execute_step_with_tool] [INFO] Step watch_loop execution completed with success=True
+[2025-12-12 13:01:30,702][agent:runner:execute_step_with_tool] [DEBUG] Step watch_loop result data: {'continue': True, 'time_ended': 1765544490, 'time_accumulated': 6}
+[2025-12-12 13:01:30,706][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:30,710][agent:runner:execute_step] [DEBUG] Processing step predict_interaction on platform tiktok
+[2025-12-12 13:01:30,715][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step predict_interaction: {}
+[2025-12-12 13:01:30,719][agent:runner:execute_tool] [INFO] Executing async tool predict_fyp_interaction
+[2025-12-12 13:01:31,225][agent:endpoint_data:find_matching_video_in_recommend_list] [DEBUG] Found matching video: 7569205660726971669 by mautojivietnams
+[2025-12-12 13:01:31,229][agent:client:fetch_single_interaction_prediction] [INFO] Fetch single interaction prediction {'timestamp': '1765544491', 'request_id': 'e7604d7c-8375-4fca-8017-7992343b2f71', 'user': UserModel(gender=<Gender.MALE: 'male'>, user_name='user2026+willibert.lower@zohomail.eu', country_code='DE', date_of_birth='2008-07-02', params=ParamsModel(topics=[TopicStanceModel(topic='fitness', stance=<StanceType.INDIFFERENT: 'indifferent'>)])), 'video': VideoModel(video_id='7569205660726971669', url='https://www.tiktok.com/@mautojivietnams/video/7569205660726971669', description='1 vóc dáng tại nhà mà tôi đã mài dũa.           #body #6mui #gym #calicthesnic #tapluyen ', author='mautojivietnams')}
+[2025-12-12 13:01:31,245][agent:runner:execute_step_with_tool] [ERROR] Error executing tool predict_fyp_interaction for step predict_interaction
+Traceback (most recent call last):
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1115, in _wrap_create_connection
+    sock = await aiohappyeyeballs.start_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohappyeyeballs/impl.py", line 122, in start_connection
+    raise first_exception
+  File "/app/.venv/lib/python3.12/site-packages/aiohappyeyeballs/impl.py", line 73, in start_connection
+    sock = await _connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohappyeyeballs/impl.py", line 208, in _connect_sock
+    await loop.sock_connect(sock, address)
+  File "/usr/local/lib/python3.12/asyncio/selector_events.py", line 651, in sock_connect
+    return await fut
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.12/asyncio/selector_events.py", line 691, in _sock_connect_cb
+    raise OSError(err, f'Connect call failed {address}')
+ConnectionRefusedError: [Errno 111] Connect call failed ('10.100.32.164', 8000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/src/pipeline/runner.py", line 643, in execute_step_with_tool
+    raw_result = await execute_tool(platform_lower, step.tool, resolved_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/runner.py", line 597, in execute_tool
+    return await execute_async_tool(tool_func, args) if is_async else execute_sync_tool(tool_func, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/runner.py", line 457, in execute_async_tool
+    return await tool_func(**args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/tiktok/foryou/prediction.py", line 29, in predict_fyp_interaction
+    response = await call_interaction_predictor(videos=[video])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/prediction/client.py", line 167, in call_interaction_predictor
+    return await fetch_single_interaction_prediction(request, url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/prediction/client.py", line 94, in fetch_single_interaction_prediction
+    async with (
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/client.py", line 1425, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1406, in _create_direct_connection
+    raise last_exc
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1375, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/aiohttp/connector.py", line 1130, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host ai-auditology-predictor.airflow.svc.cluster.local:8000 ssl:default [Connect call failed ('10.100.32.164', 8000)]
+[2025-12-12 13:01:31,252][agent:runner:execute_looping_step] [WARNING] Inner step predict_interaction failed: Cannot connect to host ai-auditology-predictor.airflow.svc.cluster.local:8000 ssl:default [Connect call failed ('10.100.32.164', 8000)]
+[2025-12-12 13:01:31,257][agent:runner:execute_looping_step] [INFO] Executing inner steps for loop watch_loop
+[2025-12-12 13:01:31,259][agent:runner:execute_step] [DEBUG] Processing step skip_video_if_prediction_missing on platform tiktok
+[2025-12-12 13:01:31,263][agent:runner:should_execute_step] [DEBUG] Evaluating condition for step skip_video_if_prediction_missing: {{ steps.predict_interaction.success == false }}
+[2025-12-12 13:01:31,266][agent:runner:resolve_string] [DEBUG] Resolved step reference 'steps.predict_interaction.success' to: false
+[2025-12-12 13:01:31,270][agent:runner:evaluate_condition_tree] [DEBUG] Evaluating False, False with operator <built-in function eq>, with result True
+[2025-12-12 13:01:31,273][agent:runner:should_execute_step] [DEBUG] Condition result for step skip_video_if_prediction_missing: True
+[2025-12-12 13:01:31,276][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step skip_video_if_prediction_missing: {}
+[2025-12-12 13:01:31,279][agent:runner:execute_tool] [INFO] Executing async tool scroll_fyp_video

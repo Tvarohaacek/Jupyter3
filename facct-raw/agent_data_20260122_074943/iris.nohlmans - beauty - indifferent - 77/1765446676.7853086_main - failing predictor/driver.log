@@ -1,0 +1,444 @@
+[2025-12-11 09:51:20,382][driver:find_browser:find_chrome_executable] [INFO] Searching for Chrome executable on Linux system
+[2025-12-11 09:51:20,385][driver:find_browser:find_chrome_executable] [DEBUG] Checking common Linux Chrome installation paths
+[2025-12-11 09:51:20,388][driver:find_browser:find_chrome_executable] [DEBUG] Checking path: /usr/bin/google-chrome
+[2025-12-11 09:51:20,390][driver:find_browser:find_chrome_executable] [INFO] Chrome executable found at: /usr/bin/google-chrome
+[2025-12-11 09:51:20,392][driver:utils:free_port] [DEBUG] Finding free port for browser connection
+[2025-12-11 09:51:20,395][driver:utils:free_port] [DEBUG] Found free port: 36035
+[2025-12-11 09:51:20,398][driver:browser:__init__] [INFO] Browser debugging port: 36035
+[2025-12-11 09:51:20,400][driver:browser:_initial_user_profile_dir] [INFO] Browser profile folder has been loaded /data/browser_storage
+[2025-12-11 09:51:20,403][driver:browser:__init__] [DEBUG] Browser launch arguments: ['--disable-dev-shm-usage', '--disable-accelerated-2d-canvas', '--disable-gpu', '--disable-backgrounding-occluded-windows', '--disable-features=TranslateUI,BlinkGenPropertyTrees', '--disable-ipc-flooding-protection', '--allow-running-insecure-content', '--enable-logging', '--v=1', '--enable-features=protocolMonitor', '--disable-notifications', '--disable-popup-blocking', '--disable-extensions', '--disable-component-extensions-with-background-pages', '--disable-default-apps', '--disable-hang-monitor', '--disable-prompt-on-repost', '--disable-client-side-phishing-detection', '--disable-sync', '--metrics-recording-only', '--no-first-run', '--password-store=basic', '--no-sandbox', '--lang=en-US', '--timezone=Europe/Paris', '--remote-debugging-port=54321', '--window-position=0,0', '--window-size=1920,1080', '--remote-debugging-host=127.0.0.1', '--remote-debugging-port=36035', '--user-data-dir=/data/browser_storage']
+[2025-12-11 09:51:20,405][driver:process:_resolve_executable] [DEBUG] Resolving executable path: /usr/bin/google-chrome
+[2025-12-11 09:51:20,408][driver:process:_resolve_executable] [DEBUG] Executable found at: /usr/bin/google-chrome
+[2025-12-11 09:51:20,410][driver:process:__init__] [DEBUG] Resolved executable path: /usr/bin/google-chrome
+[2025-12-11 09:51:20,412][driver:process:__init__] [DEBUG] ProcessManager initialized with executable: /usr/bin/google-chrome
+[2025-12-11 09:51:20,416][driver:browser:__init__] [DEBUG] Browser initialized with focus_mode=True
+[2025-12-11 09:51:20,418][driver:process:exucute_process] [INFO] Launching process: /usr/bin/google-chrome
+[2025-12-11 09:51:20,420][driver:process:exucute_process] [DEBUG] Command arguments: ['--disable-dev-shm-usage', '--disable-accelerated-2d-canvas', '--disable-gpu', '--disable-backgrounding-occluded-windows', '--disable-features=TranslateUI,BlinkGenPropertyTrees', '--disable-ipc-flooding-protection', '--allow-running-insecure-content', '--enable-logging', '--v=1', '--enable-features=protocolMonitor', '--disable-notifications', '--disable-popup-blocking', '--disable-extensions', '--disable-component-extensions-with-background-pages', '--disable-default-apps', '--disable-hang-monitor', '--disable-prompt-on-repost', '--disable-client-side-phishing-detection', '--disable-sync', '--metrics-recording-only', '--no-first-run', '--password-store=basic', '--no-sandbox', '--lang=en-US', '--timezone=Europe/Paris', '--remote-debugging-port=54321', '--window-position=0,0', '--window-size=1920,1080', '--remote-debugging-host=127.0.0.1', '--remote-debugging-port=36035', '--user-data-dir=/data/browser_storage']
+[2025-12-11 09:51:20,425][driver:process:exucute_process] [DEBUG] Process created with PID: 66
+[2025-12-11 09:51:20,427][driver:process:exucute_process] [DEBUG] Process monitoring task started
+[2025-12-11 09:51:20,430][driver:process:exucute_process] [INFO] Process started successfully (PID: 66)
+[2025-12-11 09:51:20,433][driver:browser:start] [INFO] Starting browser process
+[2025-12-11 09:51:20,436][driver:process:exucute_process] [WARNING] Process is already running, skipping launch
+[2025-12-11 09:51:20,439][driver:browser:start] [INFO] Retrieving WebSocket URL
+[2025-12-11 09:51:20,442][driver:browser:_get_websocket_url] [DEBUG] Attempting to get WebSocket URL from http://127.0.0.1:36035/json/version
+[2025-12-11 09:51:20,446][driver:process:_monitor_process] [DEBUG] Starting process monitoring for PID: 66
+[2025-12-11 09:51:20,447][driver:process:_monitor_process] [DEBUG] Created process monitoring tasks for exit, stdout, and stderr
+[2025-12-11 09:51:20,449][driver:process:_watch_process_exit] [DEBUG] Starting exit watcher for process 66
+[2025-12-11 09:51:20,450][driver:process:_handle_stream] [DEBUG] Starting stdout handler for process 66
+[2025-12-11 09:51:20,451][driver:process:_handle_stream] [DEBUG] Starting stderr handler for process 66
+[2025-12-11 09:51:20,453][driver:browser:_get_websocket_url] [DEBUG] Attempt 1: Failed to get debugger URL: http://127.0.0.1:36035/json/version - Cannot connect to host 127.0.0.1:36035 ssl:default [Connect call failed ('127.0.0.1', 36035)]
+[2025-12-11 09:51:20,799][driver:process:_default_output_handler] [ERROR] [STDERR] 
+[2025-12-11 09:51:20,805][driver:process:_default_output_handler] [ERROR] [STDERR] DevTools listening on ws://127.0.0.1:36035/devtools/browser/c7d2d29f-a98d-4588-a944-d1e7a0072b94
+[2025-12-11 09:51:21,033][driver:process:_default_output_handler] [ERROR] [STDERR] Created TensorFlow Lite XNNPACK delegate for CPU.
+[2025-12-11 09:51:21,459][driver:browser:_get_websocket_url] [DEBUG] Retrieved WebSocket URL: ws://127.0.0.1:36035/devtools/browser/c7d2d29f-a98d-4588-a944-d1e7a0072b94
+[2025-12-11 09:51:21,485][driver:browser:start] [INFO] Establishing browser connection
+[2025-12-11 09:51:21,492][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/browser/c7d2d29f-a98d-4588-a944-d1e7a0072b94
+[2025-12-11 09:51:21,562][driver:connection:connect] [INFO] Successfully connected to ws://127.0.0.1:36035/devtools/browser/c7d2d29f-a98d-4588-a944-d1e7a0072b94
+[2025-12-11 09:51:21,565][driver:connection:connect] [DEBUG] WebSocket connection established with max_size=268435456, ping_interval=30s
+[2025-12-11 09:51:21,585][driver:connection:connect] [DEBUG] Message listener task started
+[2025-12-11 09:51:21,589][driver:domain_log_buffer:start] [DEBUG] Domain log buffer flush timer started
+[2025-12-11 09:51:21,593][driver:browser:start] [INFO] Initializing tab manager
+[2025-12-11 09:51:21,598][driver:browser:start] [DEBUG] Enabling target discovery
+[2025-12-11 09:51:21,601][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Target.setDiscoverTargets
+[2025-12-11 09:51:21,663][driver:connection:send] [DEBUG] {'id': 1, 'method': 'Target.setDiscoverTargets', 'params': {'discover': True}}
+[2025-12-11 09:51:21,666][driver:connection:send] [DEBUG] Sending: Target.setDiscoverTargets (id=1)
+[2025-12-11 09:51:21,670][driver:connection:_listen_for_messages] [INFO] Starting WebSocket message listener
+[2025-12-11 09:51:21,674][driver:connection:_process_message] [DEBUG] Processing message with id: 1
+[2025-12-11 09:51:21,683][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Target.setDiscoverTargets completed in 0.02 seconds
+[2025-12-11 09:51:21,686][driver:browser:start] [INFO] Discovering existing tabs
+[2025-12-11 09:51:21,688][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Target.getTargets
+[2025-12-11 09:51:21,691][driver:connection:send] [DEBUG] {'id': 2, 'method': 'Target.getTargets'}
+[2025-12-11 09:51:21,696][driver:connection:send] [DEBUG] Sending: Target.getTargets (id=2)
+[2025-12-11 09:51:21,700][driver:connection:_process_message] [DEBUG] Processing message with id: 2
+[2025-12-11 09:51:21,701][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Target.getTargets completed in 0.01 seconds
+[2025-12-11 09:51:21,704][driver:tab_manager:discover_tabs] [DEBUG] New tab was discovered !
+[2025-12-11 09:51:21,707][driver:tab:__init__] [INFO] Creating new tab with target ID: 35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,711][driver:tab:__init__] [DEBUG] Tab WebSocket URL: ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,714][driver:tab:__init__] [DEBUG] Tab initialized with domains to enable: ['Page', 'Runtime', 'Network', 'DOM', 'Media']
+[2025-12-11 09:51:21,716][driver:tab:connect] [DEBUG] Connecting tab 35232A5B175626D4CEF132C542172271 to ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,719][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,724][driver:connection:connect] [INFO] Successfully connected to ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,727][driver:connection:connect] [DEBUG] WebSocket connection established with max_size=268435456, ping_interval=30s
+[2025-12-11 09:51:21,730][driver:connection:connect] [DEBUG] Message listener task started
+[2025-12-11 09:51:21,733][driver:domain_log_buffer:start] [DEBUG] Domain log buffer flush timer started
+[2025-12-11 09:51:21,735][driver:tab:connect] [INFO] Tab 35232A5B175626D4CEF132C542172271 connected successfully
+[2025-12-11 09:51:21,739][driver:tab_manager:discover_tabs] [DEBUG] New tab was discovered !
+[2025-12-11 09:51:21,742][driver:tab:__init__] [INFO] Creating new tab with target ID: 0B20C716734906DCA1E1A69B3671B12C
+[2025-12-11 09:51:21,744][driver:tab:__init__] [DEBUG] Tab WebSocket URL: ws://127.0.0.1:36035/devtools/page/0B20C716734906DCA1E1A69B3671B12C
+[2025-12-11 09:51:21,747][driver:tab:__init__] [DEBUG] Tab initialized with domains to enable: ['Page', 'Runtime', 'Network', 'DOM', 'Media']
+[2025-12-11 09:51:21,750][driver:tab:connect] [DEBUG] Connecting tab 0B20C716734906DCA1E1A69B3671B12C to ws://127.0.0.1:36035/devtools/page/0B20C716734906DCA1E1A69B3671B12C
+[2025-12-11 09:51:21,753][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/0B20C716734906DCA1E1A69B3671B12C
+[2025-12-11 09:51:21,757][driver:connection:_listen_for_messages] [INFO] Starting WebSocket message listener
+[2025-12-11 09:51:21,760][driver:connection:connect] [INFO] Successfully connected to ws://127.0.0.1:36035/devtools/page/0B20C716734906DCA1E1A69B3671B12C
+[2025-12-11 09:51:21,763][driver:connection:connect] [DEBUG] WebSocket connection established with max_size=268435456, ping_interval=30s
+[2025-12-11 09:51:21,766][driver:connection:connect] [DEBUG] Message listener task started
+[2025-12-11 09:51:21,768][driver:domain_log_buffer:start] [DEBUG] Domain log buffer flush timer started
+[2025-12-11 09:51:21,770][driver:tab:connect] [INFO] Tab 0B20C716734906DCA1E1A69B3671B12C connected successfully
+[2025-12-11 09:51:21,773][driver:browser:start] [INFO] Found None existing tabs
+[2025-12-11 09:51:21,776][driver:browser:start] [DEBUG] Initializing browser events
+[2025-12-11 09:51:21,778][driver:browser:_init_events] [INFO] Registering browser target event handlers
+[2025-12-11 09:51:21,781][driver:connection:on] [DEBUG] Event type Target.targetDestroyed was added into event handlers.
+[2025-12-11 09:51:21,784][driver:connection:on] [DEBUG] Handler on_target_destroyed was added into event handlers Target.targetDestroyed.
+[2025-12-11 09:51:21,786][driver:browser:_init_events] [DEBUG] Registering focus mode event handlers
+[2025-12-11 09:51:21,788][driver:connection:on] [DEBUG] Event type Target.targetCreated was added into event handlers.
+[2025-12-11 09:51:21,791][driver:connection:on] [DEBUG] Handler on_target_focus was added into event handlers Target.targetCreated.
+[2025-12-11 09:51:21,793][driver:connection:on] [DEBUG] Event type Target.targetInfoChanged was added into event handlers.
+[2025-12-11 09:51:21,796][driver:connection:on] [DEBUG] Handler on_target_focus was added into event handlers Target.targetInfoChanged.
+[2025-12-11 09:51:21,798][driver:browser:start] [INFO] Browser started successfully
+[2025-12-11 09:51:21,801][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Browser.setDownloadBehavior
+[2025-12-11 09:51:21,803][driver:connection:send] [DEBUG] {'id': 3, 'method': 'Browser.setDownloadBehavior', 'params': {'behavior': 'allowAndName', 'downloadPath': '/data/1765446676.7853086/downloads', 'eventsEnabled': True}}
+[2025-12-11 09:51:21,806][driver:connection:send] [DEBUG] Sending: Browser.setDownloadBehavior (id=3)
+[2025-12-11 09:51:21,808][driver:connection:_listen_for_messages] [INFO] Starting WebSocket message listener
+[2025-12-11 09:51:21,810][driver:connection:_process_message] [DEBUG] Processing message with id: 3
+[2025-12-11 09:51:21,812][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Browser.setDownloadBehavior completed in 0.01 seconds
+[2025-12-11 09:51:21,817][driver:connection:on] [DEBUG] Event type Media.playerEventsAdded was added into event handlers.
+[2025-12-11 09:51:21,820][driver:connection:on] [DEBUG] Handler _event_added_responce was added into event handlers Media.playerEventsAdded.
+[2025-12-11 09:51:21,822][driver:connection:on] [DEBUG] Create task for enable domain Media.
+[2025-12-11 09:51:21,843][driver:connection:on] [DEBUG] Event type Network.requestWillBeSent was added into event handlers.
+[2025-12-11 09:51:21,846][driver:connection:on] [DEBUG] Handler _on_request was added into event handlers Network.requestWillBeSent.
+[2025-12-11 09:51:21,848][driver:connection:on] [DEBUG] Create task for enable domain Network.
+[2025-12-11 09:51:21,850][driver:connection:on] [DEBUG] Event type Network.loadingFinished was added into event handlers.
+[2025-12-11 09:51:21,853][driver:connection:on] [DEBUG] Handler _on_loading_finished was added into event handlers Network.loadingFinished.
+[2025-12-11 09:51:21,855][driver:connection:on] [DEBUG] Create task for enable domain Network.
+[2025-12-11 09:51:21,857][driver:endpoint_watcher:_setup_event_handlers] [DEBUG] Network event handlers registered
+[2025-12-11 09:51:21,859][driver:endpoint_watcher:__init__] [INFO] MultiEndpointWatcher initialized
+[2025-12-11 09:51:21,861][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'comment_list' with pattern: https://www.tiktok.com/api/comment/list/
+[2025-12-11 09:51:21,864][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'recommend_item_list' with pattern: https://www.tiktok.com/api/recommend/item_list
+[2025-12-11 09:51:21,867][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'search_general_full' with pattern: https://www.tiktok.com/api/search/general/full/
+[2025-12-11 09:51:21,869][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'search_general_preview' with pattern: https://www.tiktok.com/api/search/general/preview/
+[2025-12-11 09:51:21,872][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'user_detail' with pattern: https://www.tiktok.com/api/user/detail/
+[2025-12-11 09:51:21,875][driver:endpoint_watcher:add_endpoint] [INFO] Added endpoint 'webcast' with pattern: https://webcast.tiktok.com/webcast/room/check_alive/
+[2025-12-11 09:51:21,892][driver:tab:attach] [DEBUG] Attaching to tab 35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,895][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Target.attachToTarget
+[2025-12-11 09:51:21,897][driver:connection:send] [DEBUG] {'id': 1, 'method': 'Target.attachToTarget', 'params': {'targetId': TargetID('35232A5B175626D4CEF132C542172271'), 'flatten': True}}
+[2025-12-11 09:51:21,899][driver:connection:send] [DEBUG] Sending: Target.attachToTarget (id=1)
+[2025-12-11 09:51:21,918][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Media
+[2025-12-11 09:51:21,919][driver:connection:send] [DEBUG] {'id': 4, 'method': 'Media.enable'}
+[2025-12-11 09:51:21,921][driver:connection:send] [DEBUG] Sending: Media.enable (id=4)
+[2025-12-11 09:51:21,923][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Network
+[2025-12-11 09:51:21,924][driver:connection:send] [DEBUG] {'id': 5, 'method': 'Network.enable'}
+[2025-12-11 09:51:21,926][driver:connection:send] [DEBUG] Sending: Network.enable (id=5)
+[2025-12-11 09:51:21,927][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Network
+[2025-12-11 09:51:21,929][driver:connection:send] [DEBUG] {'id': 6, 'method': 'Network.enable'}
+[2025-12-11 09:51:21,931][driver:connection:send] [DEBUG] Sending: Network.enable (id=6)
+[2025-12-11 09:51:21,932][driver:connection:_process_message] [DEBUG] Processing message with id: 1
+[2025-12-11 09:51:21,934][driver:connection:_process_message] [DEBUG] Processing message with id: 4
+[2025-12-11 09:51:21,935][driver:connection:_process_message] [DEBUG] Processing message with id: 5
+[2025-12-11 09:51:21,936][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Target.attachToTarget completed in 0.04 seconds
+[2025-12-11 09:51:21,939][driver:tab:attach] [INFO] Successfully attached to tab 35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,942][driver:tab:attach] [DEBUG] Enabling domains for tab 35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,945][driver:tab:_enable_domains] [DEBUG] Enabling domain Page for tab 35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,947][driver:tab:attach] [DEBUG] Tab 35232A5B175626D4CEF132C542172271 already attached, skipping
+[2025-12-11 09:51:21,949][driver:connection:send] [DEBUG] {'id': 7, 'method': 'Page.enable'}
+[2025-12-11 09:51:21,951][driver:connection:send] [DEBUG] Sending: Page.enable (id=7)
+[2025-12-11 09:51:21,954][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Media
+[2025-12-11 09:51:21,956][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Network
+[2025-12-11 09:51:21,958][driver:connection:_process_message] [DEBUG] Processing message with id: 6
+[2025-12-11 09:51:21,959][driver:connection:_process_message] [DEBUG] Processing message with id: 2
+[2025-12-11 09:51:21,961][driver:connection:_process_message] [DEBUG] Processing message with id: 7
+[2025-12-11 09:51:21,962][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Network
+[2025-12-11 09:51:21,968][driver:tab:_enable_domains] [DEBUG] Enabling domain Runtime for tab 35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,970][driver:tab:attach] [DEBUG] Tab 35232A5B175626D4CEF132C542172271 already attached, skipping
+[2025-12-11 09:51:21,973][driver:connection:send] [DEBUG] {'id': 8, 'method': 'Runtime.enable'}
+[2025-12-11 09:51:21,975][driver:connection:send] [DEBUG] Sending: Runtime.enable (id=8)
+[2025-12-11 09:51:21,978][driver:connection:_process_message] [DEBUG] Processing message with id: 3
+[2025-12-11 09:51:21,984][driver:connection:_process_message] [DEBUG] Processing message with id: 8
+[2025-12-11 09:51:21,986][driver:tab:_enable_domains] [DEBUG] Enabling domain Network for tab 35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:21,989][driver:tab:attach] [DEBUG] Tab 35232A5B175626D4CEF132C542172271 already attached, skipping
+[2025-12-11 09:51:21,991][driver:connection:send] [DEBUG] {'id': 9, 'method': 'Network.enable'}
+[2025-12-11 09:51:21,993][driver:connection:send] [DEBUG] Sending: Network.enable (id=9)
+[2025-12-11 09:51:21,997][driver:connection:_process_message] [DEBUG] Processing message with id: 9
+[2025-12-11 09:51:21,999][driver:tab:_enable_domains] [DEBUG] Enabling domain DOM for tab 35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:22,001][driver:tab:attach] [DEBUG] Tab 35232A5B175626D4CEF132C542172271 already attached, skipping
+[2025-12-11 09:51:22,003][driver:connection:send] [DEBUG] {'id': 10, 'method': 'DOM.enable'}
+[2025-12-11 09:51:22,006][driver:connection:send] [DEBUG] Sending: DOM.enable (id=10)
+[2025-12-11 09:51:22,009][driver:connection:_process_message] [DEBUG] Processing message with id: 10
+[2025-12-11 09:51:22,011][driver:tab:_enable_domains] [DEBUG] Enabling domain Media for tab 35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:22,013][driver:tab:attach] [DEBUG] Tab 35232A5B175626D4CEF132C542172271 already attached, skipping
+[2025-12-11 09:51:22,015][driver:connection:send] [DEBUG] {'id': 11, 'method': 'Media.enable'}
+[2025-12-11 09:51:22,018][driver:connection:send] [DEBUG] Sending: Media.enable (id=11)
+[2025-12-11 09:51:22,021][driver:connection:_process_message] [DEBUG] Processing message with id: 11
+[2025-12-11 09:51:22,022][driver:tab:_enable_domains] [DEBUG] Enabled 5/5 domains for tab 35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:22,024][driver:tab:navigate] [INFO] Navigating tab 35232A5B175626D4CEF132C542172271 to: https://www.tiktok.com/
+[2025-12-11 09:51:22,027][driver:tab:navigate] [DEBUG] Navigation wait event: networkIdle
+[2025-12-11 09:51:22,029][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Page.navigate
+[2025-12-11 09:51:22,032][driver:connection:send] [DEBUG] {'id': 12, 'method': 'Page.navigate', 'params': {'url': 'https://www.tiktok.com/'}}
+[2025-12-11 09:51:22,034][driver:connection:send] [DEBUG] Sending: Page.navigate (id=12)
+[2025-12-11 09:51:22,712][driver:connection:_process_message] [DEBUG] Processing message with id: 12
+[2025-12-11 09:51:22,714][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:Page.navigate took 0.68 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 16.
+[2025-12-11 09:51:22,718][driver:tab:navigate] [DEBUG] Waiting for 'networkIdle' event
+[2025-12-11 09:51:22,721][driver:connection:on] [DEBUG] Event type Page.lifecycleEvent was added into event handlers.
+[2025-12-11 09:51:22,725][driver:connection:on] [DEBUG] Handler _on_lifecycle_event was added into event handlers Page.lifecycleEvent.
+[2025-12-11 09:51:22,728][driver:connection:on] [DEBUG] Create task for enable domain Page.
+[2025-12-11 09:51:22,732][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Page
+[2025-12-11 09:51:22,734][driver:connection:send] [DEBUG] {'id': 13, 'method': 'Page.enable'}
+[2025-12-11 09:51:22,735][driver:connection:send] [DEBUG] Sending: Page.enable (id=13)
+[2025-12-11 09:51:22,788][driver:connection:_process_message] [DEBUG] Processing message with id: 13
+[2025-12-11 09:51:22,790][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Page
+[2025-12-11 09:51:23,837][driver:endpoint_watcher:_on_request] [INFO] Watching request 209.378 for endpoint 'recommend_item_list': https://www.tiktok.com/api/recommend/item_list/?WebIdLastTime=1765299915&aid=1988&app_language=en&app_name=tiktok_web&browser_language=en-US&browser_name=Mozilla&browser_online=true&browser_platform=Linux%20x86_64&browser_version=5.0%20%28X11%3B%20Linux%20x86_64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F143.0.0.0%20Safari%2F537.36&channel=tiktok_web&clientABVersions=70508271%2C72437276%2C73547759%2C73720540%2C74444736%2C74446914%2C74757744%2C74780476%2C74782564%2C74813746%2C74852654%2C74869499%2C74879361%2C74894691%2C74902368%2C74907602%2C74926161%2C74930475%2C74970062%2C74973673%2C74976256%2C74983390%2C74983941%2C74987204%2C74991530%2C74998869%2C75001422%2C75005875%2C75014048%2C75014657%2C75026333%2C75036738%2C75038625%2C75041559%2C75045554%2C75045730%2C75045801%2C75045921%2C75048550%2C75060340%2C75069884%2C75074404%2C75077940%2C75081927%2C75081995%2C75088453%2C75094426%2C75100934%2C75103455%2C75108292%2C75112496%2C75114547%2C75122539%2C75125466%2C70138197%2C70156809%2C70405643%2C70772958%2C71057832%2C71200802%2C71381811%2C71516509%2C71803300%2C71962127%2C72360691%2C72408100%2C72854054%2C72892778%2C73171280%2C73208420%2C73989921%2C74276218%2C74844724&cookie_enabled=true&count=6&coverFormat=2&cpu_core_number=4&dark_mode=false&data_collection_enabled=true&day_of_week=4&device_id=7581905393073653270&device_platform=web_pc&device_score=7&device_type=web_h264&enable_cache=false&focus_state=true&from_page=fyp&history_len=2&isNonPersonalized=false&is_fullscreen=false&is_new_user=false&is_page_visible=true&itemID=&language=en&launch_mode=direct&network=1.3&odinId=7581855106086601750&os=linux&priority_region=DE&pullType=1&referer=&region=DE&screen_height=1080&screen_width=1920&showAboutThisAd=true&showAds=true&time_of_day=9&tz_name=UTC&video_encoding=&vv_count=255&vv_count_fyp=230&watchLiveLastTime=&webcast_language=en&window_height=0&window_width=0&msToken=bOkyF5-GhdWfN1o1QValIXdBJ8XlymL45gm-k1xm9j2Ke6tpa3abvO8kw98kgQL8lT-nnJDV7VS9qqsEHYgZxASkWzK8tKPp8a91u6KCu-i_ZbJbWhvWmkOx6SWOPSe_oKAoMbzBjL-zMO686zMU2WZG&X-Bogus=DFSzsIVOmYvAN9rGCYGfU/vDKK/J&X-Gnarly=M5/pvhlodq1yNJD2LQJEmelVNupD3/CMPv/ftSGxNRAgboqXaMMXRqu8S1j3-f1qUjWgmdMrreLzA6uDl4LdRg-R1VWDAyIgIMnIrrlvGFT2IpLUjTEg-84BYVkCWos5SMAzd52caTJOObaU8Ziq/Twf3lPjhzmWSpfd2oCl//YmcZBhqGTBQY/YTTQh36quqP8xOATPFFRll-Gn6s8nrCFHMAynp6ksaobIs2GYpQQ4OJu30QdSlYb2ZTD6JlqCj6uj5J1e-nsKJNl5PbTeDO4DjxBoJW73SXgpDih4/xrBV2lTPY-oIIi4v8hAs9vBr/f=
+[2025-12-11 09:51:24,438][driver:process:_default_output_handler] [WARNING] [STDERR] [66:89:1211/095124.437405:ERROR:google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
+[2025-12-11 09:51:26,227][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Network.getResponseBody
+[2025-12-11 09:51:26,229][driver:connection:send] [DEBUG] {'id': 16, 'method': 'Network.getResponseBody', 'params': {'requestId': RequestId('209.378')}}
+[2025-12-11 09:51:26,231][driver:connection:send] [DEBUG] Sending: Network.getResponseBody (id=16)
+[2025-12-11 09:51:26,674][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['Target']
+[2025-12-11 09:51:26,676][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 7 messages to /data/1765446676.7853086/network/browser_connection/Target.json
+[2025-12-11 09:51:26,702][driver:connection:_process_message] [DEBUG] Processing message with id: 16
+[2025-12-11 09:51:26,704][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:Network.getResponseBody took 0.48 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 17.
+[2025-12-11 09:51:26,759][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['Target', 'DOM']
+[2025-12-11 09:51:26,763][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 1 messages to /data/1765446676.7853086/network/35232A5B175626D4CEF132C542172271/Target.json
+[2025-12-11 09:51:26,765][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 2 messages to /data/1765446676.7853086/network/35232A5B175626D4CEF132C542172271/DOM.json
+[2025-12-11 09:51:27,733][driver:lifecycle_watcher:_on_timeout] [WARNING] Navigation timeout after 5s waiting for 'networkIdle'
+[2025-12-11 09:51:27,737][driver:tab:navigate] [WARNING] Navigation timeout waiting for 'networkIdle' event at https://www.tiktok.com/
+[2025-12-11 09:51:27,740][driver:tab:navigate] [DEBUG] Navigation will continue despite timeout
+[2025-12-11 09:51:27,762][driver:flow:execute] [INFO] Start Flow: 'Check if user is logged in' (1 steps).
+[2025-12-11 09:51:27,765][driver:flow:execute] [INFO] Flow: 'Check if user is logged in' (1 of 1 steps) - Check if user is logged in
+[2025-12-11 09:51:27,769][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: VerifyNodeAttribute
+[2025-12-11 09:51:27,772][driver:base:act] [DEBUG] Verify if 'attribute check on '//a[@data-e2e='nav-profile']''.
+[2025-12-11 09:51:27,775][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:27,778][driver:connection:send] [DEBUG] {'id': 17, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-11 09:51:27,781][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=17)
+[2025-12-11 09:51:27,820][driver:connection:_process_message] [DEBUG] Processing message with id: 17
+[2025-12-11 09:51:27,822][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.04 seconds
+[2025-12-11 09:51:27,844][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-11 09:51:27,848][driver:connection:send] [DEBUG] {'id': 18, 'method': 'DOM.performSearch', 'params': {'query': "//a[@data-e2e='nav-profile']"}}
+[2025-12-11 09:51:27,850][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=18)
+[2025-12-11 09:51:27,863][driver:connection:_process_message] [DEBUG] Processing message with id: 18
+[2025-12-11 09:51:27,866][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.02 seconds
+[2025-12-11 09:51:27,870][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-11 09:51:27,873][driver:connection:send] [DEBUG] {'id': 19, 'method': 'DOM.getSearchResults', 'params': {'searchId': '209.0', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-11 09:51:27,876][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=19)
+[2025-12-11 09:51:27,891][driver:connection:_process_message] [DEBUG] Processing message with id: 19
+[2025-12-11 09:51:27,896][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getSearchResults completed in 0.02 seconds
+[2025-12-11 09:51:27,902][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-11 09:51:27,906][driver:connection:send] [DEBUG] {'id': 20, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '209.0'}}
+[2025-12-11 09:51:27,910][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=20)
+[2025-12-11 09:51:27,919][driver:connection:_process_message] [DEBUG] Processing message with id: 20
+[2025-12-11 09:51:27,921][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.discardSearchResults completed in 0.01 seconds
+[2025-12-11 09:51:27,925][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //a[@data-e2e='nav-profile'] query.
+[2025-12-11 09:51:27,927][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-11 09:51:27,931][driver:connection:send] [DEBUG] {'id': 21, 'method': 'DOM.describeNode', 'params': {'nodeId': 435, 'pierce': True}}
+[2025-12-11 09:51:27,934][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=21)
+[2025-12-11 09:51:27,939][driver:connection:_process_message] [DEBUG] Processing message with id: 21
+[2025-12-11 09:51:27,942][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.describeNode completed in 0.01 seconds
+[2025-12-11 09:51:27,946][driver:by_query_or_selector:locate_element] [DEBUG] Element found by text query: //a[@data-e2e='nav-profile']
+[2025-12-11 09:51:27,950][driver:element:get_node_attrs] [DEBUG] Converting attributes for node NodeId(435)
+[2025-12-11 09:51:27,953][driver:element:get_node_attrs] [DEBUG] Node has 4 attributes
+[2025-12-11 09:51:27,955][driver:element:get_node_attrs] [DEBUG] Converted attributes: {'data-e2e': 'nav-profile', 'tabindex': '-1', 'class_': 'link-a11y-focus', 'href': '/@user99293502999042'}
+[2025-12-11 09:51:27,957][driver:attribute:_verify] [DEBUG] Attribute check passed for //a[@data-e2e='nav-profile']
+[2025-12-11 09:51:27,960][driver:base:act] [DEBUG] Verification passed: 'attribute check on '//a[@data-e2e='nav-profile']''.
+[2025-12-11 09:51:27,963][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 succeeded: VerifyNodeAttribute
+[2025-12-11 09:51:28,067][driver:flow:_execute_step_with_retry] [INFO] Step 'Check if user is logged in' completed successfully
+[2025-12-11 09:51:28,071][driver:flow:execute] [INFO] Flow 'Check if user is logged in': Completed successfully
+[2025-12-11 09:51:28,107][driver:tab:attach] [DEBUG] Tab 35232A5B175626D4CEF132C542172271 already attached, skipping
+[2025-12-11 09:51:28,109][driver:tab:navigate] [INFO] Navigating tab 35232A5B175626D4CEF132C542172271 to: https://www.tiktok.com/foryou
+[2025-12-11 09:51:28,112][driver:tab:navigate] [DEBUG] Navigation wait event: networkIdle
+[2025-12-11 09:51:28,114][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Page.navigate
+[2025-12-11 09:51:28,117][driver:connection:send] [DEBUG] {'id': 22, 'method': 'Page.navigate', 'params': {'url': 'https://www.tiktok.com/foryou'}}
+[2025-12-11 09:51:28,119][driver:connection:send] [DEBUG] Sending: Page.navigate (id=22)
+[2025-12-11 09:51:28,258][driver:connection:_process_message] [DEBUG] Processing message with id: 23
+[2025-12-11 09:51:28,662][driver:connection:_process_message] [DEBUG] Processing message with id: 22
+[2025-12-11 09:51:28,664][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:Page.navigate took 0.55 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 17.
+[2025-12-11 09:51:28,667][driver:tab:navigate] [DEBUG] Waiting for 'networkIdle' event
+[2025-12-11 09:51:28,670][driver:connection:on] [DEBUG] Handler _on_lifecycle_event was added into event handlers Page.lifecycleEvent.
+[2025-12-11 09:51:28,775][driver:process:_default_output_handler] [ERROR] [STDERR] [1211/095128.774742:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq: No such file or directory (2)
+[2025-12-11 09:51:28,777][driver:process:_default_output_handler] [ERROR] [STDERR] [1211/095128.774854:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq: No such file or directory (2)
+[2025-12-11 09:51:29,014][driver:connection:_listen_for_messages] [WARNING] WebSocket connection closed unexpectedly (code: ABNORMAL_CLOSURE): no close frame received or sent
+[2025-12-11 09:51:29,030][driver:connection:_listen_for_messages] [INFO] Message listener stopped.
+[2025-12-11 09:51:29,037][driver:connection:_listen_for_messages] [WARNING] WebSocket connection closed unexpectedly (code: ABNORMAL_CLOSURE): no close frame received or sent
+[2025-12-11 09:51:29,040][driver:connection:_listen_for_messages] [INFO] Message listener stopped.
+[2025-12-11 09:51:29,045][driver:connection:_listen_for_messages] [WARNING] WebSocket connection closed unexpectedly (code: ABNORMAL_CLOSURE): no close frame received or sent
+[2025-12-11 09:51:29,048][driver:connection:_listen_for_messages] [INFO] Message listener stopped.
+[2025-12-11 09:51:29,054][driver:process:_default_output_handler] [ERROR] [STDERR] [102:134:1211/095129.041650:ERROR:net/socket/ssl_client_socket_impl.cc:916] handshake failed; returned -1, SSL error code 1, net_error -3
+[2025-12-11 09:51:29,093][driver:process:_handle_stream] [DEBUG] stdout stream closed for process 66
+[2025-12-11 09:51:29,095][driver:process:_handle_stream] [DEBUG] stdout handler completed for process 66, processed 0 lines
+[2025-12-11 09:51:29,096][driver:process:_handle_stream] [DEBUG] stderr stream closed for process 66
+[2025-12-11 09:51:29,098][driver:process:_handle_stream] [DEBUG] stderr handler completed for process 66, processed 7 lines
+[2025-12-11 09:51:29,465][driver:process:_watch_process_exit] [WARNING] Process 66 exited with non-zero code -11
+[2025-12-11 09:51:29,468][driver:process:stop] [DEBUG] Process is not running, nothing to stop
+[2025-12-11 09:51:29,470][driver:process:_watch_process_exit] [DEBUG] Exit watcher for process 66 completed
+[2025-12-11 09:51:29,471][driver:process:_monitor_process] [DEBUG] All monitoring tasks completed
+[2025-12-11 09:51:31,768][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['DOM']
+[2025-12-11 09:51:31,771][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 55 messages to /data/1765446676.7853086/network/35232A5B175626D4CEF132C542172271/DOM.json
+[2025-12-11 09:51:33,675][driver:lifecycle_watcher:_on_timeout] [WARNING] Navigation timeout after 5s waiting for 'networkIdle'
+[2025-12-11 09:51:33,677][driver:tab:navigate] [WARNING] Navigation timeout waiting for 'networkIdle' event at https://www.tiktok.com/foryou
+[2025-12-11 09:51:33,680][driver:tab:navigate] [DEBUG] Navigation will continue despite timeout
+[2025-12-11 09:51:33,773][driver:flow:execute] [INFO] Start Flow: 'Pause video' (1 steps).
+[2025-12-11 09:51:33,776][driver:flow:execute] [INFO] Flow: 'Pause video' (1 of 1 steps) - Click on video
+[2025-12-11 09:51:33,781][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:33,784][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:33,787][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:33,793][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:33,797][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:33,803][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:34,306][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:34,309][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:34,313][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:34,317][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:34,320][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:34,323][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:34,827][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:34,829][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:34,833][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:34,836][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:34,839][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:34,842][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:35,346][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:35,348][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:35,351][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:35,361][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:35,365][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:35,369][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:35,872][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:35,875][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:35,878][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:35,882][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:35,885][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:35,889][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:36,393][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:36,396][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:36,398][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:36,403][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:36,407][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:36,411][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:36,914][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:36,917][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:36,919][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:36,928][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:36,931][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:36,935][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:37,438][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:37,441][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:37,443][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:37,446][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:37,452][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:37,455][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:37,958][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:37,960][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:37,963][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:37,967][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:37,970][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:37,974][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:38,477][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:38,480][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:38,484][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:38,488][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:38,494][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:38,497][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:39,001][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:39,003][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:39,006][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:39,010][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:39,014][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:39,019][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:39,523][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:39,525][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:39,528][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:39,531][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:39,534][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:39,538][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:40,041][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:40,044][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:40,046][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:40,050][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:40,062][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:40,066][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:40,570][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:40,573][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:40,575][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:40,579][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:40,582][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:40,585][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:41,088][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:41,090][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:41,093][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:41,097][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:41,100][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:41,103][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:41,608][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:41,610][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:41,613][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:41,617][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:41,629][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:41,632][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:42,136][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:42,139][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:42,141][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:42,146][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:42,149][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:42,152][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:42,656][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:42,658][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:42,661][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:42,665][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:42,669][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:42,681][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:43,184][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:43,187][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:43,190][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:43,194][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:43,197][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:43,201][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:43,704][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:43,707][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:43,710][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:43,714][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:43,719][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:43,722][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:44,226][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:44,229][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:44,231][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:44,235][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:44,238][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:44,241][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:44,746][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:44,748][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:44,751][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:44,754][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:44,758][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:44,761][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:45,265][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:45,268][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:45,270][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:45,275][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:45,280][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:45,287][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:45,791][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:45,793][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:45,796][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:45,800][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:45,806][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:45,812][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:46,317][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:46,319][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:46,323][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:46,326][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:46,330][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:46,334][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:46,837][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:46,840][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:46,844][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:46,852][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:46,856][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:46,863][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:47,367][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:47,369][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:47,372][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:47,376][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:47,380][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:47,384][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:47,888][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:47,890][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:47,893][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:47,897][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:47,900][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:47,903][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:48,407][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: Click
+[2025-12-11 09:51:48,409][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-11 09:51:48,413][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:36035/devtools/page/35232A5B175626D4CEF132C542172271
+[2025-12-11 09:51:48,420][driver:connection:connect] [ERROR] Failed to establish WebSocket connection: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:48,424][driver:base:act] [WARNING] Error during interaction: click on '//article[.//video][position() = 1]' - Connection failed: [Errno 111] Connect call failed ('127.0.0.1', 36035)
+[2025-12-11 09:51:48,433][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 failed: Click, retrying...
+[2025-12-11 09:51:48,782][driver:flow:execute] [ERROR] Flow 'Pause video': Timeout in 'Click on video' after 15.0s
+[2025-12-11 09:51:49,089][driver:domain_log_buffer:_periodic_flush] [DEBUG] Periodic flush task cancelled
+[2025-12-11 09:51:49,090][driver:domain_log_buffer:_periodic_flush] [DEBUG] Periodic flush task cancelled
+[2025-12-11 09:51:49,092][driver:domain_log_buffer:_periodic_flush] [DEBUG] Periodic flush task cancelled

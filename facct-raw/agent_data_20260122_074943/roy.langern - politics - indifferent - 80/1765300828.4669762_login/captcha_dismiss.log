@@ -1,0 +1,3 @@
+[2025-12-09 17:20:34,225][agent:captcha:act] [DEBUG] Starting CAPTCHA detection and dismissal process
+[2025-12-09 17:20:34,226][agent:captcha:act] [DEBUG] Checking for rotation CAPTCHA elements...
+[2025-12-09 17:20:34,293][agent:captcha:act] [DEBUG] No rotation CAPTCHA found on page - page is clean

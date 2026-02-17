@@ -1,0 +1,655 @@
+[2025-12-09 17:20:32,385][driver:find_browser:find_chrome_executable] [INFO] Searching for Chrome executable on Linux system
+[2025-12-09 17:20:32,388][driver:find_browser:find_chrome_executable] [DEBUG] Checking common Linux Chrome installation paths
+[2025-12-09 17:20:32,391][driver:find_browser:find_chrome_executable] [DEBUG] Checking path: /usr/bin/google-chrome
+[2025-12-09 17:20:32,393][driver:find_browser:find_chrome_executable] [INFO] Chrome executable found at: /usr/bin/google-chrome
+[2025-12-09 17:20:32,396][driver:utils:free_port] [DEBUG] Finding free port for browser connection
+[2025-12-09 17:20:32,399][driver:utils:free_port] [DEBUG] Found free port: 53837
+[2025-12-09 17:20:32,401][driver:browser:__init__] [INFO] Browser debugging port: 53837
+[2025-12-09 17:20:32,403][driver:browser:_initial_user_profile_dir] [INFO] Browser profile folder has been loaded /data/browser_storage
+[2025-12-09 17:20:32,406][driver:browser:__init__] [DEBUG] Browser launch arguments: ['--disable-dev-shm-usage', '--disable-accelerated-2d-canvas', '--disable-gpu', '--disable-backgrounding-occluded-windows', '--disable-features=TranslateUI,BlinkGenPropertyTrees', '--disable-ipc-flooding-protection', '--allow-running-insecure-content', '--enable-logging', '--v=1', '--enable-features=protocolMonitor', '--disable-notifications', '--disable-popup-blocking', '--disable-extensions', '--disable-component-extensions-with-background-pages', '--disable-default-apps', '--disable-hang-monitor', '--disable-prompt-on-repost', '--disable-client-side-phishing-detection', '--disable-sync', '--metrics-recording-only', '--no-first-run', '--password-store=basic', '--no-sandbox', '--lang=en-US', '--timezone=Europe/Paris', '--remote-debugging-port=54321', '--window-position=0,0', '--window-size=1920,1080', '--remote-debugging-host=127.0.0.1', '--remote-debugging-port=53837', '--user-data-dir=/data/browser_storage']
+[2025-12-09 17:20:32,408][driver:process:_resolve_executable] [DEBUG] Resolving executable path: /usr/bin/google-chrome
+[2025-12-09 17:20:32,411][driver:process:_resolve_executable] [DEBUG] Executable found at: /usr/bin/google-chrome
+[2025-12-09 17:20:32,413][driver:process:__init__] [DEBUG] Resolved executable path: /usr/bin/google-chrome
+[2025-12-09 17:20:32,415][driver:process:__init__] [DEBUG] ProcessManager initialized with executable: /usr/bin/google-chrome
+[2025-12-09 17:20:32,419][driver:browser:__init__] [DEBUG] Browser initialized with focus_mode=True
+[2025-12-09 17:20:32,421][driver:process:exucute_process] [INFO] Launching process: /usr/bin/google-chrome
+[2025-12-09 17:20:32,423][driver:process:exucute_process] [DEBUG] Command arguments: ['--disable-dev-shm-usage', '--disable-accelerated-2d-canvas', '--disable-gpu', '--disable-backgrounding-occluded-windows', '--disable-features=TranslateUI,BlinkGenPropertyTrees', '--disable-ipc-flooding-protection', '--allow-running-insecure-content', '--enable-logging', '--v=1', '--enable-features=protocolMonitor', '--disable-notifications', '--disable-popup-blocking', '--disable-extensions', '--disable-component-extensions-with-background-pages', '--disable-default-apps', '--disable-hang-monitor', '--disable-prompt-on-repost', '--disable-client-side-phishing-detection', '--disable-sync', '--metrics-recording-only', '--no-first-run', '--password-store=basic', '--no-sandbox', '--lang=en-US', '--timezone=Europe/Paris', '--remote-debugging-port=54321', '--window-position=0,0', '--window-size=1920,1080', '--remote-debugging-host=127.0.0.1', '--remote-debugging-port=53837', '--user-data-dir=/data/browser_storage']
+[2025-12-09 17:20:32,427][driver:process:exucute_process] [DEBUG] Process created with PID: 65
+[2025-12-09 17:20:32,429][driver:process:exucute_process] [DEBUG] Process monitoring task started
+[2025-12-09 17:20:32,432][driver:process:exucute_process] [INFO] Process started successfully (PID: 65)
+[2025-12-09 17:20:32,434][driver:browser:start] [INFO] Starting browser process
+[2025-12-09 17:20:32,437][driver:process:exucute_process] [WARNING] Process is already running, skipping launch
+[2025-12-09 17:20:32,440][driver:browser:start] [INFO] Retrieving WebSocket URL
+[2025-12-09 17:20:32,443][driver:browser:_get_websocket_url] [DEBUG] Attempting to get WebSocket URL from http://127.0.0.1:53837/json/version
+[2025-12-09 17:20:32,446][driver:process:_monitor_process] [DEBUG] Starting process monitoring for PID: 65
+[2025-12-09 17:20:32,447][driver:process:_monitor_process] [DEBUG] Created process monitoring tasks for exit, stdout, and stderr
+[2025-12-09 17:20:32,448][driver:process:_watch_process_exit] [DEBUG] Starting exit watcher for process 65
+[2025-12-09 17:20:32,450][driver:process:_handle_stream] [DEBUG] Starting stdout handler for process 65
+[2025-12-09 17:20:32,451][driver:process:_handle_stream] [DEBUG] Starting stderr handler for process 65
+[2025-12-09 17:20:32,453][driver:browser:_get_websocket_url] [DEBUG] Attempt 1: Failed to get debugger URL: http://127.0.0.1:53837/json/version - Cannot connect to host 127.0.0.1:53837 ssl:default [Connect call failed ('127.0.0.1', 53837)]
+[2025-12-09 17:20:32,763][driver:process:_default_output_handler] [ERROR] [STDERR] 
+[2025-12-09 17:20:32,765][driver:process:_default_output_handler] [ERROR] [STDERR] DevTools listening on ws://127.0.0.1:53837/devtools/browser/af75817c-fa13-41a0-a311-5ba03b4f1952
+[2025-12-09 17:20:32,958][driver:process:_default_output_handler] [ERROR] [STDERR] Created TensorFlow Lite XNNPACK delegate for CPU.
+[2025-12-09 17:20:33,458][driver:browser:_get_websocket_url] [DEBUG] Retrieved WebSocket URL: ws://127.0.0.1:53837/devtools/browser/af75817c-fa13-41a0-a311-5ba03b4f1952
+[2025-12-09 17:20:33,462][driver:browser:start] [INFO] Establishing browser connection
+[2025-12-09 17:20:33,466][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:53837/devtools/browser/af75817c-fa13-41a0-a311-5ba03b4f1952
+[2025-12-09 17:20:33,522][driver:connection:connect] [INFO] Successfully connected to ws://127.0.0.1:53837/devtools/browser/af75817c-fa13-41a0-a311-5ba03b4f1952
+[2025-12-09 17:20:33,524][driver:connection:connect] [DEBUG] WebSocket connection established with max_size=268435456, ping_interval=30s
+[2025-12-09 17:20:33,527][driver:connection:connect] [DEBUG] Message listener task started
+[2025-12-09 17:20:33,530][driver:domain_log_buffer:start] [DEBUG] Domain log buffer flush timer started
+[2025-12-09 17:20:33,532][driver:browser:start] [INFO] Initializing tab manager
+[2025-12-09 17:20:33,535][driver:browser:start] [DEBUG] Enabling target discovery
+[2025-12-09 17:20:33,538][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Target.setDiscoverTargets
+[2025-12-09 17:20:33,587][driver:connection:send] [DEBUG] {'id': 1, 'method': 'Target.setDiscoverTargets', 'params': {'discover': True}}
+[2025-12-09 17:20:33,591][driver:connection:send] [DEBUG] Sending: Target.setDiscoverTargets (id=1)
+[2025-12-09 17:20:33,594][driver:connection:_listen_for_messages] [INFO] Starting WebSocket message listener
+[2025-12-09 17:20:33,596][driver:connection:_process_message] [DEBUG] Processing message with id: 1
+[2025-12-09 17:20:33,598][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Target.setDiscoverTargets completed in 0.01 seconds
+[2025-12-09 17:20:33,601][driver:browser:start] [INFO] Discovering existing tabs
+[2025-12-09 17:20:33,605][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Target.getTargets
+[2025-12-09 17:20:33,608][driver:connection:send] [DEBUG] {'id': 2, 'method': 'Target.getTargets'}
+[2025-12-09 17:20:33,612][driver:connection:send] [DEBUG] Sending: Target.getTargets (id=2)
+[2025-12-09 17:20:33,618][driver:connection:_process_message] [DEBUG] Processing message with id: 2
+[2025-12-09 17:20:33,620][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Target.getTargets completed in 0.01 seconds
+[2025-12-09 17:20:33,624][driver:tab_manager:discover_tabs] [DEBUG] New tab was discovered !
+[2025-12-09 17:20:33,626][driver:tab:__init__] [INFO] Creating new tab with target ID: E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:33,630][driver:tab:__init__] [DEBUG] Tab WebSocket URL: ws://127.0.0.1:53837/devtools/page/E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:33,633][driver:tab:__init__] [DEBUG] Tab initialized with domains to enable: ['Page', 'Runtime', 'Network', 'DOM', 'Media']
+[2025-12-09 17:20:33,636][driver:tab:connect] [DEBUG] Connecting tab E750DAD92BE2F1126E03268A93911324 to ws://127.0.0.1:53837/devtools/page/E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:33,639][driver:connection:connect] [INFO] Connecting to WebSocket at ws://127.0.0.1:53837/devtools/page/E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:33,647][driver:connection:connect] [INFO] Successfully connected to ws://127.0.0.1:53837/devtools/page/E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:33,651][driver:connection:connect] [DEBUG] WebSocket connection established with max_size=268435456, ping_interval=30s
+[2025-12-09 17:20:33,654][driver:connection:connect] [DEBUG] Message listener task started
+[2025-12-09 17:20:33,658][driver:domain_log_buffer:start] [DEBUG] Domain log buffer flush timer started
+[2025-12-09 17:20:33,662][driver:tab:connect] [INFO] Tab E750DAD92BE2F1126E03268A93911324 connected successfully
+[2025-12-09 17:20:33,665][driver:browser:start] [INFO] Found None existing tabs
+[2025-12-09 17:20:33,668][driver:browser:start] [DEBUG] Initializing browser events
+[2025-12-09 17:20:33,671][driver:browser:_init_events] [INFO] Registering browser target event handlers
+[2025-12-09 17:20:33,675][driver:connection:on] [DEBUG] Event type Target.targetDestroyed was added into event handlers.
+[2025-12-09 17:20:33,678][driver:connection:on] [DEBUG] Handler on_target_destroyed was added into event handlers Target.targetDestroyed.
+[2025-12-09 17:20:33,681][driver:browser:_init_events] [DEBUG] Registering focus mode event handlers
+[2025-12-09 17:20:33,683][driver:connection:on] [DEBUG] Event type Target.targetCreated was added into event handlers.
+[2025-12-09 17:20:33,685][driver:connection:on] [DEBUG] Handler on_target_focus was added into event handlers Target.targetCreated.
+[2025-12-09 17:20:33,688][driver:connection:on] [DEBUG] Event type Target.targetInfoChanged was added into event handlers.
+[2025-12-09 17:20:33,691][driver:connection:on] [DEBUG] Handler on_target_focus was added into event handlers Target.targetInfoChanged.
+[2025-12-09 17:20:33,694][driver:browser:start] [INFO] Browser started successfully
+[2025-12-09 17:20:33,697][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Browser.setDownloadBehavior
+[2025-12-09 17:20:33,700][driver:connection:send] [DEBUG] {'id': 3, 'method': 'Browser.setDownloadBehavior', 'params': {'behavior': 'allowAndName', 'downloadPath': '/data/1765300828.4669762/downloads', 'eventsEnabled': True}}
+[2025-12-09 17:20:33,702][driver:connection:send] [DEBUG] Sending: Browser.setDownloadBehavior (id=3)
+[2025-12-09 17:20:33,705][driver:connection:_listen_for_messages] [INFO] Starting WebSocket message listener
+[2025-12-09 17:20:33,706][driver:connection:_process_message] [DEBUG] Processing message with id: 3
+[2025-12-09 17:20:33,708][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Browser.setDownloadBehavior completed in 0.01 seconds
+[2025-12-09 17:20:33,713][driver:connection:on] [DEBUG] Event type Media.playerEventsAdded was added into event handlers.
+[2025-12-09 17:20:33,715][driver:connection:on] [DEBUG] Handler _event_added_responce was added into event handlers Media.playerEventsAdded.
+[2025-12-09 17:20:33,717][driver:connection:on] [DEBUG] Create task for enable domain Media.
+[2025-12-09 17:20:33,750][driver:tab:attach] [DEBUG] Attaching to tab E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:33,753][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Target.attachToTarget
+[2025-12-09 17:20:33,755][driver:connection:send] [DEBUG] {'id': 1, 'method': 'Target.attachToTarget', 'params': {'targetId': TargetID('E750DAD92BE2F1126E03268A93911324'), 'flatten': True}}
+[2025-12-09 17:20:33,757][driver:connection:send] [DEBUG] Sending: Target.attachToTarget (id=1)
+[2025-12-09 17:20:33,777][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Media
+[2025-12-09 17:20:33,778][driver:connection:send] [DEBUG] {'id': 4, 'method': 'Media.enable'}
+[2025-12-09 17:20:33,780][driver:connection:send] [DEBUG] Sending: Media.enable (id=4)
+[2025-12-09 17:20:33,802][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Network
+[2025-12-09 17:20:33,804][driver:connection:send] [DEBUG] {'id': 6, 'method': 'Network.enable'}
+[2025-12-09 17:20:33,806][driver:connection:send] [DEBUG] Sending: Network.enable (id=6)
+[2025-12-09 17:20:33,807][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Network
+[2025-12-09 17:20:33,809][driver:connection:send] [DEBUG] {'id': 7, 'method': 'Network.enable'}
+[2025-12-09 17:20:33,811][driver:connection:send] [DEBUG] Sending: Network.enable (id=7)
+[2025-12-09 17:20:33,813][driver:connection:_process_message] [DEBUG] Processing message with id: 1
+[2025-12-09 17:20:33,815][driver:connection:_process_message] [DEBUG] Processing message with id: 4
+[2025-12-09 17:20:33,817][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Target.attachToTarget completed in 0.06 seconds
+[2025-12-09 17:20:33,821][driver:tab:attach] [INFO] Successfully attached to tab E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:33,824][driver:tab:attach] [DEBUG] Enabling domains for tab E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:33,827][driver:tab:_enable_domains] [DEBUG] Enabling domain Page for tab E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:33,829][driver:tab:attach] [DEBUG] Tab E750DAD92BE2F1126E03268A93911324 already attached, skipping
+[2025-12-09 17:20:33,832][driver:connection:send] [DEBUG] {'id': 8, 'method': 'Page.enable'}
+[2025-12-09 17:20:33,834][driver:connection:send] [DEBUG] Sending: Page.enable (id=8)
+[2025-12-09 17:20:33,837][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Media
+[2025-12-09 17:20:33,843][driver:connection:_process_message] [DEBUG] Processing message with id: 5
+[2025-12-09 17:20:33,844][driver:connection:_process_message] [DEBUG] Processing message with id: 6
+[2025-12-09 17:20:33,845][driver:connection:_process_message] [DEBUG] Processing message with id: 7
+[2025-12-09 17:20:33,863][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Network
+[2025-12-09 17:20:33,865][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Network
+[2025-12-09 17:20:33,981][driver:connection:_process_message] [DEBUG] Processing message with id: 2
+[2025-12-09 17:20:34,139][driver:connection:_process_message] [DEBUG] Processing message with id: 3
+[2025-12-09 17:20:34,146][driver:connection:_process_message] [DEBUG] Processing message with id: 8
+[2025-12-09 17:20:34,147][driver:connection:_process_message] [DEBUG] Processing message with id: 9
+[2025-12-09 17:20:34,149][driver:tab:_enable_domains] [DEBUG] Enabling domain Runtime for tab E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:34,151][driver:tab:attach] [DEBUG] Tab E750DAD92BE2F1126E03268A93911324 already attached, skipping
+[2025-12-09 17:20:34,153][driver:connection:send] [DEBUG] {'id': 10, 'method': 'Runtime.enable'}
+[2025-12-09 17:20:34,156][driver:connection:send] [DEBUG] Sending: Runtime.enable (id=10)
+[2025-12-09 17:20:34,169][driver:connection:_process_message] [DEBUG] Processing message with id: 10
+[2025-12-09 17:20:34,171][driver:tab:_enable_domains] [DEBUG] Enabling domain Network for tab E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:34,173][driver:tab:attach] [DEBUG] Tab E750DAD92BE2F1126E03268A93911324 already attached, skipping
+[2025-12-09 17:20:34,177][driver:connection:send] [DEBUG] {'id': 12, 'method': 'Network.enable'}
+[2025-12-09 17:20:34,180][driver:connection:send] [DEBUG] Sending: Network.enable (id=12)
+[2025-12-09 17:20:34,187][driver:connection:_process_message] [DEBUG] Processing message with id: 11
+[2025-12-09 17:20:34,207][driver:connection:_process_message] [DEBUG] Processing message with id: 12
+[2025-12-09 17:20:34,208][driver:tab:_enable_domains] [DEBUG] Enabling domain DOM for tab E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:34,211][driver:tab:attach] [DEBUG] Tab E750DAD92BE2F1126E03268A93911324 already attached, skipping
+[2025-12-09 17:20:34,213][driver:connection:send] [DEBUG] {'id': 14, 'method': 'DOM.enable'}
+[2025-12-09 17:20:34,215][driver:connection:send] [DEBUG] Sending: DOM.enable (id=14)
+[2025-12-09 17:20:34,218][driver:connection:_process_message] [DEBUG] Processing message with id: 13
+[2025-12-09 17:20:34,234][driver:connection:_process_message] [DEBUG] Processing message with id: 14
+[2025-12-09 17:20:34,236][driver:tab:_enable_domains] [DEBUG] Enabling domain Media for tab E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:34,239][driver:tab:attach] [DEBUG] Tab E750DAD92BE2F1126E03268A93911324 already attached, skipping
+[2025-12-09 17:20:34,243][driver:connection:send] [DEBUG] {'id': 16, 'method': 'Media.enable'}
+[2025-12-09 17:20:34,246][driver:connection:send] [DEBUG] Sending: Media.enable (id=16)
+[2025-12-09 17:20:34,253][driver:connection:_process_message] [DEBUG] Processing message with id: 15
+[2025-12-09 17:20:34,274][driver:connection:_process_message] [DEBUG] Processing message with id: 16
+[2025-12-09 17:20:34,275][driver:tab:_enable_domains] [DEBUG] Enabled 5/5 domains for tab E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:34,277][driver:tab:navigate] [INFO] Navigating tab E750DAD92BE2F1126E03268A93911324 to: https://www.tiktok.com/
+[2025-12-09 17:20:34,280][driver:tab:navigate] [DEBUG] Navigation wait event: networkIdle
+[2025-12-09 17:20:34,282][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Page.navigate
+[2025-12-09 17:20:34,284][driver:connection:send] [DEBUG] {'id': 18, 'method': 'Page.navigate', 'params': {'url': 'https://www.tiktok.com/'}}
+[2025-12-09 17:20:34,286][driver:connection:send] [DEBUG] Sending: Page.navigate (id=18)
+[2025-12-09 17:20:34,289][driver:connection:_process_message] [DEBUG] Processing message with id: 17
+[2025-12-09 17:20:34,858][driver:connection:_process_message] [DEBUG] Processing message with id: 18
+[2025-12-09 17:20:34,860][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:Page.navigate took 0.58 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-09 17:20:34,864][driver:tab:navigate] [DEBUG] Waiting for 'networkIdle' event
+[2025-12-09 17:20:34,867][driver:connection:on] [DEBUG] Event type Page.lifecycleEvent was added into event handlers.
+[2025-12-09 17:20:34,870][driver:connection:on] [DEBUG] Handler _on_lifecycle_event was added into event handlers Page.lifecycleEvent.
+[2025-12-09 17:20:34,874][driver:connection:on] [DEBUG] Create task for enable domain Page.
+[2025-12-09 17:20:34,877][driver:connection:_enable_domain] [INFO] Enabling CDP domain: Page
+[2025-12-09 17:20:34,879][driver:connection:send] [DEBUG] {'id': 20, 'method': 'Page.enable'}
+[2025-12-09 17:20:34,881][driver:connection:send] [DEBUG] Sending: Page.enable (id=20)
+[2025-12-09 17:20:34,895][driver:connection:_process_message] [DEBUG] Processing message with id: 19
+[2025-12-09 17:20:34,909][driver:connection:_process_message] [DEBUG] Processing message with id: 20
+[2025-12-09 17:20:34,911][driver:connection:_enable_domain] [DEBUG] Successfully enabled domain: Page
+[2025-12-09 17:20:34,949][driver:connection:_process_message] [DEBUG] Processing message with id: 21
+[2025-12-09 17:20:35,019][driver:connection:_process_message] [DEBUG] Processing message with id: 22
+[2025-12-09 17:20:35,050][driver:connection:_process_message] [DEBUG] Processing message with id: 24
+[2025-12-09 17:20:35,092][driver:connection:_process_message] [DEBUG] Processing message with id: 25
+[2025-12-09 17:20:35,331][driver:connection:_process_message] [DEBUG] Processing message with id: 23
+[2025-12-09 17:20:35,341][driver:connection:_process_message] [DEBUG] Processing message with id: 26
+[2025-12-09 17:20:35,518][driver:connection:_process_message] [DEBUG] Processing message with id: 28
+[2025-12-09 17:20:35,605][driver:connection:_process_message] [DEBUG] Processing message with id: 29
+[2025-12-09 17:20:35,875][driver:connection:_process_message] [DEBUG] Processing message with id: 30
+[2025-12-09 17:20:36,054][driver:connection:_process_message] [DEBUG] Processing message with id: 27
+[2025-12-09 17:20:36,066][driver:connection:_process_message] [DEBUG] Processing message with id: 31
+[2025-12-09 17:20:36,602][driver:connection:_process_message] [DEBUG] Processing message with id: 32
+[2025-12-09 17:20:37,291][driver:connection:_process_message] [DEBUG] Processing message with id: 33
+[2025-12-09 17:20:37,855][driver:connection:_process_message] [DEBUG] Processing message with id: 34
+[2025-12-09 17:20:38,550][driver:connection:_process_message] [DEBUG] Processing message with id: 35
+[2025-12-09 17:20:38,597][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['Target']
+[2025-12-09 17:20:38,600][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 6 messages to /data/1765300828.4669762/network/browser_connection/Target.json
+[2025-12-09 17:20:38,707][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['Target', 'DOM']
+[2025-12-09 17:20:38,709][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 1 messages to /data/1765300828.4669762/network/E750DAD92BE2F1126E03268A93911324/Target.json
+[2025-12-09 17:20:38,713][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 61 messages to /data/1765300828.4669762/network/E750DAD92BE2F1126E03268A93911324/DOM.json
+[2025-12-09 17:20:39,145][driver:connection:_process_message] [DEBUG] Processing message with id: 36
+[2025-12-09 17:20:39,878][driver:lifecycle_watcher:_on_timeout] [WARNING] Navigation timeout after 5s waiting for 'networkIdle'
+[2025-12-09 17:20:39,882][driver:tab:navigate] [WARNING] Navigation timeout waiting for 'networkIdle' event at https://www.tiktok.com/
+[2025-12-09 17:20:39,885][driver:tab:navigate] [DEBUG] Navigation will continue despite timeout
+[2025-12-09 17:20:39,972][driver:flow:execute] [INFO] Start Flow: 'Check if user is logged in' (1 steps).
+[2025-12-09 17:20:39,976][driver:flow:execute] [INFO] Flow: 'Check if user is logged in' (1 of 1 steps) - Check if user is logged in
+[2025-12-09 17:20:39,981][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/1: VerifyNodeAttribute
+[2025-12-09 17:20:39,984][driver:base:act] [DEBUG] Verify if 'attribute check on '//a[@data-e2e='nav-profile']''.
+[2025-12-09 17:20:39,986][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:39,991][driver:connection:send] [DEBUG] {'id': 38, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:39,996][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=38)
+[2025-12-09 17:20:40,407][driver:connection:_process_message] [DEBUG] Processing message with id: 38
+[2025-12-09 17:20:40,409][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.42 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-09 17:20:40,430][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:40,435][driver:connection:send] [DEBUG] {'id': 40, 'method': 'DOM.performSearch', 'params': {'query': "//a[@data-e2e='nav-profile']"}}
+[2025-12-09 17:20:40,439][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=40)
+[2025-12-09 17:20:40,839][driver:connection:_process_message] [DEBUG] Processing message with id: 37
+[2025-12-09 17:20:40,855][driver:connection:_process_message] [DEBUG] Processing message with id: 40
+[2025-12-09 17:20:40,858][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.performSearch took 0.42 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 15.
+[2025-12-09 17:20:40,863][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-09 17:20:40,867][driver:connection:send] [DEBUG] {'id': 41, 'method': 'DOM.getSearchResults', 'params': {'searchId': '176.2', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-09 17:20:40,870][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=41)
+[2025-12-09 17:20:41,203][driver:connection:_process_message] [DEBUG] Processing message with id: 39
+[2025-12-09 17:20:41,408][driver:connection:_process_message] [DEBUG] Processing message with id: 41
+[2025-12-09 17:20:41,409][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getSearchResults took 0.54 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-09 17:20:41,413][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-09 17:20:41,416][driver:connection:send] [DEBUG] {'id': 42, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '176.2'}}
+[2025-12-09 17:20:41,419][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=42)
+[2025-12-09 17:20:41,558][driver:connection:_process_message] [DEBUG] Processing message with id: 42
+[2025-12-09 17:20:41,560][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.discardSearchResults took 0.14 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-09 17:20:41,563][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //a[@data-e2e='nav-profile'] query.
+[2025-12-09 17:20:41,567][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-09 17:20:41,571][driver:connection:send] [DEBUG] {'id': 43, 'method': 'DOM.describeNode', 'params': {'nodeId': 584, 'pierce': True}}
+[2025-12-09 17:20:41,574][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=43)
+[2025-12-09 17:20:41,888][driver:connection:_process_message] [DEBUG] Processing message with id: 43
+[2025-12-09 17:20:41,891][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.describeNode took 0.32 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-09 17:20:41,896][driver:by_query_or_selector:locate_element] [DEBUG] Element found by text query: //a[@data-e2e='nav-profile']
+[2025-12-09 17:20:41,898][driver:element:get_node_attrs] [DEBUG] Converting attributes for node NodeId(584)
+[2025-12-09 17:20:41,901][driver:element:get_node_attrs] [DEBUG] Node has 4 attributes
+[2025-12-09 17:20:41,904][driver:element:get_node_attrs] [DEBUG] Converted attributes: {'data-e2e': 'nav-profile', 'tabindex': '-1', 'class_': 'link-a11y-focus', 'href': '/@user5072442832394'}
+[2025-12-09 17:20:41,906][driver:attribute:_verify] [DEBUG] Attribute check passed for //a[@data-e2e='nav-profile']
+[2025-12-09 17:20:41,909][driver:base:act] [DEBUG] Verification passed: 'attribute check on '//a[@data-e2e='nav-profile']''.
+[2025-12-09 17:20:41,911][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/1 succeeded: VerifyNodeAttribute
+[2025-12-09 17:20:42,014][driver:flow:_execute_step_with_retry] [INFO] Step 'Check if user is logged in' completed successfully
+[2025-12-09 17:20:42,017][driver:flow:execute] [INFO] Flow 'Check if user is logged in': Completed successfully
+[2025-12-09 17:20:42,033][driver:flow:execute] [INFO] Start Flow: 'Create collection' (3 steps).
+[2025-12-09 17:20:42,036][driver:flow:execute] [INFO] Flow: 'Create collection' (1 of 3 steps) - Go to favorites
+[2025-12-09 17:20:42,039][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 1/4: Click
+[2025-12-09 17:20:42,042][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:42,045][driver:connection:send] [DEBUG] {'id': 45, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:42,047][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=45)
+[2025-12-09 17:20:42,116][driver:connection:_process_message] [DEBUG] Processing message with id: 45
+[2025-12-09 17:20:42,118][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.07 seconds
+[2025-12-09 17:20:42,143][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:42,146][driver:connection:send] [DEBUG] {'id': 46, 'method': 'DOM.performSearch', 'params': {'query': "//a[@data-e2e='nav-profile']"}}
+[2025-12-09 17:20:42,149][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=46)
+[2025-12-09 17:20:42,382][driver:connection:_process_message] [DEBUG] Processing message with id: 44
+[2025-12-09 17:20:42,390][driver:connection:_process_message] [DEBUG] Processing message with id: 46
+[2025-12-09 17:20:42,395][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.performSearch took 0.25 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-09 17:20:42,398][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getSearchResults
+[2025-12-09 17:20:42,401][driver:connection:send] [DEBUG] {'id': 48, 'method': 'DOM.getSearchResults', 'params': {'searchId': '176.3', 'fromIndex': 0, 'toIndex': 1}}
+[2025-12-09 17:20:42,405][driver:connection:send] [DEBUG] Sending: DOM.getSearchResults (id=48)
+[2025-12-09 17:20:42,412][driver:connection:_process_message] [DEBUG] Processing message with id: 48
+[2025-12-09 17:20:42,414][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getSearchResults completed in 0.01 seconds
+[2025-12-09 17:20:42,417][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.discardSearchResults
+[2025-12-09 17:20:42,419][driver:connection:send] [DEBUG] {'id': 49, 'method': 'DOM.discardSearchResults', 'params': {'searchId': '176.3'}}
+[2025-12-09 17:20:42,422][driver:connection:send] [DEBUG] Sending: DOM.discardSearchResults (id=49)
+[2025-12-09 17:20:42,425][driver:connection:_process_message] [DEBUG] Processing message with id: 49
+[2025-12-09 17:20:42,427][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.discardSearchResults completed in 0.01 seconds
+[2025-12-09 17:20:42,431][driver:tab:find_elements_by_query] [DEBUG] Found 1 elements with //a[@data-e2e='nav-profile'] query.
+[2025-12-09 17:20:42,434][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.describeNode
+[2025-12-09 17:20:42,437][driver:connection:send] [DEBUG] {'id': 50, 'method': 'DOM.describeNode', 'params': {'nodeId': 1972, 'pierce': True}}
+[2025-12-09 17:20:42,440][driver:connection:send] [DEBUG] Sending: DOM.describeNode (id=50)
+[2025-12-09 17:20:42,445][driver:connection:_process_message] [DEBUG] Processing message with id: 50
+[2025-12-09 17:20:42,447][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.describeNode completed in 0.01 seconds
+[2025-12-09 17:20:42,450][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getBoxModel
+[2025-12-09 17:20:42,453][driver:connection:send] [DEBUG] {'id': 51, 'method': 'DOM.getBoxModel', 'params': {'nodeId': 1972}}
+[2025-12-09 17:20:42,455][driver:connection:send] [DEBUG] Sending: DOM.getBoxModel (id=51)
+[2025-12-09 17:20:42,460][driver:connection:_process_message] [DEBUG] Processing message with id: 51
+[2025-12-09 17:20:42,461][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getBoxModel completed in 0.01 seconds
+[2025-12-09 17:20:42,464][driver:element:_calculate_center] [DEBUG] Calculating center coordinates from box model content
+[2025-12-09 17:20:42,467][driver:element:_calculate_center] [DEBUG] Box dimensions: left=16, top=499, right=224, bottom=522
+[2025-12-09 17:20:42,470][driver:element:_calculate_center] [DEBUG] Calculated center: (120.0, 510.5)
+[2025-12-09 17:20:42,473][driver:tab:click_element] [INFO] Clicking element at (120.0, 510.5)
+[2025-12-09 17:20:42,475][driver:tab:click_element] [DEBUG] Dispatching mousePressed event
+[2025-12-09 17:20:42,478][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-09 17:20:42,481][driver:connection:send] [DEBUG] {'id': 52, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mousePressed', 'x': 120.0, 'y': 510.5, 'button': 'left', 'clickCount': 1}}
+[2025-12-09 17:20:42,483][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=52)
+[2025-12-09 17:20:42,690][driver:connection:_process_message] [DEBUG] Processing message with id: 47
+[2025-12-09 17:20:42,702][driver:connection:_process_message] [DEBUG] Processing message with id: 52
+[2025-12-09 17:20:42,705][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:Input.dispatchMouseEvent took 0.22 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 14.
+[2025-12-09 17:20:42,710][driver:tab:click_element] [DEBUG] Waiting 0.1s between press and release
+[2025-12-09 17:20:42,814][driver:tab:click_element] [DEBUG] Dispatching mouseReleased event
+[2025-12-09 17:20:42,816][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Input.dispatchMouseEvent
+[2025-12-09 17:20:42,819][driver:connection:send] [DEBUG] {'id': 53, 'method': 'Input.dispatchMouseEvent', 'params': {'type': 'mouseReleased', 'x': 120.0, 'y': 510.5, 'button': 'left', 'clickCount': 1}}
+[2025-12-09 17:20:42,822][driver:connection:send] [DEBUG] Sending: Input.dispatchMouseEvent (id=53)
+[2025-12-09 17:20:42,830][driver:connection:_process_message] [DEBUG] Processing message with id: 53
+[2025-12-09 17:20:42,832][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Input.dispatchMouseEvent completed in 0.01 seconds
+[2025-12-09 17:20:42,834][driver:tab:click_element] [INFO] Successfully clicked element at (120.0, 510.5)
+[2025-12-09 17:20:42,837][driver:click:_interact_with_element] [DEBUG] Successfully clicked element: click on '//a[@data-e2e='nav-profile']'
+[2025-12-09 17:20:42,839][driver:base:act] [INFO] Interaction succeeded: click on '//a[@data-e2e='nav-profile']' NodeId(1972)
+[2025-12-09 17:20:42,842][driver:flow:_execute_step_with_retry] [DEBUG]   Action 1/4 succeeded: Click
+[2025-12-09 17:20:42,945][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 2/4: Wait
+[2025-12-09 17:20:42,948][driver:wait:act] [INFO] Waiting for 1.0 seconds
+[2025-12-09 17:20:43,689][driver:connection:_process_message] [DEBUG] Processing message with id: 54
+[2025-12-09 17:20:43,716][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['DOM']
+[2025-12-09 17:20:43,744][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 616 messages to /data/1765300828.4669762/network/E750DAD92BE2F1126E03268A93911324/DOM.json
+[2025-12-09 17:20:43,951][driver:flow:_execute_step_with_retry] [DEBUG]   Action 2/4 succeeded: Wait
+[2025-12-09 17:20:44,016][driver:connection:_process_message] [DEBUG] Processing message with id: 55
+[2025-12-09 17:20:44,055][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:44,058][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:44,061][driver:connection:send] [DEBUG] {'id': 56, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:44,064][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=56)
+[2025-12-09 17:20:44,128][driver:connection:_process_message] [DEBUG] Processing message with id: 56
+[2025-12-09 17:20:44,131][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.07 seconds
+[2025-12-09 17:20:44,169][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:44,173][driver:connection:send] [DEBUG] {'id': 57, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:44,176][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=57)
+[2025-12-09 17:20:44,184][driver:connection:_process_message] [DEBUG] Processing message with id: 57
+[2025-12-09 17:20:44,185][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-09 17:20:44,188][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:44,190][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:44,193][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:44,197][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:44,200][driver:connection:send] [DEBUG] {'id': 58, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:44,203][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=58)
+[2025-12-09 17:20:44,232][driver:connection:_process_message] [DEBUG] Processing message with id: 58
+[2025-12-09 17:20:44,234][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:44,253][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(3858)
+[2025-12-09 17:20:44,255][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:44,258][driver:connection:send] [DEBUG] {'id': 59, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 3858, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:44,260][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=59)
+[2025-12-09 17:20:44,266][driver:connection:_process_message] [DEBUG] Processing message with id: 59
+[2025-12-09 17:20:44,267][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:44,272][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:44,276][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:44,781][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:44,784][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:44,786][driver:connection:send] [DEBUG] {'id': 61, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:44,789][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=61)
+[2025-12-09 17:20:44,986][driver:connection:_process_message] [DEBUG] Processing message with id: 60
+[2025-12-09 17:20:45,001][driver:connection:_process_message] [DEBUG] Processing message with id: 61
+[2025-12-09 17:20:45,003][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.22 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-09 17:20:45,026][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:45,029][driver:connection:send] [DEBUG] {'id': 62, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:45,032][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=62)
+[2025-12-09 17:20:45,043][driver:connection:_process_message] [DEBUG] Processing message with id: 62
+[2025-12-09 17:20:45,045][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.02 seconds
+[2025-12-09 17:20:45,047][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:45,050][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:45,053][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:45,055][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:45,058][driver:connection:send] [DEBUG] {'id': 64, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:45,061][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=64)
+[2025-12-09 17:20:45,093][driver:connection:_process_message] [DEBUG] Processing message with id: 64
+[2025-12-09 17:20:45,095][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.04 seconds
+[2025-12-09 17:20:45,119][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(6199)
+[2025-12-09 17:20:45,122][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:45,124][driver:connection:send] [DEBUG] {'id': 65, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 6199, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:45,127][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=65)
+[2025-12-09 17:20:45,132][driver:connection:_process_message] [DEBUG] Processing message with id: 65
+[2025-12-09 17:20:45,134][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:45,137][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:45,140][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:45,359][driver:connection:_process_message] [DEBUG] Processing message with id: 63
+[2025-12-09 17:20:45,644][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:45,646][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:45,649][driver:connection:send] [DEBUG] {'id': 66, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:45,651][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=66)
+[2025-12-09 17:20:45,679][driver:connection:_process_message] [DEBUG] Processing message with id: 66
+[2025-12-09 17:20:45,681][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:45,703][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:45,705][driver:connection:send] [DEBUG] {'id': 67, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:45,708][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=67)
+[2025-12-09 17:20:45,715][driver:connection:_process_message] [DEBUG] Processing message with id: 67
+[2025-12-09 17:20:45,716][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-09 17:20:45,719][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:45,721][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:45,724][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:45,726][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:45,729][driver:connection:send] [DEBUG] {'id': 68, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:45,732][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=68)
+[2025-12-09 17:20:45,762][driver:connection:_process_message] [DEBUG] Processing message with id: 68
+[2025-12-09 17:20:45,764][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:45,784][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(8539)
+[2025-12-09 17:20:45,786][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:45,789][driver:connection:send] [DEBUG] {'id': 69, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 8539, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:45,792][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=69)
+[2025-12-09 17:20:45,798][driver:connection:_process_message] [DEBUG] Processing message with id: 69
+[2025-12-09 17:20:45,799][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:45,802][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:45,804][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:46,294][driver:connection:_process_message] [DEBUG] Processing message with id: 70
+[2025-12-09 17:20:46,307][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:46,310][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:46,312][driver:connection:send] [DEBUG] {'id': 71, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:46,315][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=71)
+[2025-12-09 17:20:46,344][driver:connection:_process_message] [DEBUG] Processing message with id: 71
+[2025-12-09 17:20:46,345][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:46,432][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:46,435][driver:connection:send] [DEBUG] {'id': 72, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:46,438][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=72)
+[2025-12-09 17:20:46,451][driver:connection:_process_message] [DEBUG] Processing message with id: 72
+[2025-12-09 17:20:46,453][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.02 seconds
+[2025-12-09 17:20:46,455][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:46,458][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:46,461][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:46,464][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:46,467][driver:connection:send] [DEBUG] {'id': 74, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:46,469][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=74)
+[2025-12-09 17:20:46,509][driver:connection:_process_message] [DEBUG] Processing message with id: 74
+[2025-12-09 17:20:46,511][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.04 seconds
+[2025-12-09 17:20:46,531][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(10882)
+[2025-12-09 17:20:46,534][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:46,536][driver:connection:send] [DEBUG] {'id': 75, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 10882, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:46,539][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=75)
+[2025-12-09 17:20:46,542][driver:process:_default_output_handler] [WARNING] [STDERR] [65:89:1209/172046.510873:ERROR:google_apis/gcm/engine/registration_request.cc:292] Registration response error message: DEPRECATED_ENDPOINT
+[2025-12-09 17:20:46,545][driver:connection:_process_message] [DEBUG] Processing message with id: 75
+[2025-12-09 17:20:46,547][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:46,550][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:46,552][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:46,739][driver:connection:_process_message] [DEBUG] Processing message with id: 73
+[2025-12-09 17:20:47,057][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:47,059][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:47,063][driver:connection:send] [DEBUG] {'id': 76, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:47,065][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=76)
+[2025-12-09 17:20:47,095][driver:connection:_process_message] [DEBUG] Processing message with id: 76
+[2025-12-09 17:20:47,097][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:47,119][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:47,122][driver:connection:send] [DEBUG] {'id': 77, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:47,124][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=77)
+[2025-12-09 17:20:47,132][driver:connection:_process_message] [DEBUG] Processing message with id: 77
+[2025-12-09 17:20:47,133][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-09 17:20:47,136][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:47,138][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:47,141][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:47,144][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:47,147][driver:connection:send] [DEBUG] {'id': 78, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:47,149][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=78)
+[2025-12-09 17:20:47,176][driver:connection:_process_message] [DEBUG] Processing message with id: 78
+[2025-12-09 17:20:47,178][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:47,198][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(13220)
+[2025-12-09 17:20:47,200][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:47,204][driver:connection:send] [DEBUG] {'id': 79, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 13220, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:47,206][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=79)
+[2025-12-09 17:20:47,211][driver:connection:_process_message] [DEBUG] Processing message with id: 79
+[2025-12-09 17:20:47,212][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:47,215][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:47,218][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:47,596][driver:connection:_process_message] [DEBUG] Processing message with id: 80
+[2025-12-09 17:20:47,722][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:47,724][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:47,727][driver:connection:send] [DEBUG] {'id': 81, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:47,729][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=81)
+[2025-12-09 17:20:47,759][driver:connection:_process_message] [DEBUG] Processing message with id: 81
+[2025-12-09 17:20:47,761][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:47,779][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:47,782][driver:connection:send] [DEBUG] {'id': 83, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:47,784][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=83)
+[2025-12-09 17:20:47,793][driver:connection:_process_message] [DEBUG] Processing message with id: 83
+[2025-12-09 17:20:47,794][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-09 17:20:47,797][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:47,799][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:47,802][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:47,804][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:47,807][driver:connection:send] [DEBUG] {'id': 84, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:47,809][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=84)
+[2025-12-09 17:20:47,952][driver:connection:_process_message] [DEBUG] Processing message with id: 84
+[2025-12-09 17:20:47,954][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.15 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-09 17:20:47,974][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(15532)
+[2025-12-09 17:20:47,978][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:47,980][driver:connection:send] [DEBUG] {'id': 85, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 15532, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:47,983][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=85)
+[2025-12-09 17:20:48,187][driver:connection:_process_message] [DEBUG] Processing message with id: 82
+[2025-12-09 17:20:48,195][driver:connection:_process_message] [DEBUG] Processing message with id: 85
+[2025-12-09 17:20:48,196][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:48,199][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:48,202][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:48,708][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:48,710][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:48,713][driver:connection:send] [DEBUG] {'id': 87, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:48,716][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=87)
+[2025-12-09 17:20:48,748][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['DOM']
+[2025-12-09 17:20:48,780][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 133 messages to /data/1765300828.4669762/network/E750DAD92BE2F1126E03268A93911324/DOM.json
+[2025-12-09 17:20:48,911][driver:connection:_process_message] [DEBUG] Processing message with id: 86
+[2025-12-09 17:20:48,934][driver:connection:_process_message] [DEBUG] Processing message with id: 87
+[2025-12-09 17:20:48,936][driver:utils:time_track] [WARNING] Operation send_cdp_transaction:DOM.getDocument took 0.22 seconds, exceeding threshold of 0.1 seconds. Number of active tasks in event loop: 13.
+[2025-12-09 17:20:48,959][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:48,962][driver:connection:send] [DEBUG] {'id': 88, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:48,965][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=88)
+[2025-12-09 17:20:48,972][driver:connection:_process_message] [DEBUG] Processing message with id: 88
+[2025-12-09 17:20:48,973][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-09 17:20:48,976][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:48,979][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:48,982][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:48,986][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:48,989][driver:connection:send] [DEBUG] {'id': 89, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:48,991][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=89)
+[2025-12-09 17:20:49,021][driver:connection:_process_message] [DEBUG] Processing message with id: 89
+[2025-12-09 17:20:49,023][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:49,043][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(17826)
+[2025-12-09 17:20:49,047][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:49,050][driver:connection:send] [DEBUG] {'id': 90, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 17826, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:49,053][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=90)
+[2025-12-09 17:20:49,058][driver:connection:_process_message] [DEBUG] Processing message with id: 90
+[2025-12-09 17:20:49,060][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:49,064][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:49,066][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:49,491][driver:connection:_process_message] [DEBUG] Processing message with id: 91
+[2025-12-09 17:20:49,571][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:49,574][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:49,577][driver:connection:send] [DEBUG] {'id': 92, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:49,580][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=92)
+[2025-12-09 17:20:49,609][driver:connection:_process_message] [DEBUG] Processing message with id: 92
+[2025-12-09 17:20:49,612][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.04 seconds
+[2025-12-09 17:20:49,635][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:49,638][driver:connection:send] [DEBUG] {'id': 93, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:49,641][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=93)
+[2025-12-09 17:20:49,649][driver:connection:_process_message] [DEBUG] Processing message with id: 93
+[2025-12-09 17:20:49,651][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-09 17:20:49,653][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:49,656][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:49,658][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:49,661][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:49,664][driver:connection:send] [DEBUG] {'id': 94, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:49,666][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=94)
+[2025-12-09 17:20:49,694][driver:connection:_process_message] [DEBUG] Processing message with id: 94
+[2025-12-09 17:20:49,696][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:49,715][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(20120)
+[2025-12-09 17:20:49,718][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:49,720][driver:connection:send] [DEBUG] {'id': 95, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 20120, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:49,723][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=95)
+[2025-12-09 17:20:49,727][driver:connection:_process_message] [DEBUG] Processing message with id: 95
+[2025-12-09 17:20:49,729][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:49,732][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:49,735][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:50,224][driver:connection:_process_message] [DEBUG] Processing message with id: 96
+[2025-12-09 17:20:50,238][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:50,240][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:50,243][driver:connection:send] [DEBUG] {'id': 97, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:50,246][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=97)
+[2025-12-09 17:20:50,274][driver:connection:_process_message] [DEBUG] Processing message with id: 97
+[2025-12-09 17:20:50,275][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:50,363][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:50,366][driver:connection:send] [DEBUG] {'id': 98, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:50,369][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=98)
+[2025-12-09 17:20:50,376][driver:connection:_process_message] [DEBUG] Processing message with id: 98
+[2025-12-09 17:20:50,377][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-09 17:20:50,380][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:50,383][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:50,386][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:50,388][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:50,392][driver:connection:send] [DEBUG] {'id': 99, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:50,395][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=99)
+[2025-12-09 17:20:50,424][driver:connection:_process_message] [DEBUG] Processing message with id: 99
+[2025-12-09 17:20:50,425][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:50,446][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(22414)
+[2025-12-09 17:20:50,449][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:50,452][driver:connection:send] [DEBUG] {'id': 100, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 22414, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:50,455][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=100)
+[2025-12-09 17:20:50,459][driver:connection:_process_message] [DEBUG] Processing message with id: 100
+[2025-12-09 17:20:50,461][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:50,465][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:50,468][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:50,774][driver:connection:_process_message] [DEBUG] Processing message with id: 101
+[2025-12-09 17:20:50,972][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:50,974][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:50,978][driver:connection:send] [DEBUG] {'id': 102, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:50,981][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=102)
+[2025-12-09 17:20:51,008][driver:connection:_process_message] [DEBUG] Processing message with id: 102
+[2025-12-09 17:20:51,010][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:51,034][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:51,036][driver:connection:send] [DEBUG] {'id': 103, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:51,039][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=103)
+[2025-12-09 17:20:51,046][driver:connection:_process_message] [DEBUG] Processing message with id: 103
+[2025-12-09 17:20:51,048][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-09 17:20:51,051][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:51,053][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:51,056][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:51,058][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:51,061][driver:connection:send] [DEBUG] {'id': 104, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:51,064][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=104)
+[2025-12-09 17:20:51,092][driver:connection:_process_message] [DEBUG] Processing message with id: 104
+[2025-12-09 17:20:51,094][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:51,114][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(24708)
+[2025-12-09 17:20:51,117][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:51,120][driver:connection:send] [DEBUG] {'id': 105, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 24708, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:51,122][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=105)
+[2025-12-09 17:20:51,127][driver:connection:_process_message] [DEBUG] Processing message with id: 105
+[2025-12-09 17:20:51,129][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:51,133][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:51,135][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:51,537][driver:connection:_process_message] [DEBUG] Processing message with id: 106
+[2025-12-09 17:20:51,638][driver:flow:_execute_step_with_retry] [DEBUG]   Attempting action 3/4: Click
+[2025-12-09 17:20:51,641][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:51,644][driver:connection:send] [DEBUG] {'id': 107, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:51,647][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=107)
+[2025-12-09 17:20:51,678][driver:connection:_process_message] [DEBUG] Processing message with id: 107
+[2025-12-09 17:20:51,679][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.04 seconds
+[2025-12-09 17:20:51,702][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.performSearch
+[2025-12-09 17:20:51,705][driver:connection:send] [DEBUG] {'id': 108, 'method': 'DOM.performSearch', 'params': {'query': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:51,707][driver:connection:send] [DEBUG] Sending: DOM.performSearch (id=108)
+[2025-12-09 17:20:51,715][driver:connection:_process_message] [DEBUG] Processing message with id: 108
+[2025-12-09 17:20:51,717][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.performSearch completed in 0.01 seconds
+[2025-12-09 17:20:51,719][driver:by_query_or_selector:locate_elements] [DEBUG] No element found by text query: //p[@role='tab'][position()=3]
+[2025-12-09 17:20:51,722][driver:tab:find_elements_by_selector] [INFO] Finding elements with selector: '//p[@role='tab'][position()=3]'
+[2025-12-09 17:20:51,724][driver:tab:find_elements_by_selector] [DEBUG] Getting document root node
+[2025-12-09 17:20:51,727][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.getDocument
+[2025-12-09 17:20:51,731][driver:connection:send] [DEBUG] {'id': 109, 'method': 'DOM.getDocument', 'params': {'depth': -1, 'pierce': True}}
+[2025-12-09 17:20:51,733][driver:connection:send] [DEBUG] Sending: DOM.getDocument (id=109)
+[2025-12-09 17:20:51,762][driver:connection:_process_message] [DEBUG] Processing message with id: 109
+[2025-12-09 17:20:51,763][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:DOM.getDocument completed in 0.03 seconds
+[2025-12-09 17:20:51,784][driver:tab:find_elements_by_selector] [DEBUG] Querying selector '//p[@role='tab'][position()=3]' on document node NodeId(27002)
+[2025-12-09 17:20:51,788][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:DOM.querySelectorAll
+[2025-12-09 17:20:51,793][driver:connection:send] [DEBUG] {'id': 110, 'method': 'DOM.querySelectorAll', 'params': {'nodeId': 27002, 'selector': "//p[@role='tab'][position()=3]"}}
+[2025-12-09 17:20:51,797][driver:connection:send] [DEBUG] Sending: DOM.querySelectorAll (id=110)
+[2025-12-09 17:20:51,825][driver:connection:_process_message] [DEBUG] Processing message with id: 110
+[2025-12-09 17:20:51,826][driver:connection:send] [ERROR] DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:51,830][driver:base:act] [WARNING] Error during interaction: click on '//p[@role='tab'][position()=3]' - DOM.querySelectorAll failed: DOM Error while querying (code: -32000)
+[2025-12-09 17:20:51,833][driver:flow:_execute_step_with_retry] [DEBUG]   Action 3/4 failed: Click, retrying...
+[2025-12-09 17:20:52,039][driver:flow:execute] [ERROR] Flow 'Create collection': Timeout in 'Go to favorites' after 10.0s
+[2025-12-09 17:20:52,128][driver:connection:_process_message] [DEBUG] Processing message with id: 111
+[2025-12-09 17:20:52,825][driver:connection:_process_message] [DEBUG] Processing message with id: 112
+[2025-12-09 17:20:53,457][driver:connection:_process_message] [DEBUG] Processing message with id: 113
+[2025-12-09 17:20:53,783][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['DOM']
+[2025-12-09 17:20:53,818][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 25 messages to /data/1765300828.4669762/network/E750DAD92BE2F1126E03268A93911324/DOM.json
+[2025-12-09 17:20:54,140][driver:connection:_process_message] [DEBUG] Processing message with id: 114
+[2025-12-09 17:20:54,757][driver:connection:_process_message] [DEBUG] Processing message with id: 115
+[2025-12-09 17:20:55,426][driver:connection:_process_message] [DEBUG] Processing message with id: 116
+[2025-12-09 17:20:56,070][driver:connection:_process_message] [DEBUG] Processing message with id: 117
+[2025-12-09 17:20:56,737][driver:connection:_process_message] [DEBUG] Processing message with id: 118
+[2025-12-09 17:20:57,113][driver:browser:__aexit__] [INFO] Exiting browser context
+[2025-12-09 17:20:57,116][driver:browser:_disconnect_all_tabs] [INFO] Closing 1 tabs connection gracefully.
+[2025-12-09 17:20:57,119][driver:tab:close] [INFO] Closing tab E750DAD92BE2F1126E03268A93911324 (close_target=False)
+[2025-12-09 17:20:57,121][driver:tab:close] [DEBUG] Disconnecting from tab E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:57,122][driver:connection:disconnect] [DEBUG] Cancelling message listener task
+[2025-12-09 17:20:57,124][driver:connection:_listen_for_messages] [DEBUG] Message listener cancelled
+[2025-12-09 17:20:57,125][driver:connection:_listen_for_messages] [INFO] Message listener stopped.
+[2025-12-09 17:20:57,127][driver:connection:disconnect] [DEBUG] Listener task was canceled successfully
+[2025-12-09 17:20:57,129][driver:domain_log_buffer:stop] [DEBUG] Cancelling domain log flush timer task
+[2025-12-09 17:20:57,136][driver:domain_log_buffer:_periodic_flush] [DEBUG] Periodic flush task cancelled
+[2025-12-09 17:20:57,137][driver:domain_log_buffer:stop] [DEBUG] Flush timer task was canceled successfully
+[2025-12-09 17:20:57,139][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['DOM']
+[2025-12-09 17:20:57,176][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 29 messages to /data/1765300828.4669762/network/E750DAD92BE2F1126E03268A93911324/DOM.json
+[2025-12-09 17:20:57,179][driver:domain_log_buffer:stop] [DEBUG] Domain log buffer stopped and flushed
+[2025-12-09 17:20:57,181][driver:connection:disconnect] [DEBUG] Attempting to close websocket with state 1
+[2025-12-09 17:20:57,183][driver:connection:disconnect] [INFO] Disconnected from ws://127.0.0.1:53837/devtools/page/E750DAD92BE2F1126E03268A93911324
+[2025-12-09 17:20:57,185][driver:tab:close] [INFO] Tab E750DAD92BE2F1126E03268A93911324 closed
+[2025-12-09 17:20:57,187][driver:browser:_disconnect_all_tabs] [DEBUG] All tabs closed successfully
+[2025-12-09 17:20:57,190][driver:browser:_close_browser_and_disconnect] [INFO] Sending 'close' command to browser.
+[2025-12-09 17:20:57,192][driver:utils:time_track] [DEBUG] Starting timed operation: send_cdp_transaction:Browser.close
+[2025-12-09 17:20:57,195][driver:connection:send] [DEBUG] {'id': 4, 'method': 'Browser.close'}
+[2025-12-09 17:20:57,198][driver:connection:send] [DEBUG] Sending: Browser.close (id=4)
+[2025-12-09 17:20:57,201][driver:connection:_process_message] [DEBUG] Processing message with id: 4
+[2025-12-09 17:20:57,203][driver:utils:time_track] [DEBUG] Operation send_cdp_transaction:Browser.close completed in 0.01 seconds
+[2025-12-09 17:20:57,207][driver:connection:disconnect] [DEBUG] Cancelling message listener task
+[2025-12-09 17:20:57,211][driver:connection:_listen_for_messages] [DEBUG] Message listener cancelled
+[2025-12-09 17:20:57,213][driver:connection:_listen_for_messages] [INFO] Message listener stopped.
+[2025-12-09 17:20:57,215][driver:connection:disconnect] [DEBUG] Listener task was canceled successfully
+[2025-12-09 17:20:57,220][driver:domain_log_buffer:stop] [DEBUG] Cancelling domain log flush timer task
+[2025-12-09 17:20:57,224][driver:domain_log_buffer:_periodic_flush] [DEBUG] Periodic flush task cancelled
+[2025-12-09 17:20:57,225][driver:domain_log_buffer:stop] [DEBUG] Flush timer task was canceled successfully
+[2025-12-09 17:20:57,228][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushing domain logs for: ['Target']
+[2025-12-09 17:20:57,232][driver:domain_log_buffer:_flush_domains] [DEBUG] Flushed 1 messages to /data/1765300828.4669762/network/browser_connection/Target.json
+[2025-12-09 17:20:57,235][driver:domain_log_buffer:stop] [DEBUG] Domain log buffer stopped and flushed
+[2025-12-09 17:20:57,237][driver:connection:disconnect] [DEBUG] Attempting to close websocket with state 1
+[2025-12-09 17:20:57,240][driver:connection:disconnect] [INFO] Disconnected from ws://127.0.0.1:53837/devtools/browser/af75817c-fa13-41a0-a311-5ba03b4f1952
+[2025-12-09 17:20:57,394][driver:process:_handle_stream] [DEBUG] stdout stream closed for process 65
+[2025-12-09 17:20:57,396][driver:process:_handle_stream] [DEBUG] stdout handler completed for process 65, processed 0 lines
+[2025-12-09 17:20:57,397][driver:process:_handle_stream] [DEBUG] stderr stream closed for process 65
+[2025-12-09 17:20:57,399][driver:process:_handle_stream] [DEBUG] stderr handler completed for process 65, processed 4 lines
+[2025-12-09 17:20:57,512][driver:process:_watch_process_exit] [INFO] Process 65 exited normally with code 0
+[2025-12-09 17:20:57,514][driver:process:stop] [DEBUG] Process is not running, nothing to stop
+[2025-12-09 17:20:57,515][driver:process:_watch_process_exit] [DEBUG] Exit watcher for process 65 completed
+[2025-12-09 17:20:57,517][driver:process:_monitor_process] [DEBUG] All monitoring tasks completed
+[2025-12-09 17:20:58,245][driver:process:stop] [DEBUG] Process is not running, nothing to stop
+[2025-12-09 17:20:58,247][driver:browser:__aexit__] [INFO] Browser closed.

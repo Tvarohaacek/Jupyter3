@@ -1,0 +1,155 @@
+[2025-12-09 17:12:26,767][agent:main:main_async] [INFO] Storage path: /data
+[2025-12-09 17:12:26,890][agent:main:run_pipeline] [INFO] Starting pipeline execution for experiment: drifting_study_login
+[2025-12-09 17:12:26,892][agent:toolbox:clear_pipeline_log] [INFO] Pipeline execution log cleared
+[2025-12-09 17:12:26,895][agent:runner:execute_pipeline] [INFO] --- Starting Pipeline Execution for Experiment: drifting_study_login ---
+[2025-12-09 17:12:26,897][agent:context:_try_parse_puppet_identity] [DEBUG] Successfully parsed puppet identity from variables
+[2025-12-09 17:12:26,899][agent:runner:get_pipeline_action_step_results] [INFO] Executing initial actions on platform 'tiktok'
+[2025-12-09 17:12:26,901][agent:runner:execute_initial_actions] [INFO] No initial actions found (ONCE schedule, no dependencies).
+[2025-12-09 17:12:26,903][agent:runner:get_pipeline_action_step_results] [INFO] Completed initial actions: None
+[2025-12-09 17:12:26,905][agent:runner:resolve_dependencies_until_complete] [INFO] Entering dependency resolution loop for 1 pending actions.
+[2025-12-09 17:12:26,907][agent:runner:resolve_dependencies_until_complete] [DEBUG] Starting dependency resolution round. Pending: ['login_phase']
+[2025-12-09 17:12:26,909][agent:runner:execute_pending_actions_round] [INFO] Dependencies met for action login_phase, executing.
+[2025-12-09 17:12:26,911][agent:runner:execute_action] [INFO] Executing action: login_phase - Login to TikTok social platform.
+[2025-12-09 17:12:26,914][agent:runner:execute_step] [DEBUG] Processing step open_browser on platform tiktok
+[2025-12-09 17:12:26,916][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step open_browser: {}
+[2025-12-09 17:12:26,918][agent:runner:execute_tool] [INFO] Executing async tool open_browser
+[2025-12-09 17:12:26,921][agent:session:open_browser] [INFO] Initializing browser session
+[2025-12-09 17:12:26,923][agent:session:_ensure_protocol_handler_allowance] [INFO] Injecting/checking TikTok protocol into browser storage preferences.
+[2025-12-09 17:12:26,926][agent:session:_ensure_protocol_handler_allowance] [INFO] Chrome preferences file path: /data/browser_storage/Default/Preferences
+[2025-12-09 17:12:26,929][agent:session:_ensure_protocol_handler_allowance] [DEBUG] Chrome preferences file /data/browser_storage/Default/Preferences missing; skipping allowance injection
+[2025-12-09 17:12:26,931][agent:session:open_browser] [INFO] Browser options: ['--disable-dev-shm-usage', '--disable-accelerated-2d-canvas', '--disable-gpu', '--disable-backgrounding-occluded-windows', '--disable-features=TranslateUI,BlinkGenPropertyTrees', '--disable-ipc-flooding-protection', '--allow-running-insecure-content', '--enable-logging', '--v=1', '--enable-features=protocolMonitor', '--disable-notifications', '--disable-popup-blocking', '--disable-extensions', '--disable-component-extensions-with-background-pages', '--disable-default-apps', '--disable-hang-monitor', '--disable-prompt-on-repost', '--disable-client-side-phishing-detection', '--disable-sync', '--metrics-recording-only', '--no-first-run', '--password-store=basic', '--no-sandbox', '--lang=en-US', '--timezone=Europe/Paris', '--remote-debugging-port=54321', '--window-position=0,0', '--window-size=1920,1080']
+[2025-12-09 17:12:28,247][agent:session:open_browser] [INFO] Browser download directory set to /data/1765300343.2403793/downloads
+[2025-12-09 17:12:28,256][agent:session:open_browser] [INFO] Browser session initialized successfully
+[2025-12-09 17:12:28,259][agent:runner:execute_step_with_tool] [INFO] Step open_browser execution completed with success=True
+[2025-12-09 17:12:28,261][agent:runner:execute_step_with_tool] [DEBUG] Step open_browser result data: {'browser_initialized': True}
+[2025-12-09 17:12:28,264][agent:runner:execute_step] [DEBUG] Processing step start_dismiss_actions on platform tiktok
+[2025-12-09 17:12:28,266][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step start_dismiss_actions: {'mode': 'before_login'}
+[2025-12-09 17:12:28,269][agent:runner:execute_tool] [INFO] Executing async tool start_dismiss_actions
+[2025-12-09 17:12:28,272][agent:popup_handler:start_dismiss_actions] [INFO] Start dismiss task.
+[2025-12-09 17:12:28,275][agent:runner:execute_step_with_tool] [INFO] Step start_dismiss_actions execution completed with success=True
+[2025-12-09 17:12:28,277][agent:runner:execute_step_with_tool] [DEBUG] Step start_dismiss_actions result data: {'dismiss_task': <Task pending name='dismiss_loop_task' coro=<dismiss_loop() running at /app/.venv/lib/python3.12/site-packages/driver/actions/utils.py:11>>}
+[2025-12-09 17:12:28,280][agent:runner:execute_step] [DEBUG] Processing step navigate_to_tiktok on platform tiktok
+[2025-12-09 17:12:28,282][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step navigate_to_tiktok: {'url': 'https://www.tiktok.com/'}
+[2025-12-09 17:12:28,284][agent:runner:execute_tool] [INFO] Executing async tool navigate_to
+[2025-12-09 17:12:28,287][agent:session:navigate_to] [DEBUG] Navigating to URL: https://www.tiktok.com/
+[2025-12-09 17:12:28,299][agent:screenshot:screenshot_loop] [DEBUG] Screenshot loop started with sleep interval: '1' s.)
+[2025-12-09 17:12:28,307][agent:screenshot:screenshot_loop] [DEBUG] Screenshot loop started with sleep interval: '1' s.)
+[2025-12-09 17:12:29,847][agent:screenshot:take_screenshot] [ERROR] Screenshot failed.
+Traceback (most recent call last):
+  File "/app/src/platforms/browser/screenshot.py", line 17, in take_screenshot
+    await tab.screenshot(folder=config.screens_path)
+  File "/app/.venv/lib/python3.12/site-packages/driver/tab.py", line 403, in screenshot
+    data = await self.connection.send_cdp_transaction(page.capture_screenshot(format_=file_format, capture_beyond_viewport=full_page))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/driver/connection.py", line 167, in send_cdp_transaction
+    response = await self.send(**message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/.venv/lib/python3.12/site-packages/driver/connection.py", line 240, in send
+    raise ConnectionError(error_msg)
+ConnectionError: Page.captureScreenshot failed: Not attached to an active page (code: -32000)
+[2025-12-09 17:12:34,857][agent:runner:execute_step_with_tool] [INFO] Step navigate_to_tiktok execution completed with success=True
+[2025-12-09 17:12:34,861][agent:runner:execute_step_with_tool] [DEBUG] Step navigate_to_tiktok result data: {'url': 'https://www.tiktok.com/'}
+[2025-12-09 17:12:34,864][agent:runner:execute_step] [DEBUG] Processing step account_login on platform tiktok
+[2025-12-09 17:12:34,868][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.username' to: user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:12:34,871][agent:runner:resolve_string] [DEBUG] Resolved variable 'experiment.variables.secret' to: z1oDZ@mr
+[2025-12-09 17:12:34,875][agent:runner:execute_step_with_tool] [DEBUG] Resolved arguments for step account_login: {'email': 'user2026+matthias.jungfer@zohomail.eu', 'secret': 'z1oDZ@mr'}
+[2025-12-09 17:12:34,879][agent:runner:execute_tool] [INFO] Executing async tool log_in_with_email
+[2025-12-09 17:13:31,880][agent:email_verification:fetch_verification_code] [DEBUG] Using imap server imap.zoho.eu, with username user2026@zohomail.eu
+[2025-12-09 17:13:45,483][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:14:00,058][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:14:03,545][agent:captcha:store] [INFO] Store blob from blob:https://www.tiktok.com/8cfbdf7d-11e8-4ea5-83f4-73d423c4e110 (size: 5528 bytes)
+[2025-12-09 17:14:14,165][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:14:28,420][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:14:42,864][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:14:57,850][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:15:12,467][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:15:26,504][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:15:41,078][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:15:55,433][agent:email_verification:fetch_verification_code] [DEBUG] Waiting for verification email addressed to user2026+matthias.jungfer@zohomail.eu
+[2025-12-09 17:16:01,883][agent:runner:execute_step_with_tool] [ERROR] Error executing tool log_in_with_email for step account_login
+Traceback (most recent call last):
+  File "/app/src/actions/email_verification.py", line 83, in fetch_verification_code
+    await asyncio.sleep(FETCH_RETRY_DELAY)
+  File "/usr/local/lib/python3.12/asyncio/tasks.py", line 665, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/src/actions/email_verification.py", line 61, in fetch_verification_code
+    async with asyncio.timeout(FETCH_TIMEOUT_SECONDS):
+  File "/usr/local/lib/python3.12/asyncio/timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/src/pipeline/runner.py", line 643, in execute_step_with_tool
+    raw_result = await execute_tool(platform_lower, step.tool, resolved_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/runner.py", line 597, in execute_tool
+    return await execute_async_tool(tool_func, args) if is_async else execute_sync_tool(tool_func, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/runner.py", line 457, in execute_async_tool
+    return await tool_func(**args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/tiktok/authentication.py", line 227, in log_in_with_email
+    await check_verification_code(email)
+  File "/app/src/pipeline/toolbox.py", line 132, in wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/platforms/tiktok/authentication.py", line 262, in check_verification_code
+    code = await fetch_verification_code(email, TIKTOK_SERVERS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/src/actions/email_verification.py", line 86, in fetch_verification_code
+    raise TimeoutError(msg) from exc
+TimeoutError: No verification code arrived.
+[2025-12-09 17:16:01,887][agent:runner:execute_action] [ERROR] Action login_phase terminated early due to critical failure in step account_login: No verification code arrived.
+[2025-12-09 17:16:01,890][agent:runner:execute_action] [INFO] Finished action: login_phase
+[2025-12-09 17:16:01,895][agent:runner:resolve_dependencies_until_complete] [DEBUG] Completed actions after round: {'login_phase'}
+[2025-12-09 17:16:01,897][agent:runner:resolve_dependencies_until_complete] [INFO] All actions completed.
+[2025-12-09 17:16:01,900][agent:runner:execute_pipeline] [INFO] --- Pipeline Execution Finished for Experiment: drifting_study_login ---
+[2025-12-09 17:16:01,902][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-09 17:16:01,904][agent:output:display_execution_results] [INFO] PIPELINE EXECUTION RESULTS
+[2025-12-09 17:16:01,906][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-09 17:16:01,908][agent:output:display_execution_results] [INFO] 
+[2025-12-09 17:16:01,909][agent:output:display_execution_results] [INFO] ----------------------------------------
+[2025-12-09 17:16:01,911][agent:output:display_execution_results] [INFO] ACTION: LOGIN_PHASE
+[2025-12-09 17:16:01,913][agent:output:display_execution_results] [INFO] ----------------------------------------
+[2025-12-09 17:16:01,915][agent:output:display_execution_results] [INFO] Step Execution Details:
+[2025-12-09 17:16:01,917][agent:output:display_execution_results] [INFO]   [OK] open_browser
+[2025-12-09 17:16:01,919][agent:output:display_execution_results] [INFO]   [OK] start_dismiss_actions
+[2025-12-09 17:16:01,920][agent:output:display_execution_results] [INFO]   [OK] navigate_to_tiktok
+[2025-12-09 17:16:01,922][agent:output:display_execution_results] [INFO]   [FAIL] account_login (FAILED)
+[2025-12-09 17:16:01,924][agent:output:display_execution_results] [INFO] Action 'login_phase' Summary:
+[2025-12-09 17:16:01,926][agent:output:display_execution_results] [INFO]   Steps Count: 4
+[2025-12-09 17:16:01,928][agent:output:display_execution_results] [INFO]   Successful: 3
+[2025-12-09 17:16:01,930][agent:output:display_execution_results] [INFO]   Failed: 1
+[2025-12-09 17:16:01,932][agent:output:display_execution_results] [INFO]   Skipped: 0
+[2025-12-09 17:16:01,934][agent:output:display_execution_results] [INFO]   Success Rate: 75.0%
+[2025-12-09 17:16:01,935][agent:output:display_execution_results] [INFO] Error Details:
+[2025-12-09 17:16:01,937][agent:output:display_execution_results] [INFO]     • account_login: No verification code arrived.
+[2025-12-09 17:16:01,939][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-09 17:16:01,941][agent:output:display_execution_results] [INFO] PIPELINE EXECUTION SUMMARY
+[2025-12-09 17:16:01,943][agent:output:display_execution_results] [INFO] ============================================================
+[2025-12-09 17:16:01,945][agent:output:display_execution_results] [INFO] Pipeline ID: drifting_study_login
+[2025-12-09 17:16:01,947][agent:output:display_execution_results] [INFO] Actions Overview:
+[2025-12-09 17:16:01,949][agent:output:display_execution_results] [INFO]   Total Actions: 1
+[2025-12-09 17:16:01,951][agent:output:display_execution_results] [INFO]   Successful Actions: 0
+[2025-12-09 17:16:01,953][agent:output:display_execution_results] [INFO]   Failed Actions: 1
+[2025-12-09 17:16:01,955][agent:output:display_execution_results] [INFO] Steps Overview:
+[2025-12-09 17:16:01,957][agent:output:display_execution_results] [INFO]   Total Steps: 4
+[2025-12-09 17:16:01,959][agent:output:display_execution_results] [INFO]   Successful Steps: 3
+[2025-12-09 17:16:01,960][agent:output:display_execution_results] [INFO]   Failed Steps: 1
+[2025-12-09 17:16:01,962][agent:output:display_execution_results] [INFO]   Skipped Steps: 0
+[2025-12-09 17:16:01,964][agent:output:display_execution_results] [INFO]   Overall Success Rate: 75.0%
+[2025-12-09 17:16:01,966][agent:output:display_pipeline_complete] [INFO] Pipeline execution COMPLETED WITH ERRORS
+[2025-12-09 17:16:01,968][agent:output:display_pipeline_complete] [INFO] ============================================================
+[2025-12-09 17:16:01,970][agent:uploader:validate_upload_config] [INFO] Upload of collected data to repository is disabled in configuration.
+[2025-12-09 17:16:01,973][agent:main:run_pipeline] [WARNING] Pipeline completed with errors
