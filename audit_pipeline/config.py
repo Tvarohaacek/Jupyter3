@@ -16,6 +16,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 
 REELS_REQUIRED_COLS: tuple[str, ...] = (
+    "video_id",
     "topic",
     "predicted_topic",
     "video_action_watch",

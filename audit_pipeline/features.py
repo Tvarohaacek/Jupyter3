@@ -119,6 +119,80 @@ def _compute_ages(df: pd.DataFrame, config: AnalysisConfig) -> tuple[float, floa
 
 
 # ---------------------------------------------------------------------------
+# Deduplikace
+# ---------------------------------------------------------------------------
+
+def _first_non_random(s: pd.Series) -> str:
+    """
+    Vrací první non-random / non-NaN hodnotu z group.
+    Pokud žádná taková není, vrací 'random'.
+
+    Použití: aggregátor pro `predicted_topic` při dedupu, aby zůstal
+    konzistentní s `is_topic_match` (který agreguje přes `any`).
+    """
+    for v in s:
+        if pd.notna(v) and str(v).strip().lower() != "random":
+            return v
+    return "random"
+
+
+def deduplicate_videos(
+    df: pd.DataFrame,
+    key: str = "video_id",
+) -> pd.DataFrame:
+    """
+    Sjednotí opakované výskyty stejného videa do jednoho řádku.
+
+    V auditních datech se některé video objeví ve feedu mnohokrát (v jednom
+    z testovacích datasetů 577×). Pokud bychom procenta počítali přes řádky,
+    jediné spamované video by dominovalo všem statistikám. Tato funkce
+    proto agreguje per video_id následovně:
+
+      * action sloupce (watch/like/bookmark) → logické OR: pokud byl uživatel
+        kdykoli aktivní, video se počítá jako interagované;
+      * interaction_number → min (pořadí prvního výskytu v session);
+      * is_topic_match → any (pokud byl klasifikován jako match alespoň 1×);
+      * ostatní (autor, popis, predicted_topic, ...) → first.
+
+    Vrací DF seřazený podle interaction_number.
+    """
+    if key not in df.columns:
+        raise ValueError(f"Sloupec '{key}' není v DataFrame.")
+
+    n_before = len(df)
+    n_unique = df[key].nunique()
+    if n_before == n_unique:
+        return df.reset_index(drop=True)
+
+    # Strategie agregace pro každý sloupec
+    agg_map: dict = {}
+    for col in df.columns:
+        if col == key:
+            continue
+        if col in ("video_action_watch", "video_action_like",
+                   "video_action_bookmark", "video_action_skip",
+                   "is_topic_match", "is_topic_stance",
+                   "is_topic_opposite", "is_recipes", "is_random"):
+            agg_map[col] = "any"
+        elif col == "interaction_number":
+            agg_map[col] = "min"
+        elif col == "predicted_topic":
+            # Preferuj non-random / non-NaN klasifikaci, jinak vezmi první.
+            # Nutné, aby is_topic_match=True bylo konzistentní s predicted_topic.
+            agg_map[col] = _first_non_random
+        else:
+            agg_map[col] = "first"
+
+    deduped = (
+        df.groupby(key, as_index=False, sort=False)
+        .agg(agg_map)
+        .sort_values("interaction_number" if "interaction_number" in df.columns else key)
+        .reset_index(drop=True)
+    )
+    return deduped
+
+
+# ---------------------------------------------------------------------------
 # TikTok enrichment
 # ---------------------------------------------------------------------------
 

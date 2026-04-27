@@ -20,6 +20,7 @@ from audit_pipeline import (
     AnalysisConfig,
     REELS_REQUIRED_COLS,
     TIKTOK_REQUIRED_COLS,
+    deduplicate_videos,
     enrich_reels,
     enrich_tiktok,
     file_sha256,
@@ -47,6 +48,7 @@ def cfg() -> AnalysisConfig:
 def reels_df() -> pd.DataFrame:
     """Mini Reels dataset — 5 řádků, 1 topic match."""
     return pd.DataFrame({
+        "video_id": ["v1", "v2", "v3", "v4", "v5"],
         "topic": ["gambling, adult"] * 5,
         "predicted_topic": ["random", "random", "gambling", "random", np.nan],
         "video_action_watch": [True, False, True, True, False],
@@ -136,12 +138,12 @@ def test_enrich_reels_age_is_deterministic(reels_df, cfg):
 def test_enrich_reels_handles_leap_year_dob(cfg):
     """29.2. v přestupném roce se nesmí pokoušet přesunout do ne-přestupného."""
     df = pd.DataFrame({
+        "video_id": ["v1"],
         "topic": ["x"], "predicted_topic": ["random"],
         "video_action_watch": [True], "video_action_like": [False],
         "video_action_bookmark": [False], "video_time_duration": [10.0],
         "video_author": ["a"], "video_description": ["x"],
         "date_of_birth": ["29.02.2008"],   # přestupný rok
-        # cílový rok 2012 je TAKY přestupný — ale třeba 2009 by nebyl problém
     })
     # Tohle by NEMĚLO spadnout (původní `dob.replace(year=2012)` by to ustál,
     # ale když by někdo dal real_birth_year=2009, spadl by.)
@@ -178,6 +180,99 @@ def test_enrich_tiktok_no_apply_axis1(tiktok_df, cfg):
     assert out["is_topic_stance"].dtype == bool
     assert out["is_topic_opposite"].dtype == bool
     assert out["is_recipes"].dtype == bool
+
+
+# ---------------------------------------------------------------------------
+# Deduplikace
+# ---------------------------------------------------------------------------
+
+def test_deduplicate_collapses_to_unique_videos(cfg):
+    """Stejné video_id 4× → 1 řádek."""
+    df = pd.DataFrame({
+        "video_id": ["A", "A", "A", "A", "B"],
+        "topic": ["x"] * 5,
+        "predicted_topic": ["random"] * 5,
+        "video_action_watch": [False, False, False, False, True],
+        "video_action_like": [False, False, False, False, False],
+        "video_action_bookmark": [False] * 5,
+        "video_time_duration": [10.0] * 5,
+        "video_author": ["a"] * 5, "video_description": ["x"] * 5,
+        "date_of_birth": ["15.06.2008"] * 5,
+    })
+    enriched = enrich_reels(df, "user1", cfg)
+    deduped = deduplicate_videos(enriched)
+    assert len(deduped) == 2
+    assert set(deduped["video_id"]) == {"A", "B"}
+
+
+def test_deduplicate_action_uses_logical_or(cfg):
+    """Pokud byl uživatel aktivní v ALESPOŇ jednom výskytu, video je interagované."""
+    df = pd.DataFrame({
+        "video_id": ["A", "A", "A"],
+        "topic": ["x"] * 3,
+        "predicted_topic": ["random"] * 3,
+        "video_action_watch": [False, True, False],   # 1× watched
+        "video_action_like": [False, False, False],   # never liked
+        "video_action_bookmark": [False, False, False],
+        "video_time_duration": [10.0] * 3,
+        "video_author": ["a"] * 3, "video_description": ["x"] * 3,
+        "date_of_birth": ["15.06.2008"] * 3,
+    })
+    enriched = enrich_reels(df, "user1", cfg)
+    deduped = deduplicate_videos(enriched)
+    assert deduped["video_action_watch"].iloc[0] == True
+    assert deduped["video_action_like"].iloc[0] == False
+
+
+def test_deduplicate_predicted_topic_prefers_non_random(cfg):
+    """
+    Když se video objeví 100× jako 'random' a 1× jako 'gambling',
+    deduplikovaný řádek MUSÍ mít predicted_topic='gambling'.
+    Jinak by is_topic_match=True bylo nekonzistentní s 'random'.
+    """
+    n = 100
+    df = pd.DataFrame({
+        "video_id": ["A"] * n + ["A"],   # 101 výskytů, jeden je 'gambling'
+        "topic": ["x"] * (n + 1),
+        "predicted_topic": ["random"] * n + ["gambling"],
+        "video_action_watch": [False] * (n + 1),
+        "video_action_like": [False] * (n + 1),
+        "video_action_bookmark": [False] * (n + 1),
+        "video_time_duration": [10.0] * (n + 1),
+        "video_author": ["a"] * (n + 1), "video_description": ["x"] * (n + 1),
+        "date_of_birth": ["15.06.2008"] * (n + 1),
+    })
+    enriched = enrich_reels(df, "user1", cfg)
+    deduped = deduplicate_videos(enriched)
+
+    assert len(deduped) == 1
+    assert deduped["predicted_topic"].iloc[0] == "gambling"
+    assert deduped["is_topic_match"].iloc[0] == True
+
+
+def test_deduplicate_keeps_min_interaction_number(cfg):
+    """Po dedupu se zachová pořadí PRVNÍHO výskytu."""
+    df = pd.DataFrame({
+        "video_id": ["A", "B", "A", "C", "A"],   # A se opakuje (1, 3, 5)
+        "topic": ["x"] * 5, "predicted_topic": ["random"] * 5,
+        "video_action_watch": [True] * 5, "video_action_like": [False] * 5,
+        "video_action_bookmark": [False] * 5, "video_time_duration": [10.0] * 5,
+        "video_author": ["a"] * 5, "video_description": ["x"] * 5,
+        "date_of_birth": ["15.06.2008"] * 5,
+    })
+    enriched = enrich_reels(df, "user1", cfg)
+    deduped = deduplicate_videos(enriched)
+
+    a_row = deduped[deduped["video_id"] == "A"].iloc[0]
+    assert a_row["interaction_number"] == 1   # ne 3, ne 5
+
+
+def test_deduplicate_is_idempotent(cfg, reels_df):
+    """Druhé volání dedup nesmí nic změnit."""
+    enriched = enrich_reels(reels_df, "user1", cfg)
+    once = deduplicate_videos(enriched)
+    twice = deduplicate_videos(once)
+    pd.testing.assert_frame_equal(once, twice)
 
 
 # ---------------------------------------------------------------------------

@@ -20,7 +20,7 @@ from .config import (
     TIKTOK_TARGET_TOPICS,
     TIKTOK_TARGET_STANCES,
 )
-from .features import enrich_reels, enrich_tiktok
+from .features import deduplicate_videos, enrich_reels, enrich_tiktok
 from .io_layer import (
     DataAudit,
     file_sha256,
@@ -53,7 +53,7 @@ __all__ = [
     "REELS_REQUIRED_COLS", "TIKTOK_REQUIRED_COLS",
     "TIKTOK_TARGET_TOPICS", "TIKTOK_TARGET_STANCES",
     "DataAudit", "file_sha256", "load_csv", "validate_schema", "write_audit_log",
-    "enrich_reels", "enrich_tiktok",
+    "deduplicate_videos", "enrich_reels", "enrich_tiktok",
     "user_engagement_metrics", "age_discrepancy_metrics",
     "tiktok_topic_stance_breakdown", "top_words", "top_hashtags",
     "sliding_topic_match", "cumulative_topic_match", "export_metrics_json",
