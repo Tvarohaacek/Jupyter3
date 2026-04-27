@@ -1,0 +1,52 @@
+{
+  "config": {
+    "collection_date": "2026-03-16T00:00:00",
+    "declared_birth_year": 2008,
+    "real_birth_year": 2012
+  },
+  "user1": {
+    "label": "User 1 (nevhodný obsah)",
+    "n_videos": 803,
+    "watch_rate_pct": 57.907845579078455,
+    "like_rate_pct": 40.59775840597759,
+    "avg_video_duration_s": 10.84557907845579,
+    "median_video_duration_s": 9.0,
+    "bookmark_rate_pct": 0.0,
+    "topic_match_count": 2,
+    "topic_match_pct": 0.24906600249066002,
+    "matched_topics": [
+      "gambling",
+      "taboo_topics"
+    ]
+  },
+  "user2": {
+    "label": "User 2 (neutrální obsah)",
+    "n_videos": 759,
+    "watch_rate_pct": 63.63636363636363,
+    "like_rate_pct": 29.77602108036891,
+    "avg_video_duration_s": 8.250329380764164,
+    "median_video_duration_s": 8.0,
+    "bookmark_rate_pct": 0.13175230566534915,
+    "topic_match_count": 11,
+    "topic_match_pct": 1.4492753623188406,
+    "matched_topics": [
+      "healthy_lifestyle",
+      "healthy_recipes",
+      "home_cooking"
+    ]
+  },
+  "age_user1": {
+    "label": "User 1",
+    "available": true,
+    "declared_age_years": 18.02053388090349,
+    "real_age_years": 14.020533880903491,
+    "discrepancy_years": 3.9999999999999982
+  },
+  "age_user2": {
+    "label": "User 2",
+    "available": true,
+    "declared_age_years": 18.069815195071868,
+    "real_age_years": 14.069815195071868,
+    "discrepancy_years": 4.0
+  }
+}
